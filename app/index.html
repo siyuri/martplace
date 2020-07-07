@@ -1,17 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  
-  
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- NOTE - header top start -->
+
+        <div class="header__top">
+          <a href="#" class="header__logo">
+            <img class="header__logo-img" src="../images/header_logo.png" alt="logo image">
+          </a>
+          <div class="header__user-panel">
+            <a href="#" class="header__register-link">Become a seller</a>
+            <ul class="header__icons">
+              <li class="header__icon-item">
+                <a class="header_icon-btn" href="#">
+                  <svg class="lnr lnr-alarm">
+                    <use xlink:href="#lnr-alarm"></use>
+                  </svg>
+                  new notification
+                  <span class="header__icon-badge">25</span>
+                </a>
+              </li>
+              <li class="header__icon-item">
+                <a class="header_icon-btn" href="#">
+                  <svg class="lnr lnr-envelope">
+                    <use xlink:href="#lnr-envelope"></use>
+                  </svg>
+                  new email
+                  <span class="header__icon-badge">6</span>
+                </a>
+              </li>
+              <li class="header__icon-item">
+                <a class="header_icon-btn" href="#">
+                  <svg class="lnr lnr-cart">
+                    <use xlink:href="#lnr-cart"></use>
+                  </svg>
+                  your cart
+                  <span class="header__icon-badge">2</span>
+                </a>
+              </li>
+            </ul>
+            <div class="header__user-info">
+              <a class="header__user-avatar" href="#">
+                <img class="header__user-img user-avatar" src="images/avatar.jpg" alt="user avatar">
+              </a>
+              <a class="header__user-nickname user-nickname" href="#">
+                Taofiq Hakim
+                <span class="header__user-balance">$20.45</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOTE - header top ends -->
+
+        <!-- NOTE - header bottom starts -->
+
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__inner">
+              <nav class="header__bottom-menu">
+                <ul class="header__bottom-items">
+                  <li class="header__bottom-item">
+                    <a class="header__bottom-link" href="#">
+                      HOME
+                    </a>
+                  </li>
+                  <li class="header__bottom-item">
+                    <a class="header__bottom-link" href="#">
+                      all products
+                    </a>
+                  </li>
+                  <li class="header__bottom-item">
+                    <a class="header__bottom-link" href="#">
+                      wordpress
+                    </a>
+                  </li>
+                  <li class="header__bottom-item">
+                    <a class="header__bottom-link" href="#">
+                      features
+                    </a>
+                  </li>
+                  <li class="header__bottom-item">
+                    <a class="header__bottom-link" href="#">
+                      Pages
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <form class="header__bottom-search search-form">
+                <input type="search" class="search-form__input" placeholder="Search product here...">
+                <button class="search-form__btn"><svg class="lnr lnr-magnifier">
+                    <use xlink:href="#lnr-magnifier"></use>
+                  </svg></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NOTE - header__bottom ends -->
+
+
+  <!-- NOTE - introdaction section starts -->
+
+  <section class="top">
+    <div class="container--fluid">
+      <div class="top__inner">
+        <div class="top__title">
+          Create Your Own
+          <span class="top__title--bold">
+            Digital Product Marketplace
+          </span>
+        </div>
+        <p class="top__text">
+          MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
+        </p>
+        <a class="top__all-products" href="">View All Products</a>
+        <a class="top__popular-products" href="">Popular Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTE - introdaction section ends -->
+
+  <!-- NOTE - about section starts -->
+
+  <section class="about">
+    <div class="container">
+      <div class="about__inner">
+        <form class="about__search" action="">
+          <input class="about__search-input" id="search-products" type="search">
+          <select class="about__search-select" name="search-category" id="select-products">
+            <option value="all">All Categories</option>
+            <option value="newest">Newest</option>
+            <option value="popular">Popular</option>
+          </select>
+          <button class="about__search-btn" type="button">
+            Search Now
+          </button>
+        </form>
+        <div class="about__box">
+          <div class="about__box-wrapper">
+            <div class="about__box-item">
+              <div class="about__box-title">
+                Best UX Research
+              </div>
+              <div class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </div>
+            </div>
+            <div class="about__box-item">
+              <div class="about__box-title">
+                Fully Responsive
+              </div>
+              <div class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </div>
+            </div>
+            <div class="about__box-item">
+              <div class="about__box-title">
+                Fully Responsive
+              </div>
+              <div class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTE - Start slider-features -->
+
+  <section class="slider-featured">
+    <div class="container">
+      <div class="slider-featured__wrapper">
+        <div class="slider-featured__top">
+          <div class="slider-featured__title title">
+            Weekly Featured Products
+          </div>
+          <div class="slider-featured__box">
+            <div class="slider-featured__products">
+              <div class="slider-featured__product">
+                <img src="images/slider-featured-1.jpg" alt="pretty green template for iPhone"
+                  class="slider-featured__product-img">
+                <div class="slider-featured__buttons buttons--hover-decoration">
+                  <a href="#" class="newest-products__item-link">
+                    More info
+                  </a>
+                  <a href="#" class="newest-products__item-link">
+                    Live Demo
+                  </a>
+                </div>
+                <div class="slider-featured__product-card product-card">
+                  <a class="product-card__title title">
+                    One Page Resume Template user-avatar
+                  </a>
+                  <a class="product-card__author" href="#">
+                    <img class="product-card__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                    AazzTech
+                  </a>
+                  <a class="product-card__category" href="#">
+                    WordPress
+                  </a>
+                  <p class="product-card__description">
+                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                    quam
+                    aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                    mattis, leo quam aliquet congue justo ut scelerisque.
+                  </p>
+                  <button class="product-card__filter" type="button">website</button>
+                  <button class="product-card__filter" type="button">plugin</button>
+                  <button class="product-card__filter" type="button">loading page</button>
+                  <div class="product-card__review">
+                    <button class="product-card__price-range" type="button">$10 - $50</button>
+                    <!-- TODO - likes/backet/starrating -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-featured__product">
+                <img src="images/slider-featured-1.jpg" alt="pretty green template for iPhone"
+                  class="slider-featured__product-img">
+                <div class="slider-featured__buttons buttons--hover-decoration">
+                  <a href="#" class="newest-products__item-link">
+                    More info
+                  </a>
+                  <a href="#" class="newest-products__item-link">
+                    Live Demo
+                  </a>
+                </div>
+                <div class="slider-featured__product-card product-card">
+                  <a class="product-card__title title">
+                    One Page Resume Template user-avatar
+                  </a>
+                  <a class="product-card__author" href="#">
+                    <img class="product-card__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                    AazzTech
+                  </a>
+                  <a class="product-card__category" href="#">
+                    WordPress
+                  </a>
+                  <p class="product-card__description">
+                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                    quam
+                    aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                    mattis, leo quam aliquet congue justo ut scelerisque.
+                  </p>
+                  <button class="product-card__filter" type="button">website</button>
+                  <button class="product-card__filter" type="button">plugin</button>
+                  <button class="product-card__filter" type="button">loading page</button>
+                  <div class="product-card__review">
+                    <button class="product-card__price-range" type="button">$10 - $50</button>
+                    <!-- TODO - likes/backet/starrating -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-featured__product">
+                <img src="images/slider-featured-1.jpg" alt="pretty green template for iPhone"
+                  class="slider-featured__product-img">
+                <div class="slider-featured__buttons buttons--hover-decoration">
+                  <a href="#" class="newest-products__item-link">
+                    More info
+                  </a>
+                  <a href="#" class="newest-products__item-link">
+                    Live Demo
+                  </a>
+                </div>
+                <div class="slider-featured__product-card product-card">
+                  <a class="product-card__title title">
+                    One Page Resume Template user-avatar
+                  </a>
+                  <a class="product-card__author" href="#">
+                    <img class="product-card__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                    AazzTech
+                  </a>
+                  <a class="product-card__category" href="#">
+                    WordPress
+                  </a>
+                  <p class="product-card__description">
+                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                    quam
+                    aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                    mattis, leo quam aliquet congue justo ut scelerisque.
+                  </p>
+                  <button class="product-card__filter" type="button">website</button>
+                  <button class="product-card__filter" type="button">plugin</button>
+                  <button class="product-card__filter" type="button">loading page</button>
+                  <div class="product-card__review">
+                    <button class="product-card__price-range" type="button">$10 - $50</button>
+                    <!-- TODO - likes/backet/starrating -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTE - end slider-featured -->
+
+  <!-- NOTE - start newest-products -->
+
+  <section class="newst-products">
+    <div class="container">
+      <div class="newest-products__inner">
+        <div class="newest-products__navigation">
+          <div class="newest-products__title title">Newest Release Products</div>
+          <div class="newest-products__filter">
+            <span class="newest-products__filter">Filter by:</span>
+
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="newest-products__dots" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
+
+            <div class="newest-products__filter-filterby">
+              <button class="newest-products__filter-btn">Trending items</button>
+              <button class="newest-products__filter-btn">Best items</button>
+              <button class="newest-products__filter-btn">Best rating</button>
+              <button class="newest-products__filter-btn">Low price</button>
+              <button class="newest-products__filter-btn">High price</button>
+            </div>
+          </div>
+          <div class="newest-products__categories">
+            <button class="newest-products__categoty" type="button">Plugins</button>
+            <button class="newest-products__categoty" type="button">WordPress</button>
+            <button class="newest-products__categoty" type="button">Site Teplate</button>
+            <button class="newest-products__categoty" type="button">PSD Template</button>
+            <button class="newest-products__categoty" type="button">Joomlo</button>
+            <button class="newest-products__categoty" type="button">User Interface</button>
+            <button class="newest-products__categoty" type="button">Landing Page</button>
+            <button class="newest-products__categoty" type="button">Software</button>
+          </div>
+        </div>
+        <div class="newest-products__items">
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
+
 </body>
+
 </html>
