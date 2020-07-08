@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  font-weight: normal;
+  color: $text;
+  font-size: 1rem;
+  line-height: 195%;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
