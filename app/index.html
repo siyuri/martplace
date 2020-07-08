@@ -342,7 +342,7 @@
                 d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
             </svg>
 
-            <div class="newest-products__filter-filterby">
+            <div class="newest-products__filterby">
               <button class="newest-products__filter-btn">Trending items</button>
               <button class="newest-products__filter-btn">Best items</button>
               <button class="newest-products__filter-btn">Best rating</button>
@@ -351,18 +351,22 @@
             </div>
           </div>
           <div class="newest-products__categories">
-            <button class="newest-products__categoty" type="button">Plugins</button>
-            <button class="newest-products__categoty" type="button">WordPress</button>
-            <button class="newest-products__categoty" type="button">Site Teplate</button>
-            <button class="newest-products__categoty" type="button">PSD Template</button>
-            <button class="newest-products__categoty" type="button">Joomlo</button>
-            <button class="newest-products__categoty" type="button">User Interface</button>
-            <button class="newest-products__categoty" type="button">Landing Page</button>
-            <button class="newest-products__categoty" type="button">Software</button>
+            <button class="newest-products__categoty" data-filter=".category-plugin" type="button">Plugins</button>
+            <button class="newest-products__categoty" data-filter=".category-wordpress" type="button">WordPress</button>
+            <button class="newest-products__categoty" data-filter=".category-html" type="button">Site
+              Teplate</button>
+            <button class="newest-products__categoty" data-filter=".category-psd" type="button">PSD
+              Template</button>
+            <button class="newest-products__categoty" data-filter=".category-joomlo" type="button">Joomlo</button>
+            <button class="newest-products__categoty" data-filter=".category-ui" type="button">User
+              Interface</button>
+            <button class="newest-products__categoty" data-filter=".category-landingpage" type="button">Landing
+              Page</button>
+            <button class="newest-products__categoty" data-filter=".category-software" type="button">Software</button>
           </div>
         </div>
         <div class="newest-products__items">
-          <div class="newest-products__item product-card">
+          <div class="newest-products__item product-card mix category-plugin" data-order="1">
             <div class="newest-products__item-top">
               <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
               <div class="newest-products__buttons buttons--hover-decoration">
@@ -398,7 +402,7 @@
             </div>
           </div>
 
-          <div class="newest-products__item product-card">
+          <div class="newest-products__item product-card mix category-psd" data-order="2">
             <div class="newest-products__item-top">
               <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
               <div class="newest-products__buttons buttons--hover-decoration">
@@ -434,7 +438,7 @@
             </div>
           </div>
 
-          <div class="newest-products__item product-card">
+          <div class="newest-products__item product-card mix category-html" data-order="3">
             <div class="newest-products__item-top">
               <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
               <div class="newest-products__buttons buttons--hover-decoration">
@@ -470,7 +474,43 @@
             </div>
           </div>
 
-          <div class="newest-products__item product-card">
+          <div class="newest-products__item product-card mix category-plugin" data-order="4">
+            <div class="newest-products__item-top">
+              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
+              <div class="newest-products__buttons buttons--hover-decoration">
+                <a href="#" class="newest-products__item-link">
+                  More info
+                </a>
+                <a href="#" class="newest-products__item-link">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="newest-products__info">
+              <a class="newest-product__title title" href="#">
+                E-commerce Shopping Cart
+              </a>
+              <a class="newest-product__author product-card__author" href="#">
+                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                Theme-Valley
+              </a>
+              <a class="newest-product__category product-card__category" data-order="4" href="#">
+                Plugin
+              </a>
+              <p class="newest-product__description product-card__description">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                mattis, leo quam aliquet congue justo ut scelerisque.
+              </p>
+              <div class="newest-product__review product-card__review">
+                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <!-- TODO - likes/backet/starrating -->
+              </div>
+            </div>
+          </div>
+
+          <div class="newest-products__item product-card mix category-psd" data-order="5">
             <div class="newest-products__item-top">
               <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
               <div class="newest-products__buttons buttons--hover-decoration">
@@ -506,7 +546,7 @@
             </div>
           </div>
 
-          <div class="newest-products__item product-card">
+          <div class="newest-products__item product-card mix category-html" data-order="6">
             <div class="newest-products__item-top">
               <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
               <div class="newest-products__buttons buttons--hover-decoration">
@@ -526,43 +566,7 @@
                 <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
                 Theme-Valley
               </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
-              </div>
-            </div>
-          </div>
-
-          <div class="newest-products__item product-card">
-            <div class="newest-products__item-top">
-              <img class="newest-products__item-img" src="images/newest-1.jpg" alt="e-commerce shoppong cart">
-              <div class="newest-products__buttons buttons--hover-decoration">
-                <a href="#" class="newest-products__item-link">
-                  More info
-                </a>
-                <a href="#" class="newest-products__item-link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-products__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-products__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
+              <a class="newest-product__category product-card__category" data-order="6" href="#">
                 Plugin
               </a>
               <p class="newest-product__description product-card__description">
