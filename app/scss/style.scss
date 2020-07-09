@@ -5,7 +5,7 @@
 
 .header {
   &__inner {
-    padding: 1.438em 0 2.188em;
+    padding-top: 1.438em;
   }
 
   &__top {
@@ -38,9 +38,8 @@
 
   &__register-link {
     margin-right: 3.6em; //50px
-    font-family: 'Quicksand', sans-serif;
-    font-weight: normal;
-    padding: 0.8em 1.3em;
+    padding: 0.7em 1.3em;
+
 
   }
 
@@ -131,6 +130,63 @@
     fill: #fff;
   }
 }
+
+/*end header*/
+
+/*start top*/
+
+.top {
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 51.8em;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 3.75rem;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  &__title-accent {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 3.5em;
+  }
+
+  .button {
+    font-size: 1rem;
+    line-height: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    max-width: 11.875em;
+    padding: 1.25em 2.5em;
+
+    &+.button {
+      margin-left: 1.875em;
+    }
+
+    &:hover {
+      background: #fff;
+      color: $theme-color-blue;
+    }
+  }
+
+
+}
+
+
 
 
 
