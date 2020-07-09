@@ -5,72 +5,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Martplace</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="header__inner">
+    <div class="container-fluid container-fluid--grey">
+      <div class="container">
+        <div class="header__inner">
 
-        <!-- NOTE - header top start -->
+          <!-- NOTE - header top start -->
 
-        <div class="header__top">
-          <a href="#" class="header__logo">
-            <img class="header__logo-img" src="../images/header_logo.png" alt="logo image">
-          </a>
-          <div class="header__user-panel">
-            <a href="#" class="header__register-link">Become a seller</a>
-            <ul class="header__icons">
-              <li class="header__icon-item">
-                <a class="header_icon-btn" href="#">
-                  <svg class="lnr lnr-alarm">
-                    <use xlink:href="#lnr-alarm"></use>
-                  </svg>
-                  new notification
-                  <span class="header__icon-badge">25</span>
+          <div class="header__top">
+            <a href="#" class="header__logo">
+              <img class="header__logo-img" src="../images/header_logo.png" alt="logo image">
+            </a>
+            <div class="header__user-panel">
+              <a class="header__register-link button" href="#">Become a Seller</a>
+              <ul class="header__icons">
+                <li class="header__icon-item">
+                  <a class="header_icon-btn" href="#">
+                    <svg class="lnr lnr-alarm">
+                      <use xlink:href="#lnr-alarm"></use>
+                    </svg>
+                    <span class="header__icon-badge">25</span>
+                  </a>
+                </li>
+                <li class="header__icon-item">
+                  <a class="header__icon-btn" href="#">
+                    <svg class="lnr lnr-envelope">
+                      <use xlink:href="#lnr-envelope"></use>
+                    </svg>
+                    <span class="header__icon-badge">6</span>
+                  </a>
+                </li>
+                <li class="header__icon-item">
+                  <a class="header_icon-btn" href="#">
+                    <svg class="lnr lnr-cart">
+                      <use xlink:href="#lnr-cart"></use>
+                    </svg>
+                    <span class="header__icon-badge">2</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="header__user-info">
+                <a class="header__user-avatar" href="#">
+                  <img class="header__user-img user-avatar" src="images/avatar.jpg" alt="user avatar">
                 </a>
-              </li>
-              <li class="header__icon-item">
-                <a class="header_icon-btn" href="#">
-                  <svg class="lnr lnr-envelope">
-                    <use xlink:href="#lnr-envelope"></use>
-                  </svg>
-                  new email
-                  <span class="header__icon-badge">6</span>
+                <a class="header__user-nickname user-nickname" href="#">
+                  Taofiq Hakim
+                  <span class="header__user-balance">$20.45</span>
                 </a>
-              </li>
-              <li class="header__icon-item">
-                <a class="header_icon-btn" href="#">
-                  <svg class="lnr lnr-cart">
-                    <use xlink:href="#lnr-cart"></use>
-                  </svg>
-                  your cart
-                  <span class="header__icon-badge">2</span>
-                </a>
-              </li>
-            </ul>
-            <div class="header__user-info">
-              <a class="header__user-avatar" href="#">
-                <img class="header__user-img user-avatar" src="images/avatar.jpg" alt="user avatar">
-              </a>
-              <a class="header__user-nickname user-nickname" href="#">
-                Taofiq Hakim
-                <span class="header__user-balance">$20.45</span>
-              </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- NOTE - header top ends -->
+          <!-- NOTE - header top ends -->
 
-        <!-- NOTE - header bottom starts -->
+          <!-- NOTE - header bottom starts -->
 
-        <div class="header__bottom">
-          <div class="container">
-            <div class="header__inner">
+          <div class="header__bottom">
+            <div class="header__bottom-inner">
               <nav class="header__bottom-menu">
                 <ul class="header__bottom-items">
                   <li class="header__bottom-item">
@@ -102,7 +99,8 @@
               </nav>
               <form class="header__bottom-search search-form">
                 <input type="search" class="search-form__input" placeholder="Search product here...">
-                <button class="search-form__btn"><svg class="lnr lnr-magnifier">
+                <button class="search-form__btn button" type="submit">
+                  <svg class="search-form__btn-svg lnr lnr-magnifier">
                     <use xlink:href="#lnr-magnifier"></use>
                   </svg></button>
               </form>
