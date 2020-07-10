@@ -98,13 +98,4 @@ body {
   border: none;
   outline: transparent;
 
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 1rem;
-    height: 1rem;
-    fill: $theme-color-purple;
-
-  }
 }
