@@ -27,13 +27,14 @@ body {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+
 }
 
 .container-fluid {
   width: 100%;
 }
 
-.container-fluid--grey {
+.container-fluid--sliced {
   // height: 100%;
   // background: linear-gradient($bg-grey 50%, #ffffff 50%);
   background: #fff;
@@ -42,6 +43,10 @@ body {
 
 .container-fluid--gradient {
   background: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
+}
+
+.container-fluid--onecolor {
+  background: #eff1f5;
 }
 
 
@@ -77,11 +82,29 @@ body {
   &::placeholder {
     color: $form;
   }
+}
 
-  .title {
-    color: #000;
-    font-size: 1.875rem;
-    line-height: 100%;
+.title {
+  color: #000;
+  font-size: 1.875rem;
+  line-height: 100%;
+}
+
+.category-tag {
+  position: relative;
+  color: $theme-color-purple;
+  padding-left: 1.6em;
+  background: transparent;
+  border: none;
+  outline: transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    fill: $theme-color-purple;
+
   }
-
 }
