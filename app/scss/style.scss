@@ -98,19 +98,12 @@
   position: relative;
 
   &__input {
-    border: 1px solid #d9dfe5;
     border-radius: 2em;
     font-size: 0.9rem;
     padding: 1.15em 6em 1em 1.7em;
     width: 24em;
 
-    &:focus {
-      outline: transparent;
-      border: 1px solid $theme-color-blue;
-    }
-
     &::placeholder {
-      color: $form;
       font-size: 0.9rem;
       padding-right: 5em;
     }
@@ -169,7 +162,7 @@
     font-size: 1rem;
     line-height: 100%;
     background: transparent;
-    border: 1px solid #fff;
+    border: 0.0625rem solid #fff;
     max-width: 11.875em;
     padding: 1.25em 2.5em;
 
@@ -185,6 +178,130 @@
 
 
 }
+
+/*end top*/
+
+/*start about*/
+
+.about {
+
+  &__inner {
+    position: relative;
+  }
+
+  &__search {
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    box-shadow: rgba(148, 94, 94, 0.08) 0 0.25rem 1.25rem 0;
+    border-radius: 0.375rem;
+    background: #fff;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.75rem; //12
+      bottom: 0.625rem; //10
+      left: 0.9375rem; //15
+      right: 0.9375rem; //15
+      border-radius: 0.375rem;
+      box-shadow: rgba(255, 255, 255, 0.5) 0 -1.5625rem 0 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0.625rem; //10
+      left: 1.875rem; //30
+      right: 1.875rem; //30
+      border-radius: 0.375rem;
+      box-shadow: rgba(255, 255, 255, 0.5) 0 -1.5625rem 0 0, ;
+    }
+
+  }
+
+  &__search-form {
+    min-height: 9.6em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 2.5em 2.857em;
+
+  }
+
+  &__search-input {
+    font-size: 1rem;
+    max-width: 50.6em;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 1.25em 0 1.25em 1.7em;
+
+    &::placeholder {
+      padding-right: 15.3em;
+    }
+  }
+
+  &__search-select-wrapper {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      font-family: 'Linearicons-Free', serif;
+      content: "\e874";
+      font-size: 0.75rem;
+      color: $text;
+      right: 2.286em;
+      top: -1.2em;
+      pointer-events: none;
+    }
+  }
+
+  &__search-select {
+    min-height: 3.63em;
+    position: absolute;
+    border: none;
+    color: $text;
+    border-left: 0.0625rem solid #d9dfe5;
+    font-size: 1rem;
+    padding: 0 4.250em 0 1.250em;
+    top: -1.82em;
+    right: 0.1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    &:focus {
+      outline: transparent;
+    }
+
+  }
+
+  &__search-btn {
+    box-shadow: none;
+    font-size: 1rem;
+    max-width: 13.9em;
+    width: 100%;
+    border-radius: 0.25rem;
+    margin-left: 2.5em;
+    padding: 1.25em 0;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+/*end about*/
 
 
 
