@@ -5,6 +5,8 @@
   font-weight: normal;
   src: url("../fonts/Quicksand-Regular.woff2") format("woff2"),
     url("../fonts/Quicksand-Regular.woff") format("woff");
+  font-display: swap;
+
 }
 
 @font-face {
@@ -12,6 +14,7 @@
   font-weight: 500;
   src: url("../fonts/Quicksand-Medium.woff2") format("woff2"),
     url("../fonts/Quicksand-Medium.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -20,4 +23,14 @@
   font-style: normal;
   src: url("../fonts/Quicksand-Bold.woff2") format("woff2"),
     url("../fonts/Quicksand-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Linearicons;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Linearicons-Free.woff2") format("woff2"),
+    url("../fonts/Linearicons-Free.woff") format("woff");
+  font-display: swap;
 }

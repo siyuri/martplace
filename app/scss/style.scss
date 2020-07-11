@@ -450,12 +450,35 @@
   .slick-btn {
 
     position: absolute;
-    content: '';
-    z-index: 1;
-    background-color: transparent;
-    cursor: pointer;
     border: none;
     outline: transparent;
+    color: #fff;
+
+  }
+
+  .slick-prev {
+    // content: "\e874";
+    font-size: 1rem;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    background-color: $theme-color-purple;
+    top: -110px;
+    right: 65px;
+
+  }
+
+  .slick-next {
+    width: 55px;
+    height: 55px;
+    top: -110px;
+    right: 10px;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    background-color: $theme-color-purple;
   }
 
 
@@ -520,9 +543,9 @@
     }
   }
 
-
-
 }
+
+
 
 .category-tag--wordpress:before {
   background: url(../images/wordpress.svg);
