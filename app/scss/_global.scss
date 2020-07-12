@@ -93,9 +93,18 @@ body {
 .category-tag {
   position: relative;
   color: $theme-color-purple;
-  padding-left: 1.6em;
-  background: transparent;
   border: none;
   outline: transparent;
+  cursor: pointer;
+  background: transparent;
+  fill: $theme-color-purple;
+}
 
+.title--top{
+  background-color: #fff;
+  width: 100%;
+  padding: 2.5em 1.750em;
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  margin-bottom: 1.667em;
 }
