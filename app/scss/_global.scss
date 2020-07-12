@@ -90,17 +90,7 @@ body {
   line-height: 100%;
 }
 
-.category-tag {
-  position: relative;
-  color: $theme-color-purple;
-  border: none;
-  outline: transparent;
-  cursor: pointer;
-  background: transparent;
-  fill: $theme-color-purple;
-}
-
-.title--top{
+.title--top {
   background-color: #fff;
   width: 100%;
   padding: 2.5em 1.750em;
@@ -108,3 +98,103 @@ body {
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
   margin-bottom: 1.667em;
 }
+
+.category-tag {
+
+  color: $theme-color-purple;
+  padding-left: 29px;
+  margin-top: 2px;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.category-tag--wordpress,
+.category-tag--plugin {
+  background: url(../images/wordpress.svg) no-repeat;
+  background-size: 16px 16px;
+  background-position: left;
+}
+
+.category-tag--html {
+  background: url(../images/html5-brands.svg) no-repeat;
+  background-size: 16px 16px;
+  background-position: left;
+}
+
+.category-tag--ps {
+  background: url(../images/psd.svg) no-repeat;
+  background-size: 16px 16px;
+  background-position: left;
+}
+
+// .category-logo {
+//   width: 16px;
+//   height: 16px;
+//   fill: $theme-color-purple;
+//   margin-top: 2px;
+// }
+
+.product-card__description {
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
+}
+
+.svg-inline--fa {
+  width: 10px;
+  height: 10px;
+}
+
+.newest-product__heart {
+  width: 16px;
+  height: 16px;
+}
+
+.newest-product__like {
+  background: transparent;
+  outline: transparent;
+  fill: $theme-color-purple;
+
+}
+
+.btn-counter {
+  margin-left: 15px;
+  margin-right: 39px;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  font-size: .9rem;
+  text-decoration: none;
+
+  &:focus,
+  &:active {
+    fill: rgb(0, 48, 222);
+  }
+}
+
+.btn-counter:after,
+.btn-counter:hover:after {
+  text-shadow: none;
+}
+
+.btn-counter:after {
+  padding: 0 8px;
+  color: #6f7d8d;
+  content: attr(data-count);
+  left: 100%;
+  position: absolute;
+  top: -2px;
+}
+
+// .btn-counter:before {
+//   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+// }

@@ -318,16 +318,19 @@
             <div class="newest-products__top title--top">
               <div class="newest-products__title title">Newest Release Products</div>
               <div class="newest-products__filter-btn">
-                <span class="newest-products__filter">Filter by:</span>
-                <svg class="newest-products__dots" width="1em" height="1em" viewbox="0 0 16 16" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                </svg>
+                <button class="newest-products__filterby-btn" type="button">
+                  Filter by: <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-v"
+                    class="svg-inline--fa fa-ellipsis-v fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 192 512">
+                    <path fill="currentColor"
+                      d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z">
+                    </path>
+                  </svg>
+                </button>
                 <div class="newest-products__filterby">
                   <div class="newest-products__filterby-box">
                     <button class="newest-products__filter-btn">Trending items</button>
-                    <button class="newest-products__filter-btn">Best items</button>
+                    <button class="newest-products__filter-btn">Best seller</button>
                     <button class="newest-products__filter-btn">Best rating</button>
                     <button class="newest-products__filter-btn">Low price</button>
                     <button class="newest-products__filter-btn">High price</button>
@@ -370,25 +373,42 @@
               </div>
             </div>
             <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <div class="newest-product__info-line">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                <a class="newest-product__author product-card__author" href="#">
-
-                  Theme-Valley </a>
-                <a class="newest-product__category product-card__category" href="#">
-                  Plugin
+              <div class="newest-product__info-top">
+                <a class="newest-product__title title" href="#">
+                  E-commerce Shopping Cart
                 </a>
-              </div>
+                <div class="newest-product__info-line">
+                  <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author" href="#">
 
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.
-              </p>
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin" href="#">
+                    Plugin
+                  </a>
+                </div>
+
+                <p class="newest-product__description product-card__description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
               <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
+                <div class="card-review__left">
+                  <a class="newest-product__price product-card__price-range">$20</a>
+                  <a class="newest-product__like btn btn-counter" href="#" data-count="60">
+                    <span><svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16" aria-hidden="true"
+                        focusable="false" data-prefix="far" data-icon="heart" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                        </path>
+                      </svg></span>
+                  </a></div>
+                <a href="#" class="newest-product__cart">
+
+                </a>
+
+
                 <!-- TODO - likes/backet/starrating -->
               </div>
             </div>

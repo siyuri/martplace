@@ -7,6 +7,16 @@ $(function () {
     prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
   })
+  $('.newest-product__like').on('click', function (event, count) {
+    event.preventDefault()
+
+    var $this = $(this),
+      count = $this.attr('data-count'),
+      active = $this.hasClass('active')
+
+    $.fn.noop = $.noop
+    $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active')
+  })
 
   var mixer = mixitup('.newest-products__items')
 })
