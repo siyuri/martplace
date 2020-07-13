@@ -7,7 +7,7 @@ $(function () {
     prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
   })
-  $('.newest-product__like').on('click', function (event, count) {
+  $('.product-card__bottom-like').on('click', function (event, count) {
     event.preventDefault()
 
     var $this = $(this),

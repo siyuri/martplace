@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Martplace</title>
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -24,32 +23,25 @@
             </a>
             <div class="header__user-panel">
               <a class="header__register-link button" href="#">Become a Seller</a>
-              <ul class="header__icons">
-                <li class="header__icon-item">
-                  <a class="header_icon-btn" href="#">
-                    <svg class="lnr lnr-alarm">
-                      <use xlink:href="#lnr-alarm"></use>
-                    </svg>
-                    <span class="header__icon-badge">25</span>
-                  </a>
-                </li>
-                <li class="header__icon-item">
-                  <a class="header__icon-btn" href="#">
-                    <svg class="lnr lnr-envelope">
-                      <use xlink:href="#lnr-envelope"></use>
-                    </svg>
-                    <span class="header__icon-badge">6</span>
-                  </a>
-                </li>
-                <li class="header__icon-item">
-                  <a class="header_icon-btn" href="#">
-                    <svg class="lnr lnr-cart">
-                      <use xlink:href="#lnr-cart"></use>
-                    </svg>
-                    <span class="header__icon-badge">2</span>
-                  </a>
-                </li>
-              </ul>
+              <div class="header__notification-btns">
+                <a class="header__icon-btn icon-btn--alarm" href="#">
+                  <svg class="lnr lnr-alarm">
+                    <use xlink:href="#lnr-alarm"></use>
+                  </svg>
+                  <span class="header__icon-badge header__icon-badge--alarm">25</span>
+                </a>
+                <a class="header__icon-btn icon-btn--envelope" href="#">
+                  <svg class="lnr lnr-envelope">
+                    <use xlink:href="#lnr-envelope"></use>
+                  </svg>
+                  <span class="header__icon-badge header__icon-badge--envelope">6</span>
+                </a>
+                <a class="header__icon-btn icon-btn--cart" href="#">
+                  <svg class="lnr lnr-cart">
+                    <use xlink:href="#lnr-cart"></use>
+                  </svg>
+                  <span class="header__icon-badge header__icon-badge--cart">2</span>
+                </a></div>
               <div class="header__user-info">
                 <a class="header__user-avatar" href="#">
                   <img class="header__user-img user-avatar" src="images/avatar.jpg" alt="user avatar">
@@ -59,6 +51,7 @@
                   <span class="header__user-balance">$20.45</span>
                 </a>
               </div>
+
             </div>
           </div>
 
@@ -227,13 +220,13 @@
                     </a>
                   </div>
                 </div>
-                <div class="slider-featured__product-card product-card">
+                <div class="slider-featured__product-card product-card-top">
                   <a class="product-card__title title" href="#">
                     One Page Resume Template
                   </a>
                   <div class="product-card__tags">
                     <img class="product-card__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                    <a class="product-card__author" href="#">
+                    <a class="product-card__author-text" href="#">
                       AazzTech
                     </a>
                     <a class="product-card__category category-tag category-tag--wordpress">
@@ -320,7 +313,7 @@
               <div class="newest-products__filter-btn">
                 <button class="newest-products__filterby-btn" type="button">
                   Filter by: <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-v"
-                    class="svg-inline--fa fa-ellipsis-v fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg"
+                    class="filterby-btn__dots fa-ellipsis-v fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 192 512">
                     <path fill="currentColor"
                       d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z">
@@ -359,254 +352,336 @@
           </div>
         </div>
         <div class="newest-products__items">
-          <div class="newest-products__item mix category-plugin product-item--stars" data-order="1">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+          <div class="newest-products__item mix category-plugin product-card" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <div class="newest-product__info-top">
-                <a class="newest-product__title title" href="#">
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
                   E-commerce Shopping Cart
                 </a>
-                <div class="newest-product__info-line">
-                  <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author" href="#">
-
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
                     Theme-Valley </a>
-                  <a class="newest-product__category product-card__category category-tag category-tag--plugin" href="#">
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
                     Plugin
                   </a>
                 </div>
-
-                <p class="newest-product__description product-card__description">
+                <p class="newest-product__description product-card__description product-card__top-description">
                   Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                   the mattis, leo quam aliquet congue.
                 </p>
               </div>
-              <div class="newest-product__review product-card__review">
-                <div class="card-review__left">
-                  <a class="newest-product__price product-card__price-range">$20</a>
-                  <a class="newest-product__like btn btn-counter" href="#" data-count="60">
-                    <span><svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16" aria-hidden="true"
-                        focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg></span>
-                  </a></div>
-                <div class="trystar">
-                  <div class="newest-product__star star-rating"></div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
                 </div>
-                <a href="#" class="newest-product__cart">
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
                   68
                 </a>
-
-
-                <!-- TODO - likes/backet/starrating -->
               </div>
             </div>
           </div>
 
-          <div class="newest-products__item  mix category-wordpress" data-order="2">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+          <div class="newest-products__item mix category-plugin product-card product-card--stars" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
+                    Plugin
+                  </a>
+                </div>
+                <p class="newest-product__description product-card__description product-card__top-description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                </div>
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
+                  68
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="newest-products__item mix category-wordpress" data-order="3">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+          <div class="newest-products__item mix category-plugin product-card" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
+                    Plugin
+                  </a>
+                </div>
+                <p class="newest-product__description product-card__description product-card__top-description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                </div>
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
+                  68
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="newest-products__item mix category-plugin" data-order="4">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+          <div class="newest-products__item mix category-plugin product-card" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
+                    Plugin
+                  </a>
+                </div>
+                <p class="newest-product__description product-card__description product-card__top-description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                </div>
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
+                  68
+                </a>
               </div>
             </div>
           </div>
-          <div class="newest-products__item mix category-plugin" data-order="5">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+
+          <div class="newest-products__item mix category-plugin product-card" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
+                    Plugin
+                  </a>
+                </div>
+                <p class="newest-product__description product-card__description product-card__top-description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                </div>
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
+                  68
+                </a>
               </div>
             </div>
           </div>
-          <div class="newest-products__item  mix category-ui" data-order="6">
-            <div class="newest-product__preview">
-              <img class="newest-product__img" src="images/slider-featured-1.jpg"
+
+          <div class="newest-products__item mix category-plugin product-card" data-order="1">
+            <div class="newest-product__preview product-card__preview">
+              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
                 alt="pretty green template for iPhone">
-              <div class="newest-product__buttons buttons--hover-decoration">
-                <a href="#" class="newest-product__item-link item-link button">
+              <div class="newest-product__buttons preview-btn">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   More info
                 </a>
-                <a href="#" class="newest-product__item-link item-link button">
+                <a href="#" class="newest-product__item-link button preview-btn__link">
                   Live Demo
                 </a>
               </div>
             </div>
-            <div class="newest-product__info">
-              <a class="newest-product__title title" href="#">
-                E-commerce Shopping Cart
-              </a>
-              <a class="newest-product__author product-card__author" href="#">
-                <img class="newest-product__author-avatar user-avatar" src="images/avatar.jpg" alt="user avatar">
-                Theme-Valley
-              </a>
-              <a class="newest-product__category product-card__category" href="#">
-                Plugin
-              </a>
-              <p class="newest-product__description product-card__description">
-                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                quam
-                aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                mattis, leo quam aliquet congue justo ut scelerisque.
-              </p>
-              <div class="newest-product__review product-card__review">
-                <button class="newest-product__price product-card__price-range" type="button">$20</button>
-                <!-- TODO - likes/backet/starrating -->
+            <div class="newest-product__info product-card__info">
+              <div class="newest-product__info-top product-card__info-top">
+                <a class="newest-product__title title product-card__top-title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="newest-product__info-line product-card__top-author">
+                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                    src="images/avatar.jpg" alt="user avatar">
+                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                    Theme-Valley </a>
+                  <a class="newest-product__category product-card__category category-tag category-tag--plugin product-card__top-category"
+                    href="#">
+                    Plugin
+                  </a>
+                </div>
+                <p class="newest-product__description product-card__description product-card__top-description">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="newest-product__review product-card__review product-card__info-bottom">
+                <div class="card-review__left product-card__bottom-left">
+                  <a class="newest-product__price product-card__price-range product-card__bottom-price" href="#">$20</a>
+                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
+                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
+                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                      </path>
+                    </svg>
+                  </a>
+                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                </div>
+                <a href="#" class="newest-product__cart product-card__bottom-cart">
+                  68
+                </a>
               </div>
             </div>
           </div>
+
 
 
         </div>
       </div>
+    </div>
   </section>
-
-
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>

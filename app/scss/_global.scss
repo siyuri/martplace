@@ -35,8 +35,6 @@ body {
 }
 
 .container-fluid--sliced {
-  // height: 100%;
-  // background: linear-gradient($bg-grey 50%, #ffffff 50%);
   background: #fff;
   box-shadow: inset 0 100px 0 0 $bg-grey
 }
@@ -49,14 +47,7 @@ body {
   background: #eff1f5;
 }
 
-.star-rating {
-  visibility: hidden;
-  width: 16px;
-  height: 16px;
-  display: inline;
-}
-
-.product-item--stars {
+.product-card--stars {
   .star-rating {
     visibility: visible;
   }
@@ -64,7 +55,6 @@ body {
 
 .button {
   font-size: 0.875rem;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
   background-color: $theme-color-blue;
   color: #fff;
   border-radius: 2em;
@@ -72,10 +62,11 @@ body {
   cursor: pointer;
 }
 
+
+
 .lnr {
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: -50%;
+  width: 1.2em;
+  height: 1.2em;
   fill: #7e8fa1;
 }
 
@@ -111,15 +102,6 @@ body {
   margin-bottom: 1.667em;
 }
 
-.category-tag {
-
-  color: $theme-color-purple;
-  padding-left: 29px;
-  margin-top: 2px;
-  cursor: pointer;
-  outline: transparent;
-}
-
 .category-tag--wordpress,
 .category-tag--plugin {
   background: url(../images/wordpress.svg) no-repeat;
@@ -138,75 +120,3 @@ body {
   background-size: 16px 16px;
   background-position: left;
 }
-
-// .category-logo {
-//   width: 16px;
-//   height: 16px;
-//   fill: $theme-color-purple;
-//   margin-top: 2px;
-// }
-
-.product-card__description {
-  -ms-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -ms-line-clamp: 3;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  display: -webkit-box;
-  display: box;
-  word-wrap: break-word;
-  -webkit-box-orient: vertical;
-  box-orient: vertical;
-
-}
-
-.svg-inline--fa {
-  width: 10px;
-  height: 10px;
-}
-
-.newest-product__heart {
-  width: 16px;
-  height: 16px;
-}
-
-.newest-product__like {
-  background: transparent;
-  outline: transparent;
-  fill: $theme-color-purple;
-
-}
-
-.btn-counter {
-  margin-left: 15px;
-  margin-right: 39px;
-  display: inline-block;
-  height: 16px;
-  position: relative;
-  font-size: .9rem;
-  text-decoration: none;
-
-  &:focus,
-  &:active {
-    fill: rgb(0, 48, 222);
-  }
-}
-
-.btn-counter:after,
-.btn-counter:hover:after {
-  text-shadow: none;
-}
-
-.btn-counter:after {
-  padding: 0 8px;
-  color: #6f7d8d;
-  content: attr(data-count);
-  left: 100%;
-  position: absolute;
-  top: -2px;
-}
-
-// .btn-counter:before {
-//   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
-// }
