@@ -18,5 +18,16 @@ $(function () {
     $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active')
   })
 
+  $('.star-rating').raty({
+    path: null,
+    starHalf: '../images/star-half.png',
+    starOff: '../images/star-off.png',
+    starOn: '../images/star-on.png',
+    score: 4.5,
+    readOnly: true,
+    half: true,
+    halfShow: true,
+    space: false
+  })
   var mixer = mixitup('.newest-products__items')
 })

@@ -49,6 +49,18 @@ body {
   background: #eff1f5;
 }
 
+.star-rating {
+  visibility: hidden;
+  width: 16px;
+  height: 16px;
+  display: inline;
+}
+
+.product-item--stars {
+  .star-rating {
+    visibility: visible;
+  }
+}
 
 .button {
   font-size: 0.875rem;

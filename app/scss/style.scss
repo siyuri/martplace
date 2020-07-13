@@ -2,6 +2,7 @@
 @import "libs";
 @import "fonts";
 @import "global";
+@import "product-card";
 
 .header {
   &__inner {
@@ -750,6 +751,19 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 20px;
+  }
+
+  &__star {
+    margin-right: 38px;
+  }
+
+  &__cart {
+    padding-left: 30px;
+    color: $theme-color-blue;
+    font-size: .9rem;
+    background: url(../images/lnr-cart.svg) no-repeat;
+    background-size: 16px 16px;
+    background-position: left;
   }
 }
 

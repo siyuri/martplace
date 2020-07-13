@@ -33,6 +33,7 @@ gulp.task('css', function () {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
       'node_modules/slick-carousel/slick/slick.css',
+      'node_modules/raty-js/lib/jquery.raty.css'
     ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -59,6 +60,7 @@ gulp.task('js', function () {
   return gulp.src([
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/mixitup/dist/mixitup.js',
+      'node_modules/raty-js/lib/jquery.raty.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
