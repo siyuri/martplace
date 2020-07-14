@@ -420,7 +420,7 @@
   }
 
   &__item-preview {
-    max-width: 48.5%; // ANCHOR pixel-perfect говорит так. кто я такая, чтобы спорить :D
+    flex-basis: 48.5%; // ANCHOR pixel-perfect говорит так. кто я такая, чтобы спорить :D
     height: 450px;
   }
 
@@ -626,16 +626,30 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 360px);
-    height: 530px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-gap: 1.85em;
+    margin-bottom: 3.8em;
   }
 }
 
-.filterby-btn__dots {
-  width: .8em;
-  height: .8em;
+.newest-product {
+  &__allbtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__all {
+    font-size: 1rem;
+    padding: 1rem 2em;
+
+    &:hover {
+      transition: all 2s;
+      transform: scale(1.2);
+      background: linear-gradient(90deg, rgba(115, 71, 193, 1) 0%, rgba(6, 116, 236, 1) 100%);
+    }
+  }
 }
+
 
 
 /*end slider-featured*/
