@@ -11,6 +11,7 @@ html {
 
 a {
   text-decoration: none;
+
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   line-height: 150%;
   overflow-x: hidden;
   transition: all 5s;
+
 }
 
 .container {
@@ -62,7 +64,12 @@ body {
   cursor: pointer;
 }
 
-
+.button--category {
+  background: #f1f3f6;
+  color: #747b86;
+  font-size: .9rem;
+  padding: .4em 1em;
+}
 
 .lnr {
   width: 1.2em;
