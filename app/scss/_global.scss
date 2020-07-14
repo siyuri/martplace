@@ -98,9 +98,11 @@ body {
   color: #000;
   font-size: 1.875rem;
   line-height: 100%;
+  text-transform: capitalize;
 }
 
 .title--top {
+  text-transform: capitalize;
   background-color: #fff;
   width: 100%;
   padding: 2.5em 1.750em;

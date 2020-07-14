@@ -7,6 +7,15 @@ $(function () {
     prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
   })
+
+  $('.follow-slider__items').slick({
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
+  })
+
   $('.product-card__bottom-like').on('click', function (event, count) {
     event.preventDefault()
 
