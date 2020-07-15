@@ -552,6 +552,10 @@
     margin-bottom: 3.2em;
   }
 
+  .title--top {
+    padding-bottom: 1em;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -573,12 +577,25 @@
   &__filterby-btn {
     outline: transparent;
     border: none;
+    background: transparent;
+    padding-bottom: 1em;
     font-size: 1rem;
     line-height: 200%;
     padding-right: 2em;
-    background: url(../images/ellipsis-v-solid.svg) no-repeat; //тонких, если честно, не нашла
-    background-position: right;
-    background-size: .5em;
+    position: relative;
+
+
+    &:before {
+      content: '';
+      width: 1em;
+      height: 1em;
+      top: 20%;
+      right: 10%;
+      position: absolute;
+      background: url(../images/ellipsis-v-solid.svg) no-repeat;
+      background-position: right;
+      background-size: .25em;
+    }
   }
 
   &__filter-btn:hover .newest-products__filterby {
@@ -678,34 +695,348 @@
   }
 }
 
-// .follow-slider {
-//   &__inner {
-//     padding: 7.5em 0;
-//   }
+.follow-slider {
+  &__inner {
+    padding: 7.5em 0;
+  }
 
-//   &__items {
-//     flex-basis: 1140px;
+  &__items {
+    flex-basis: 1140px;
 
-//     .slick-slide {
-//       margin: 0 15px;
-//     }
+    .slick-slide {
+      margin: 0 .95em;
+    }
 
-//     .slick-list {
-//       margin: 0 -15px;
-//     }
-//   }
+    .slick-list {
+      margin: 0 -.95em;
+    }
+  }
 
-//   &__top {
-//     margin-bottom: 3.3em;
-//   }
+  &__top {
+    margin-bottom: 3.3em;
+  }
 
-
-// }
-
-
-
+}
 
 /*end slider-featured*/
 
+/*starts fact-area*/
+.fact-area {
+
+  text-align: center;
+
+  .container-fluid--onecolor {
+    background-color: #212225;
+    padding: 5.5em 0 6em;
+  }
+
+  &__item {
+    padding-top: 5.2em;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 50px;
+      height: 60px;
+    }
+  }
+
+  &__item-number {
+    font-size: 2.25rem;
+    line-height: 165%;
+  }
+
+  .item--terms {
+    color: #feb71d;
+
+    &:before {
+      background: url(../images/lnr-briefcase.svg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 50px 60px;
+
+    }
+  }
+
+  .item--sales {
+    color: #499cb5;
+
+    &:before {
+      background: url(../images/lnr-cloud-download.svg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 50px 60px;
+    }
+  }
+
+  .item--customers {
+    color: #71d14e;
+
+    &:before {
+      background: url(../images/lnr-smile.svg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 50px 60px;
+    }
+  }
+
+  .item--members {
+    color: #ff6a6d;
+
+    &:before {
+      background: url(../images/lnr-users.svg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 50px 60px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-text {
+    font-size: 1.125rem;
+    color: #fff;
+    display: block;
+
+  }
+
+}
+
+/*ends fact-area*/
+
+/*starts advantages*/
+
+.advantages {
+  padding: 7.3em 0;
+  text-align: center;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    color: #000;
+    margin-bottom: .7em;
+  }
+
+  &__text {
+    max-width: 42em;
+    line-height: 185%;
+    margin-bottom: 2.1em;
+  }
+
+  &__title-accent {
+    color: $theme-color-blue;
+    margin-left: .2em;
+
+  }
+
+  &__list {
+
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1.85em;
+    margin-bottom: 3.8em;
+
+  }
+
+  &__item {
+    padding: 3.3em .8em;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 0.245rem;
+    position: relative;
+    list-style: none;
+
+    &:before {
+      content: counter(li, decimal-leading-zero);
+      counter-increment: li;
+      position: absolute;
+      font-weight: 300;
+      color: $theme-color-blue;
+      opacity: 20%;
+      font-size: 2.8rem;
+      top: 7%;
+      left: 5%;
+      width: 48px;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.5rem;
+    padding-top: 4.4em;
+    position: relative;
+    margin-bottom: 1em;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 65px;
+      height: 65px;
+    }
+
+  }
+
+  &__item-text {
+    line-height: 185%;
+  }
+}
+
+.title--payment:before {
+  background: url(../images/lnr-license.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+}
+
+.title--quality:before {
+  background: url(../images/lnr-magic-wand.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+}
+
+.title--security:before {
+  background: url(../images/lnr-lock.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+}
+
+.title--code:before {
+  background: url(../images/lnr-chart-bars.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+}
+
+.title--update:before {
+  background: url(../images/lnr-leaf.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+}
+
+.title--support:before {
+  background: url(../images/lnr-phone.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px 60px;
+
+}
+
+/*ends advantages*/
+
+/*starts activity*/
+
+.activity {
+
+  .container-fluid {
+    display: flex;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__left,
+  &__right {
+    flex-basis: 50%;
+  }
+
+  &__left {
+    background: url(../images/start_left.png) no-repeat;
+    background-position: center;
+  }
+
+  &__right {
+    background: url(../images/start__right.png) no-repeat;
+    background-position: center;
+  }
+
+  &__title {
+    color: #fff;
+    position: relative;
+    font-size: 2.25rem;
+    padding-top: 4em;
+    margin-bottom: 2em;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    padding: 0 190px;
+    margin-bottom: 3em;
+  }
+
+  &__btn {
+    background-color: #fff;
+    max-width: 195px;
+    width: 100%;
+    padding: 1em 0;
+    transition: all .8s;
+    font-size: 1rem;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--purple {
+      color: $theme-color-purple;
+    }
+
+    &--blue {
+      color: $theme-color-blue;
+    }
+
+  }
+
+}
+
+.title--selling {
+  background: url(../images/icon-left.svg) no-repeat;
+  background-position: top center;
+  background-size: 120px 100px;
+
+}
+
+.title--shopping {
+  background: url(../images/icon-right.svg) no-repeat;
+  background-position: top center;
+  background-size: 100px 100px;
+}
+
+
+
+/* ends activity*/
 
 @import "media";

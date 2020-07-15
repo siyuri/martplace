@@ -119,7 +119,7 @@
     height: 1.5em;
     position: relative;
     font-size: .9rem;
-    text-decoration: none;
+
 
     &:after {
       padding: 0 .5em;
@@ -135,6 +135,7 @@
   &__bottom-heart {
     width: 1em;
     height: 1em;
+
   }
 
   &__bottom-rating {
