@@ -417,13 +417,16 @@
   &__item {
     display: flex !important;
     width: 100%;
-    min-height: 450px;
+    height: 450px;
+
   }
 
   &__item-preview {
     flex-basis: 48.5%; // ANCHOR pixel-perfect говорит так. кто я такая, чтобы спорить :D
     width: 100%;
     height: 100%;
+    flex: 1 1 0;
+    overflow: hidden;
   }
 
   &__item-link {
@@ -439,6 +442,7 @@
     width: 51.5%; // ANCHOR pixel-perfect говорит так. кто я такая, чтобы спорить :D
     background-color: #fff;
     padding: 1.2em;
+    height: 100%;
   }
 
   &__item-title {
