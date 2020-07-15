@@ -1,4 +1,5 @@
 $(function () {
+  // slickliders
   $('.slider-featured__products').slick({
     infinite: true,
     arrows: true,
@@ -16,6 +17,7 @@ $(function () {
     nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
   })
 
+  // like
   $('.product-card__bottom-like').on('click', function (event, count) {
     event.preventDefault()
 
@@ -27,6 +29,7 @@ $(function () {
     $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active')
   })
 
+  // raty
   $('.star-rating').raty({
     path: null,
     starHalf: '../images/star-half.png',
@@ -38,5 +41,8 @@ $(function () {
     halfShow: true,
     space: false
   })
-  var mixer = mixitup('.newest-products__items')
+
+  if ($('.newest-products__items').length) {
+    var mixer = mixitup('.newest-products__items')
+  }
 })

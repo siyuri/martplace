@@ -60,7 +60,10 @@ gulp.task('js', function () {
   return gulp.src([
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/mixitup/dist/mixitup.js',
-      'node_modules/raty-js/lib/jquery.raty.js'
+      'node_modules/raty-js/lib/jquery.raty.js',
+      'node_modules/waypoints/lib/jquery.waypoints.js',
+      'node_modules/counterup2/dist/index.js'
+
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
