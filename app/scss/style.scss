@@ -740,13 +740,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
   }
 
   &__item {
 
     padding-top: 5.2em;
     position: relative;
+
 
     &:before {
       content: '';
@@ -809,8 +809,6 @@
     }
   }
 
-
-
   &__item-text {
     font-size: 1.125rem;
     color: #fff;
@@ -825,7 +823,7 @@
 /*starts advantages*/
 
 .advantages {
-  padding: 7.3em 0;
+  padding: 7.3em 0 3.8em;
   text-align: center;
 
   &__top {
@@ -844,12 +842,6 @@
     max-width: 42em;
     line-height: 185%;
     margin-bottom: 2.1em;
-  }
-
-  &__title-accent {
-    color: $theme-color-blue;
-    margin-left: .2em;
-
   }
 
   &__list {
@@ -966,8 +958,8 @@
 
   &__left,
   &__right {
-    padding: 2em;
-    flex: 1 0 50%;
+    padding: 6.4em 0 4em;
+    flex: 1 0 50%; //ANCHOR и вопрос вот по этому вот. как сделать, чтоб они раньше начали прыгать, но при этом оставлять 50% шириныв процентах?
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -975,16 +967,18 @@
   }
 
   &__left {
-    background: url(../images/start_left.png) no-repeat;
+    background: url(../images/waves-blue.svg) no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: $theme-color-blue;
 
   }
 
   &__right {
-    background: url(../images/start__right.png) no-repeat;
+    background: url(../images/waves-purple.svg) no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: $theme-color-purple;
   }
 
   &__title {
@@ -992,7 +986,7 @@
     position: relative;
     font-size: 2.25rem;
     padding-top: 4em;
-    margin-bottom: 2em;
+    margin-bottom: .8em;
 
     &:before {
       position: absolute;
@@ -1006,7 +1000,7 @@
 
   &__text {
     color: #FFF;
-    padding: 0 190px;
+    padding: 0 11em;
     margin-bottom: 3em;
   }
 
@@ -1051,5 +1045,110 @@
 
 
 /* ends activity*/
+
+
+/* feedback starts*/
+
+
+.feedback {
+  text-align: center;
+  padding: 7.4em 0;
+
+  &__title {
+    font-size: 2.25rem;
+    margin-bottom: .6em;
+
+  }
+
+  &__text {
+    margin-bottom: 3.6em;
+    padding: 0 13em;
+    line-height: 180%;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.7em;
+  }
+
+  &__card {
+    padding: 3em 0;
+    margin-bottom: 2em;
+
+    &+.feedback__card {
+      margin-left: 1.5em;
+    }
+
+
+    flex: 1 0 555px; //NOTE  вот тут тоже самое, я хочу чтоб было 1 0 45%, но с 45% оно вообще не прыгает при адаптиве
+    background: #fff;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    border-radius: .245rem;
+    position: relative;
+    border-left: 2px solid $theme-color-blue;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: url(../images/lnr-bubble.svg);
+      width: 3.9em;
+      height: 3.9em;
+      background-repeat: no-repeat;
+      background-size: 3.9em 3.9em;
+      top: 15%;
+      right: 8%;
+
+    }
+  }
+
+  &__card-author {
+    padding-left: 2em;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2em;
+    color: #000;
+    cursor: pointer;
+  }
+
+
+  &__card-avatar {
+    width: 4em;
+    height: 4em;
+    margin-right: .8em;
+
+  }
+
+  &__card-profession {
+    display: block;
+    color: $text;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 200%;
+  }
+
+  &__card-text {
+    padding: 0 2.3em;
+    line-height: 180%;
+    text-align: start;
+  }
+
+  &__btn {
+    padding: 1.3em 3em;
+
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(115, 71, 193, 1) 0%, rgba(6, 116, 236, 1) 100%);
+    }
+
+  }
+
+}
+
+
+
+/*feedback ends*/
+
 
 @import "media";
