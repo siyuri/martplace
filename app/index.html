@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Martplace</title>
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link id="favicon" rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -19,39 +19,35 @@
           <!-- NOTE - header top start -->
 
           <div class="header__top">
-            <a href="#" class="header__logo">
+            <a class="header__logo" href="#">
               <img class="header__logo-img" src="../images/header_logo.png" alt="logo image">
             </a>
             <div class="header__user-panel">
               <a class="header__register-link button" href="#">Become a Seller</a>
               <div class="header__notification-btns">
-                <a class="header__icon-btn icon-btn--alarm" href="#">
-                  <svg class="lnr lnr-alarm">
-                    <use xlink:href="#lnr-alarm"></use>
-                  </svg>
+                <a class="header__icon-btn header__icon-btn--alarm" href="#">
+                  notification
                   <span class="header__icon-badge header__icon-badge--alarm">25</span>
                 </a>
-                <a class="header__icon-btn icon-btn--envelope" href="#">
-                  <svg class="lnr lnr-envelope">
-                    <use xlink:href="#lnr-envelope"></use>
-                  </svg>
+                <a class="header__icon-btn header__icon-btn--envelope" href="#">
+                  your mail
                   <span class="header__icon-badge header__icon-badge--envelope">6</span>
                 </a>
-                <a class="header__icon-btn icon-btn--cart" href="#">
-                  <svg class="lnr lnr-cart">
-                    <use xlink:href="#lnr-cart"></use>
-                  </svg>
+                <a class="header__icon-btn header__icon-btn--cart" href="#">
+                  your cart
                   <span class="header__icon-badge header__icon-badge--cart">2</span>
                 </a></div>
-              <div class="header__user-info">
-                <a class="header__user-avatar" href="#">
-                  <img class="header__user-img user-avatar" src="images/avatar.jpg" alt="user avatar">
-                </a>
-                <a class="header__user-nickname user-nickname" href="#">
-                  Taofiq Hakim
-                  <span class="header__user-balance">$20.45</span>
-                </a>
-              </div>
+              <a class="header__user-info" href="#">
+                <img class="header__user-avatar" src="images/avatar.jpg" alt="user avatar">
+                <div class="header__user-profile">
+                  <span class="header__user-nickname user-nickname">
+                    Taofiq Hakim
+                  </span>
+                  <span class="header__user-balance">
+                    $20.45
+                  </span>
+                </div>
+              </a>
 
             </div>
           </div>
@@ -92,11 +88,12 @@
                 </ul>
               </nav>
               <form class="header__bottom-search search-form">
-                <input type="search" class="search-form__input search-input" placeholder="Search product here...">
-                <button class="search-form__btn button" type="submit">
-                  <svg class="search-form__btn-svg lnr lnr-magnifier">
-                    <use xlink:href="#lnr-magnifier"></use>
-                  </svg></button>
+                <label class="header__bottom-label" for="search">
+                  <input class="search-form__input search-input" type="search" placeholder="Search product here..."
+                    name="search" id="search">
+                </label>
+                <button class="search-form__btn button" type="submit">search button
+                </button>
               </form>
             </div>
           </div>
@@ -107,1244 +104,1467 @@
 
   <!-- NOTE - header__bottom ends -->
 
+  <main class="main">
+    <!-- NOTE - top section starts -->
 
-  <!-- NOTE - top section starts -->
+    <section class="top">
+      <div class="container-fluid--gradient">
+        <div class="container">
+          <div class="top__inner">
+            <div class="top__title">
+              Create Your Own
+              <span class="top__title-accent">
+                Digital Product Marketplace
+              </span>
+            </div>
+            <p class="top__text">
+              MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
+            </p>
+            <div class="top__buttons">
+              <a class="top__button button" href="">View All Products</a>
+              <a class="top__button button" href="">Popular Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="top">
-    <div class="container-fluid--gradient">
+    <!-- NOTE - top section ends -->
+
+    <!-- NOTE - about section starts -->
+
+    <section class="about">
       <div class="container">
-        <div class="top__inner">
-          <div class="top__title">
-            Create Your Own
-            <span class="top__title-accent">
-              Digital Product Marketplace
+        <div class="about__inner">
+          <div class="about__search">
+            <form class="about__search-form" action="">
+              <label class="about__search-label" for="search-product">
+                <input class="about__search-input search-input" name="search-product" id="search-product" type="search"
+                  placeholder="Search your products...">
+              </label>
+              <div class="about__search-select-wrapper">
+                <select class="about__search-select" name="search-category" id="select-products">
+                  <option value="all">All Categories</option>
+                  <option value="newest">Newest</option>
+                  <option value="popular">Popular</option>
+                </select>
+              </div>
+              <button class="about__search-btn button" type="submit">
+                Search Now
+              </button>
+            </form>
+          </div>
+          <div class="about__box">
+            <article class="about__box-item">
+              <span class="about__box-title about__box-title--ux title"
+                style="background-image: url(images/about_box-1.png)">
+                Best UX Research
+              </span>
+              <p class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </article>
+            <article class="about__box-item">
+              <span class="about__box-title about__box-title--responsive title"
+                style="background-image: url(images/about_box-2.png)">
+                Fully Responsive
+              </span>
+              <p class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </article>
+            <article class="about__box-item">
+              <span class="about__box-title about__box-title--buy title"
+                style="background-image: url(images/about_box-3.png)">
+                Buy & Sell Easily
+              </span>
+              <p class="about__box-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE end about -->
+
+    <!-- NOTE - Start slider-featured -->
+
+    <section class="slider-featured">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          <div class="slider-featured__inner">
+            <div class="slider-featured__top title--top">
+              <span class="slider-featured__title title">
+                Weekly Featured Products
+              </span>
+            </div>
+            <div class="slider-featured__products">
+              <article class="slider-featured__item product-card product-card--stars">
+                <div class="slider-featured__item-preview product-card__preview">
+                  <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="slider-featured__item-buttons preview-btn">
+                    <a class="slider-featured__item-link button preview-btn__link" ref="#">
+                      More info
+                    </a>
+                    <a class="slider-featured__item-link button preview-btn__link" ref="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="slider-featured__item-info product-card__info">
+                  <div class="slider-featured__item-info-top product-card__info-top">
+                    <a class="slider-featured__item-title title product-card__top-title" href="#">
+                      One Page Resume Template
+                    </a>
+                    <div class="slider-featured__item-author product-card__top-author">
+                      <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="slider-featured__item-name product-card__top-name" href="#">
+                        AazzTech </a>
+                      <a class="slider-featured__item-category category-tag--plugin product-card__top-category"
+                        href="#">
+                        WordPress
+                      </a>
+                    </div>
+                    <p class="slider-featured__item-description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the
+                      mattis, leo quam aliquet congue justo ut scelerisque.
+                    </p>
+                    <div class="slider-featured__category-filter">
+                      <a class="slider-featured__category-link button button--category" href="#">website
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#">plugin
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#">landing page
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider-featured__item-bottom product-card__info-bottom">
+                    <div class="slider-featured__item-left product-card__bottom-left">
+                      <span class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <button class="slider-featured__item-cart product-card__bottom-cart" type="submit"
+                        data-count="634">
+                      </button>
+                    </div>
+                    <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
+                  </div>
+                </div>
+              </article>
+              <article class="slider-featured__item product-card product-card--stars">
+                <div class="slider-featured__item-preview product-card__preview">
+                  <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="slider-featured__item-buttons preview-btn">
+                    <a class="slider-featured__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="slider-featured__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="slider-featured__item-info product-card__info">
+                  <div class="slider-featured__item-info-top product-card__info-top">
+                    <a class="slider-featured__item-title title product-card__top-title" href="#">
+                      One Page Resume Template
+                    </a>
+                    <div class="slider-featured__item-author product-card__top-author">
+                      <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="slider-featured__item-name product-card__top-name" href="#">
+                        AazzTech </a>
+                      <a class="slider-featured__item-category category-tag--plugin product-card__top-category"
+                        href="#">
+                        WordPress
+                      </a>
+                    </div>
+                    <p class="slider-featured__item-description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the
+                      mattis, leo quam aliquet congue justo ut scelerisque.
+                    </p>
+                    <div class="slider-featured__category-filter">
+                      <a class="slider-featured__category-link button button--category" href="#">website
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#"
+                        alt="product category plugin">plugin
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#">landing page
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider-featured__item-bottom product-card__info-bottom">
+                    <div class="slider-featured__item-left product-card__bottom-left">
+                      <span class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <button class="slider-featured__item-cart product-card__bottom-cart" type="submit"
+                        data-count="634">
+                      </button>
+                    </div>
+                    <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="slider-featured__item product-card product-card--stars">
+                <div class="slider-featured__item-preview product-card__preview">
+                  <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="slider-featured__item-buttons preview-btn">
+                    <a class="slider-featured__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="slider-featured__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="slider-featured__item-info product-card__info">
+                  <div class="slider-featured__item-info-top product-card__info-top">
+                    <a class="slider-featured__item-title title product-card__top-title" href="#">
+                      One Page Resume Template
+                    </a>
+                    <div class="slider-featured__item-author product-card__top-author">
+                      <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="slider-featured__item-name product-card__top-name" href="#">
+                        AazzTech </a>
+                      <a class="slider-featured__item-category category-tag--plugin product-card__top-category"
+                        href="#">
+                        WordPress
+                      </a>
+                    </div>
+                    <p class="slider-featured__item-description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the
+                      mattis, leo quam aliquet congue justo ut scelerisque.
+                    </p>
+                    <div class="slider-featured__category-filter">
+                      <a class="slider-featured__category-link button button--category" href="#"
+                        alt="product category website">website
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#"
+                        alt="product category plugin">plugin
+                      </a>
+                      <a class="slider-featured__category-link button button--category" href="#"
+                        alt="product category landing page">landing page
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider-featured__item-bottom product-card__info-bottom">
+                    <div class="slider-featured__item-left product-card__bottom-left">
+                      <span class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <button class="slider-featured__item-cart product-card__bottom-cart" type="submit"
+                        data-count="634">
+                      </button>
+                    </div>
+                    <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE - end slider-featured -->
+
+    <!-- NOTE - start newest-products -->
+
+    <section class="newest-products">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          <div class="newest-products__inner">
+            <div class="newest-products__navigation">
+              <div class="newest-products__navigation-inner">
+                <div class="newest-products__top title--top">
+                  <span class="newest-products__title title">Newest Release Products</span>
+                  <div class="newest-products__filter-btn">
+                    <button class="newest-products__filterby-btn" type="submit">
+                      Filter by:
+                    </button>
+                    <div class="newest-products__filterby">
+                      <div class="newest-products__filterby-box">
+                        <button class="newest-products__filter-btn">Trending items</button>
+                        <button class="newest-products__filter-btn">Best seller</button>
+                        <button class="newest-products__filter-btn">Best rating</button>
+                        <button class="newest-products__filter-btn">Low price</button>
+                        <button class="newest-products__filter-btn">High price</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="newest-products__categories">
+                <button class="newest-products__category button button--category" data-filter=".category-plugin"
+                  type="submit">Plugins</button>
+                <button class="newest-products__category button button--category" data-filter=".category-wordpress"
+                  type="submit">WordPress</button>
+                <button class="newest-products__category button button--category" data-filter=".category-html"
+                  type="submit">Site
+                  Template</button>
+                <button class="newest-products__category button button--category" data-filter=".category-psd"
+                  type="submit">PSD
+                  Template</button>
+                <button class="newest-products__category button button--category" data-filter=".category-joomlo"
+                  type="submit">Joomlo</button>
+                <button class="newest-products__category button button--category" data-filter=".category-ui"
+                  type="submit">User
+                  Interface</button>
+                <button class="newest-products__category button button--category" data-filter=".category-landingpage"
+                  type="submit">Landing
+                  Page</button>
+                <button class="newest-products__category button button--category" data-filter=".category-software"
+                  type="submit">Software</button>
+                <button class="newest-products__category button button--category" data-filter=".all" type="submit">All
+                  Products</button>
+              </div>
+            </div>
+            <div class="newest-products__items">
+              <article class="newest-products__item mix category-plugin product-card all" data-order="1">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a href="#" class="newest-product__item-link button preview-btn__link">
+                      More info
+                    </a>
+                    <a href="#" class="newest-product__item-link button preview-btn__link">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      E-commerce Shopping Cart
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        Theme-Valley </a>
+                      <a class="newest-product__category category-tag category-tag--plugin product-card__top-category"
+                        href="#">
+                        Plugin
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$20</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="634">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="newest-products__item mix category-psd product-card all" data-order="2">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      Marketify Coffee Shop
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        EchoTheme </a>
+                      <a class="newest-product__category category-tag category-tag--ps product-card__top-category"
+                        href="#">
+                        PSD
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$18</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="50">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="newest-products__item mix category-html product-card all product-card--stars"
+                data-order="3">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      Bryson - Portfolio Template
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        Artcorner </a>
+                      <a class="newest-product__category category-tag category-tag--html product-card__top-category"
+                        href="#">
+                        HTML
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$10</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="68">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="newest-products__item mix category-plugin product-card all" data-order="4">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      E-commerce Shopping Cart
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        Theme-Valley </a>
+                      <a class="newest-product__category category-tag category-tag--plugin product-card__top-category"
+                        href="#">
+                        Plugin
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$10-50</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="68">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="newest-products__item mix category-psd product-card all" data-order="5">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      Marketify Coffee Shop
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        EchoTheme </a>
+                      <a class="newest-product__category category-tag category-tag--ps product-card__top-category"
+                        href="#">
+                        PSD
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$18-50</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="634">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="newest-products__item mix category-html product-card all product-card--stars"
+                data-order="6">
+                <div class="newest-product__preview product-card__preview">
+                  <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="newest-product__buttons preview-btn">
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="newest-product__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="newest-product__info product-card__info">
+                  <div class="newest-product__info-top product-card__info-top">
+                    <a class="newest-product__title title product-card__top-title" href="#">
+                      Bryson - Portfolio Template
+                    </a>
+                    <div class="newest-product__info-line product-card__top-author">
+                      <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="newest-product__author product-card__author product-card__top-name" href="#">
+                        Artcorner </a>
+                      <a class="newest-product__category category-tag category-tag--html product-card__top-category"
+                        href="#">
+                        HTML
+                      </a>
+                    </div>
+                    <p class="newest-product__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="newest-product__review product-card__review product-card__info-bottom">
+                    <div class="card-review__left product-card__bottom-left">
+                      <span class="newest-product__price product-card__bottom-price" href="#">$10</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="newest-product__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="64">
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="newest-product__allbtn">
+              <a class="newest-product__all button" href="#">All New Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NOTE - newest-items end -->
+
+
+    <!-- NOTE - follow-slider starts-->
+
+    <section class="follow-slider">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          <div class="follow-slider__inner">
+            <div class="follow-slider__top title--top">
+              <span class="follow-slider__title title">
+                Your Followers Feed
+              </span>
+            </div>
+            <div class="follow-slider__items">
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <a class="follow-slider__title title product-card__top-title" href="#">
+                      E-commerce Shopping Cart
+                    </a>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        Theme-Valley </a>
+                      <a class="follow-slider__category category-tag category-tag--plugin product-card__top-category"
+                        href="#">
+                        Plugin
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$20</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="246">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <a class="follow-slider__title title product-card__top-title" href="#">
+                      Marketify Coffee Shop
+                    </a>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        EchoTheme </a>
+                      <a class="follow-slider__category category-tag category-tag--ps product-card__top-category"
+                        href="#">
+                        PSD
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$20</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="634">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <a class="follow-slider__title title product-card__top-title" href="#">
+                      Bryson - Portfolio Template
+                    </a>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        Artcorner </a>
+                      <a class="follow-slider__category category-tag category-tag--html product-card__top-category"
+                        href="#">
+                        HTML
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$10</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="634">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="634">
+                    </button>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        Theme-Valley </a>
+                      <a class="follow-slider__category category-tag category-tag--plugin product-card__top-category"
+                        href="#">
+                        Plugin
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$20</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="245">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <a class="follow-slider__title title product-card__top-title" href="#">
+                      Marketify Coffee Shop
+                    </a>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        EchoTheme </a>
+                      <a class="follow-slider__category category-tag category-tag--ps product-card__top-category"
+                        href="#">
+                        PSD
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$20</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="46">
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="follow-slider__item product-card">
+                <div class="follow-slider__preview product-card__preview">
+                  <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
+                    alt="pretty green template for iPhone">
+                  <div class="follow-slider__buttons preview-btn">
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      More info
+                    </a>
+                    <a class="follow-slider__item-link button preview-btn__link" href="#">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="follow-slider__info product-card__info">
+                  <div class="follow-slider__info-top product-card__info-top">
+                    <a class="follow-slider__title title product-card__top-title" href="#">
+                      Bryson - Portfolio Template
+                    </a>
+                    <div class="follow-slider__info-line product-card__top-author">
+                      <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
+                        src="images/avatar.jpg" alt="user avatar">
+                      <a class="follow-slider__author product-card__author product-card__top-name" href="#">
+                        Artcorner </a>
+                      <a class="follow-slider__category category-tag category-tag--html product-card__top-category"
+                        href="#">
+                        HTML
+                      </a>
+                    </div>
+                    <p class="follow-slider__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="follow-slider__review product-card__review product-card__info-bottom">
+                    <div class="follow-slider__left product-card__bottom-left">
+                      <span class="follow-slider__price product-card__bottom-price" href="#">$10</span>
+                      <button class="slider-featured__item-like btn btn-counter product-card__bottom-like" type="submit"
+                        data-count="46">
+                      </button>
+                      <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
+                    </div>
+                    <button class="slider-featured__item-cart product-card__bottom-cart" type="submit" data-count="68">
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE start fact-area -->
+
+    <section class="fact-area">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          <div class="fact-area__inner">
+            <div class="fact-area__item item--terms">
+              <span class="fact-area__item-number counter">38,436</span>
+              <span class="fact-area__item-text">terms for sale</span>
+            </div>
+            <div class="fact-area__item  item--sales">
+              <span class="fact-area__item-number counter">3,736</span>
+              <span class="fact-area__item-text">total sales</span>
+            </div>
+            <div class="fact-area__item  item--customers">
+              <span class="fact-area__item-number counter">2,736</span>
+              <span class="fact-area__item-text">happy customers</span>
+            </div>
+            <div class="fact-area__item  item--members">
+              <span class="fact-area__item-number counter">25,736</span>
+              <span class="fact-area__item-text">members</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE end fact-area -->
+
+    <!-- NOTE start advantages -->
+
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages__inner">
+          <div class="advantages__top">
+            <span class="advantages__title title">
+              Why Choose<span class="advantages__title-accent title--accent">MartPlace</span>
             </span>
+            <p class="advantages__text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
+              nemis
+              omnis fugats. Lid est laborum dolo rumes fugats untras.</p>
           </div>
-          <p class="top__text">
-            MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
+          <ol class="advantages__list">
+            <li class="advantages__item ">
+              <span class="advantages__item-title title title--payment">
+                One Time Payment
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+            <li class="advantages__item ">
+              <span class="advantages__item-title title--quality title">
+                Quality Products
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+            <li class="advantages__item ">
+              <span class="advantages__item-title title--security title">
+                100% Secure Payment
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+            <li class="advantages__item ">
+              <span class="advantages__item-title title--code title">
+                Well Organized Code
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <span class="advantages__item-title title--update title">
+                Life Time Free Update
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+            <li class="advantages__item ">
+              <span class="advantages__item-title title--support title">
+                Fast and Friendly Support
+              </span>
+              <p class="advantages__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE end advantages -->
+
+    <!-- NOTE start activity -->
+
+    <section class="activity">
+      <div class="container-fluid">
+        <div class="activity__inner">
+          <article class="activity__left">
+            <span class="activity__title title title--selling">
+              Sell your product
+            </span>
+            <p class="activity__text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+              the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+            </p>
+            <a class="activity__btn activity__btn--blue button" href="#">
+              Become an Author
+            </a>
+          </article>
+
+          <article class="activity__right">
+            <span class="activity__title title title--shopping">
+              Sell your product
+            </span>
+            <p class="activity__text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+              the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+            </p>
+            <a class="activity__btn activity__btn--purple button" href="#">
+              Start Shopping
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE end activity -->
+
+    <!-- NOTE start feedback section -->
+
+    <section class="feedback">
+      <div class="container">
+        <div class="feedback__inner">
+          <span class="feedback__title title">
+            Our Clients <span class="feedback__title-accent title--accent">
+              Feedback
+            </span></span>
+          <p class="feedback__text">
+            Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est
+            laborum dolo rumes fugats untras.
           </p>
-          <div class="top__buttons">
-            <a class="top__button button" href="">View All Products</a>
-            <a class="top__button button" href="">Popular Products</a>
+          <div class="feedback__cards">
+            <article class="feedback__card">
+              <a class="feedback__card-author">
+                <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
+                <div class="feedback__card-name">
+                  Taofiqul Hakim
+                  <span class="feedback__card-profession">
+                    Product Designer
+                  </span>
+                </div>
+              </a>
+              <p class="feedback__card-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
+                the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__card">
+              <a class="feedback__card-author">
+                <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
+                <div class="feedback__card-name">
+                  Taofiqul Hakim
+                  <span class="feedback__card-profession">
+                    Product Designer
+                  </span>
+                </div>
+              </a>
+              <p class="feedback__card-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
+                the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__card">
+              <a class="feedback__card-author">
+                <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
+                <div class="feedback__card-name">
+                  Taofiqul Hakim
+                  <span class="feedback__card-profession">
+                    Product Designer
+                  </span>
+                </div>
+              </a>
+              <p class="feedback__card-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
+                the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__card">
+              <a class="feedback__card-author">
+                <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
+                <div class="feedback__card-name">
+                  Saifullah Al Murtafee
+                  <span class="feedback__card-profession">
+                    Product Designer
+                  </span>
+                </div>
+              </a>
+              <p class="feedback__card-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
+                the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+          </div>
+          <a class="feedback__btn button" href="#">View All Reviews</a>
+        </div>
+      </div>
+    </section>
+    <!-- NOTE ends feedback section -->
+
+    <!-- NOTE start news section -->
+    <section class="news">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          <div class="news__inner">
+            <div class="news__top">
+              <span class="news__title title">
+                Latest <span class="news__title-accent title--accent">
+                  News
+                </span></span>
+              <p class="news__text">
+                Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est
+                laborum dolo rumes fugats untras.
+              </p>
+            </div>
+            <div class="news__items">
+              <article class="news__item product-card">
+                <div class="news__preview product-card__preview">
+                  <a class="news__img-link" href="#">
+                    <img class="news__img product-card__img" src="images/slider-featured-1.jpg"
+                      alt="pretty green template for iPhone">
+                  </a>
+                </div>
+                <div class="news__info product-card__info">
+                  <div class="news__info-top product-card__info-top">
+                    <a class="news__title-card title product-card__top-title" href="#">
+                      Web Design Trends in 2017
+                    </a>
+                    <p class="news__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="news__review product-card__review product-card__info-bottom">
+                    <div class="news__left product-card__bottom-left">
+                      <time class="news__date" datetime="24-02.2017">24 Feb 2017</time>
+                    </div>
+                    <div class="news__left product-card__bottom-right">
+                      <a class="news__comments" href="#">45</a>
+                      <span class="news__views" data-count="345"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news__item product-card">
+                <div class="news__preview product-card__preview">
+                  <a class="news__img-link" href="#">
+                    <img class="news__img product-card__img" src="images/slider-featured-1.jpg"
+                      alt="pretty green template for iPhone">
+                  </a>
+                </div>
+                <div class="news__info product-card__info">
+                  <div class="news__info-top product-card__info-top">
+                    <a class="news__title-card title product-card__top-title" href="#">
+                      Web Design Trends in 2017
+                    </a>
+                    <p class="news__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="news__review product-card__review product-card__info-bottom">
+                    <div class="news__left product-card__bottom-left">
+                      <time class="news__date" datetime="24-02.2017">24 Feb 2017</time>
+                    </div>
+                    <div class="news__left product-card__bottom-right">
+                      <a class="news__comments" href="#">45</a>
+                      <span class="news__views" data-count="345"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news__item product-card">
+                <div class="news__preview product-card__preview">
+                  <a class="news__img-link" href="#">
+                    <img class="news__img product-card__img" src="images/slider-featured-1.jpg"
+                      alt="pretty green template for iPhone">
+                  </a>
+                </div>
+                <div class="news__info product-card__info">
+                  <div class="news__info-top product-card__info-top">
+                    <a class="news__title-card title product-card__top-title" href="#">
+                      Web Design Trends in 2017
+                    </a>
+                    <p class="news__description product-card__top-description">
+                      Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.
+                    </p>
+                  </div>
+                  <div class="news__review product-card__review product-card__info-bottom">
+                    <div class="news__left product-card__bottom-left">
+                      <time class="news__date" datetime="24-02.2017">24 Feb 2017</time>
+                    </div>
+                    <div class="news__left product-card__bottom-right">
+                      <a class="news__comments" href="#">45</a>
+                      <span class="news__views" data-count="345"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- NOTE - top section ends -->
+    <!-- NOTE ends news section -->
 
-  <!-- NOTE - about section starts -->
 
-  <section class="about">
-    <div class="container">
-      <div class="about__inner">
-        <div class="about__search">
-          <form class="about__search-form" action="">
-            <input class="about__search-input search-input" id="search-products" type="search"
-              placeholder="Search your products...">
-            <div class="about__search-select-wrapper">
-              <select class="about__search-select" name="search-category" id="select-products">
-                <option value="all">All Categories</option>
-                <option value="newest">Newest</option>
-                <option value="popular">Popular</option>
-              </select>
-            </div>
-            <button class="about__search-btn button" type="submit">
-              Search Now
-            </button>
-          </form>
-        </div>
-        <div class="about__box">
-          <div class="about__box-item">
-            <div class="about__box-title about__box-title--ux title">
-              Best UX Research
-            </div>
-            <div class="about__box-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </div>
-          <div class="about__box-item">
-            <div class="about__box-title about__box-title--responsive title">
-              Fully Responsive
-            </div>
-            <div class="about__box-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </div>
-          <div class="about__box-item">
-            <div class="about__box-title about__box-title--buy title">
-              Buy & Sell Easily
-            </div>
-            <div class="about__box-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
+    <!-- NOTE starts guarantee section -->
+    <section class="guarantee">
+      <div class="container">
+        <ul class="guarantee__inner">
+          <li class="guarantee__item guarantee__item--money">30 Days Money Back
+            <span class="guarantee__item--blue">Guarantee</span>
+          </li>
+          <li class="guarantee__item guarantee__item--support">Fast and Friendly
+            <span class="guarantee__item--purple">Support</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- NOTE ends guarantee section -->
+
+    <!-- NOTE - starts join -->
+
+    <section class="join">
+      <div class="container-fluid--gradient">
+        <div class="container">
+          <div class="join__inner">
+            <span class="join__title title">
+              Ready to Join Our Marketplace!
+            </span>
+            <p class="join__text">Over 25,000 designers and developers trust the MartPlace.</p>
+            <div class="join__btn button"> Join Us Today</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- NOTE end about -->
+    <!-- NOTE - ends join -->
+  </main>
 
-  <!-- NOTE - Start slider-featured -->
-
-  <section class="slider-featured">
+  <!-- NOTE starts footer -->
+  <footer class="footer">
     <div class="container-fluid--onecolor">
       <div class="container">
-        <div class="slider-featured__inner">
-          <div class="slider-featured__top title--top">
-            <div class="slider-featured__title title">
-              Weekly Featured Products
-            </div>
-          </div>
-
-          <div class="slider-featured__products">
-
-            <article class="slider-featured__item product-card product-card--stars">
-              <div class="slider-featured__item-preview product-card__preview">
-                <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="slider-featured__item-buttons preview-btn">
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="slider-featured__item-info product-card__info">
-                <div class="slider-featured__item-info-top product-card__info-top">
-                  <a class="slider-featured__item-title title product-card__top-title" href="#">
-                    One Page Resume Template
-                  </a>
-                  <div class="slider-featured__item-author product-card__top-author">
-                    <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="slider-featured__item-name product-card__top-name" href="#">
-                      AazzTech </a>
-                    <a class="slider-featured__item-category category-tag--plugin product-card__top-category" href="#">
-                      WordPress
-                    </a>
-                  </div>
-                  <p class="slider-featured__item-description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                    quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    mattis, leo quam aliquet congue justo ut scelerisque.
-                  </p>
-                  <div class="slider-featured__category-filter">
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category website">website
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category plugin">plugin
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category landing page">landing page
-                    </a>
-                  </div>
-                </div>
-                <div class="slider-featured__item-bottom product-card__info-bottom">
-                  <div class="slider-featured__item-left product-card__bottom-left">
-                    <a class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</a>
-                    <a class="slider-featured__item-like btn btn-counter product-card__bottom-like" href="#"
-                      data-count="46">
-                      <svg
-                        class="slider-featured__item-heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <a href="#" class="slider-featured__item-cart product-card__bottom-cart">
-                      634
-                    </a>
-                  </div>
-                  <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="slider-featured__item product-card product-card--stars">
-              <div class="slider-featured__item-preview product-card__preview">
-                <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="slider-featured__item-buttons preview-btn">
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="slider-featured__item-info product-card__info">
-                <div class="slider-featured__item-info-top product-card__info-top">
-                  <a class="slider-featured__item-title title product-card__top-title" href="#">
-                    One Page Resume Template
-                  </a>
-                  <div class="slider-featured__item-author product-card__top-author">
-                    <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="slider-featured__item-name product-card__top-name" href="#">
-                      AazzTech </a>
-                    <a class="slider-featured__item-category category-tag--plugin product-card__top-category" href="#">
-                      WordPress
-                    </a>
-                  </div>
-                  <p class="slider-featured__item-description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                    quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    mattis, leo quam aliquet congue justo ut scelerisque.
-                  </p>
-                  <div class="slider-featured__category-filter">
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category website">website
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category plugin">plugin
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category landing page">landing page
-                    </a>
-                  </div>
-                </div>
-
-                <div class="slider-featured__item-bottom product-card__info-bottom">
-                  <div class="slider-featured__item-left product-card__bottom-left">
-                    <a class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</a>
-                    <a class="slider-featured__item-like btn btn-counter product-card__bottom-like" href="#"
-                      data-count="46">
-                      <svg
-                        class="slider-featured__item-heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <a href="#" class="slider-featured__item-cart product-card__bottom-cart">
-                      634
-                    </a>
-                  </div>
-                  <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="slider-featured__item product-card product-card--stars">
-              <div class="slider-featured__item-preview product-card__preview">
-                <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="slider-featured__item-buttons preview-btn">
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="slider-featured__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="slider-featured__item-info product-card__info">
-                <div class="slider-featured__item-info-top product-card__info-top">
-                  <a class="slider-featured__item-title title product-card__top-title" href="#">
-                    One Page Resume Template
-                  </a>
-                  <div class="slider-featured__item-author product-card__top-author">
-                    <img class="slider-featured__item-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="slider-featured__item-name product-card__top-name" href="#">
-                      AazzTech </a>
-                    <a class="slider-featured__item-category category-tag--plugin product-card__top-category" href="#">
-                      WordPress
-                    </a>
-                  </div>
-                  <p class="slider-featured__item-description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                    quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    mattis, leo quam aliquet congue justo ut scelerisque.
-                  </p>
-                  <div class="slider-featured__category-filter">
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category website">website
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category plugin">plugin
-                    </a>
-                    <a class="slider-featured__category-link button button--category" href="#"
-                      alt="product category landing page">landing page
-                    </a>
-                  </div>
-                </div>
-                <div class="slider-featured__item-bottom product-card__info-bottom">
-                  <div class="slider-featured__item-left product-card__bottom-left">
-                    <a class="slider-featured__item-price product-card__bottom-price" href="#">$10 - $50</a>
-                    <a class="slider-featured__item-like btn btn-counter product-card__bottom-like" href="#"
-                      data-count="46">
-                      <svg
-                        class="slider-featured__item-heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <a href="#" class="slider-featured__item-cart product-card__bottom-cart">
-                      634
-                    </a>
-                  </div>
-                  <div class="slider-featured__item-star star-rating product-card__bottom-rating"></div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTE - end slider-featured -->
-
-  <!-- NOTE - start newest-products -->
-
-  <section class="newest-products">
-    <div class="container">
-      <div class="newest-products__inner">
-        <div class="newest-products__navigation">
-          <div class="newest-products__navigation-inner">
-            <div class="newest-products__top title--top">
-              <div class="newest-products__title title">Newest Release Products</div>
-              <div class="newest-products__filter-btn">
-                <button class="newest-products__filterby-btn" type="submit">
-                  Filter by:
-                </button>
-                <div class="newest-products__filterby">
-                  <div class="newest-products__filterby-box">
-                    <button class="newest-products__filter-btn">Trending items</button>
-                    <button class="newest-products__filter-btn">Best seller</button>
-                    <button class="newest-products__filter-btn">Best rating</button>
-                    <button class="newest-products__filter-btn">Low price</button>
-                    <button class="newest-products__filter-btn">High price</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="newest-products__categories">
-            <button class="newest-products__category button button--category" data-filter=".category-plugin"
-              type="submit">Plugins</button>
-            <button class="newest-products__category button button--category" data-filter=".category-wordpress"
-              type="submit">WordPress</button>
-            <button class="newest-products__category button button--category" data-filter=".category-html"
-              type="submit">Site
-              Teplate</button>
-            <button class="newest-products__category button button--category" data-filter=".category-psd"
-              type="submit">PSD
-              Template</button>
-            <button class="newest-products__category button button--category" data-filter=".category-joomlo"
-              type="submit">Joomlo</button>
-            <button class="newest-products__category button button--category" data-filter=".category-ui"
-              type="submit">User
-              Interface</button>
-            <button class="newest-products__category button button--category" data-filter=".category-landingpage"
-              type="submit">Landing
-              Page</button>
-            <button class="newest-products__category button button--category" data-filter=".category-software"
-              type="submit">Software</button>
-          </div>
-        </div>
-        <div class="newest-products__items">
-          <article class="newest-products__item mix category-plugin product-card" data-order="1">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  E-commerce Shopping Cart
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    Theme-Valley </a>
-                  <a class="newest-product__category category-tag category-tag--plugin product-card__top-category"
-                    href="#">
-                    Plugin
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$20</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  68
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="newest-products__item mix category-psd product-card" data-order="2">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  Marketify Coffee Shop
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    EchoTheme </a>
-                  <a class="newest-product__category category-tag category-tag--ps product-card__top-category" href="#">
-                    PSD
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$18</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="48">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  50
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="newest-products__item mix category-html product-card product-card--stars" data-order="3">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  Bryson - Portfolio Template
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    Artcorner </a>
-                  <a class="newest-product__category category-tag category-tag--html product-card__top-category"
-                    href="#">
-                    HTML
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$10</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="56">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  68
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="newest-products__item mix category-plugin product-card" data-order="4">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  E-commerce Shopping Cart
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    Theme-Valley </a>
-                  <a class="newest-product__category category-tag category-tag--plugin product-card__top-category"
-                    href="#">
-                    Plugin
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$10-50</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  68
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="newest-products__item mix category-psd product-card" data-order="5">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  Marketify Coffee Shop
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    EchoTheme </a>
-                  <a class="newest-product__category category-tag category-tag--ps product-card__top-category" href="#">
-                    PSD
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$18-50</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="48">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  50
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="newest-products__item mix category-html product-card product-card--stars" data-order="6">
-            <div class="newest-product__preview product-card__preview">
-              <img class="newest-product__img product-card__img" src="images/slider-featured-1.jpg"
-                alt="pretty green template for iPhone">
-              <div class="newest-product__buttons preview-btn">
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  More info
-                </a>
-                <a href="#" class="newest-product__item-link button preview-btn__link">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-            <div class="newest-product__info product-card__info">
-              <div class="newest-product__info-top product-card__info-top">
-                <a class="newest-product__title title product-card__top-title" href="#">
-                  Bryson - Portfolio Template
-                </a>
-                <div class="newest-product__info-line product-card__top-author">
-                  <img class="newest-product__author-avatar user-avatar product-card__top-avatar"
-                    src="images/avatar.jpg" alt="user avatar">
-                  <a class="newest-product__author product-card__author product-card__top-name" href="#">
-                    Artcorner </a>
-                  <a class="newest-product__category category-tag category-tag--html product-card__top-category"
-                    href="#">
-                    HTML
-                  </a>
-                </div>
-                <p class="newest-product__description product-card__description product-card__top-description">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.
-                </p>
-              </div>
-              <div class="newest-product__review product-card__review product-card__info-bottom">
-                <div class="card-review__left product-card__bottom-left">
-                  <a class="newest-product__price product-card__bottom-price" href="#">$10</a>
-                  <a class="newest-product__like btn btn-counter product-card__bottom-like" href="#" data-count="56">
-                    <svg class="newest-product__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                      aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                      </path>
-                    </svg>
-                  </a>
-                  <div class="newest-product__star star-rating product-card__bottom-rating"></div>
-                </div>
-                <a href="#" class="newest-product__cart product-card__bottom-cart">
-                  68
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="newest-product__allbtn">
-          <a class="newest-product__all button" href="#">All New Products</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- NOTE - newest-items end -->
-
-
-  <!-- NOTE - follow-slider starts-->
-
-  <section class="follow-slider">
-    <div class="container-fluid--onecolor">
-      <div class="container">
-        <div class="follow-slider__inner">
-          <div class="follow-slider__top title--top">
-            <div class="follow-slider__title title">
-              Your Followers Feed
-            </div>
-          </div>
-          <div class="follow-slider__items">
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    E-commerce Shopping Cart
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      Theme-Valley </a>
-                    <a class="follow-slider__category category-tag category-tag--plugin product-card__top-category"
-                      href="#">
-                      Plugin
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$20</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="90">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    246
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    Marketify Coffee Shop
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      EchoTheme </a>
-                    <a class="follow-slider__category category-tag category-tag--ps product-card__top-category"
-                      href="#">
-                      PSD
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$20</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    68
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    Bryson - Portfolio Template
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      Artcorner </a>
-                    <a class="follow-slider__category category-tag category-tag--html product-card__top-category"
-                      href="#">
-                      HTML
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$10</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="56">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    68
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    E-commerce Shopping Cart
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      Theme-Valley </a>
-                    <a class="follow-slider__category category-tag category-tag--plugin product-card__top-category"
-                      href="#">
-                      Plugin
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$20</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="90">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    246
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    Marketify Coffee Shop
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      EchoTheme </a>
-                    <a class="follow-slider__category category-tag category-tag--ps product-card__top-category"
-                      href="#">
-                      PSD
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$20</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="0">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    68
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="follow-slider__item product-card">
-              <div class="follow-slider__preview product-card__preview">
-                <img class="follow-slider__img product-card__img" src="images/slider-featured-1.jpg"
-                  alt="pretty green template for iPhone">
-                <div class="follow-slider__buttons preview-btn">
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    More info
-                  </a>
-                  <a href="#" class="follow-slider__item-link button preview-btn__link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-              <div class="follow-slider__info product-card__info">
-                <div class="follow-slider__info-top product-card__info-top">
-                  <a class="follow-slider__title title product-card__top-title" href="#">
-                    Bryson - Portfolio Template
-                  </a>
-                  <div class="follow-slider__info-line product-card__top-author">
-                    <img class="follow-slider__author-avatar user-avatar product-card__top-avatar"
-                      src="images/avatar.jpg" alt="user avatar">
-                    <a class="follow-slider__author product-card__author product-card__top-name" href="#">
-                      Artcorner </a>
-                    <a class="follow-slider__category category-tag category-tag--html product-card__top-category"
-                      href="#">
-                      HTML
-                    </a>
-                  </div>
-                  <p class="follow-slider__description product-card__description product-card__top-description">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="follow-slider__review product-card__review product-card__info-bottom">
-                  <div class="follow-slider__left product-card__bottom-left">
-                    <a class="follow-slider__price product-card__bottom-price" href="#">$10</a>
-                    <a class="follow-slider__like btn btn-counter product-card__bottom-like" href="#" data-count="56">
-                      <svg class="follow-slider__heart svg-inline--fa fa-heart fa-w-16 product-card__bottom-heart"
-                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                          d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
-                        </path>
-                      </svg>
-                    </a>
-                    <div class="follow-slider__star star-rating product-card__bottom-rating"></div>
-                  </div>
-                  <a href="#" class="follow-slider__cart product-card__bottom-cart">
-                    68
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTE start fact-area -->
-
-  <section class="fact-area">
-    <div class="container-fluid--onecolor">
-      <div class="container">
-        <div class="fact-area__inner">
-          <div class="fact-area__item item--terms">
-            <span class="fact-area__item-number counter">38,436</span>
-            <span class="fact-area__item-text">terms for sale</span>
-          </div>
-          <div class="fact-area__item  item--sales">
-            <span class="fact-area__item-number counter">3,736</span>
-            <span class="fact-area__item-text">total sales</span>
-          </div>
-          <div class="fact-area__item  item--customers">
-            <span class="fact-area__item-number counter">2,736</span>
-            <span class="fact-area__item-text">happy customers</span>
-          </div>
-          <div class="fact-area__item  item--members">
-            <span class="fact-area__item-number counter">25,736</span>
-            <span class="fact-area__item-text">members</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTE end fact-area -->
-
-  <!-- NOTE start advantages -->
-
-  <section class="advantages">
-    <div class="container">
-      <div class="advantages__inner">
-        <div class="advantages__top">
-          <div class="advantages__title title">
-            Why Choose<span class="advantages__title-accent title--accent">MartPlace</span>
-          </div>
-          <div class="advantages__text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
-            nemis
-            omnis fugats. Lid est laborum dolo rumes fugats untras.</div>
-        </div>
-        <ol class="advantages__list">
-          <li class="advantages__item ">
-            <div class="advantages__item-title title title--payment">
-              One Time Payment
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-          <li class="advantages__item ">
-            <div class="advantages__item-title title--quality title">
-              Quality Products
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-          <li class="advantages__item ">
-            <div class="advantages__item-title title--security title">
-              100% Secure Payment
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-          <li class="advantages__item ">
-            <div class="advantages__item-title title--code title">
-              Well Organized Code
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__item-title title--update title">
-              Life Time Free Update
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-          <li class="advantages__item ">
-            <div class="advantages__item-title title--support title">
-              Fast and Friendly Support
-            </div>
-            <div class="advantages__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam
-              congue is laoreet elit metus.
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTE end advantages -->
-
-  <!-- NOTE start activity -->
-
-  <section class="activity">
-    <div class="container-fluid">
-      <div class="activity__inner">
-        <article class="activity__left">
-          <div class="activity__title title title--selling">
-            Sell your product
-          </div>
-          <div class="activity__text">
-            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-            the mattis, leo quam aliquet diamcongue is laoreet elit metus.
-          </div>
-          <a class="activity__btn activity__btn--blue button" href="#">
-            Become an Author
-          </a>
-        </article>
-
-        <article class="activity__right">
-          <div class="activity__title title title--shopping">
-            Sell your product
-          </div>
-          <div class="activity__text">
-            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-            the mattis, leo quam aliquet diamcongue is laoreet elit metus.
-          </div>
-          <a class="activity__btn activity__btn--purple button" href="#">
-            Start Shopping
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTE end activity -->
-
-  <!-- NOTE start feedback section -->
-
-  <section class="feedback">
-    <div class="container">
-      <div class="feedback__inner">
-        <div class="feedback__title title">
-          Our Clients <span class="feedback__title-accent title--accent">
-            Feedback
-          </span></div>
-        <div class="feedback__text">
-          Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est
-          laborum dolo rumes fugats untras.
-        </div>
-        <div class="feedback__cards">
-          <article class="feedback__card">
-            <a class="feedback__card-author">
-              <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
-              <div class="feedback__card-name">
-                Taofiqul Hakim
-                <span class="feedback__card-profession">
-                  Product Designer
-                </span>
-              </div>
+        <div class="footer__content">
+          <div class="footer__content-box footer__content-box--about">
+            <a class="footer__content-logo" footer__linkhref="#">
+              <img class="footer__content-logo" src="images/footer-logo.png" alt="logo footer">
             </a>
-            <div class="feedback__card-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-              aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
-              the pharetra, justo ut scelerisque.
-            </div>
-          </article>
-          <article class="feedback__card">
-            <a class="feedback__card-author">
-              <img class="feedback__card-avatar user-avatar" src="images/avatar.jpg" alt="">
-              <div class="feedback__card-name">
-                Saifullah Al Murtafee
-                <span class="feedback__card-profession">
-                  Product Designer
-                </span>
-              </div>
+            <p class="footer__content-text">
+              Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the mattis, leo
+              quam.
+            </p>
+            <a class="footer__content-phone footer__link footer__link" href="tel:67898752235">
+              Phone: +6789-875-2235
             </a>
-            <div class="feedback__card-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-              aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent
-              the pharetra, justo ut scelerisque.
+            <a class="footer__content-mail footer__link" href="mailto: support@aazztech.com">support@aazztech.com</a>
+            <a class="footer__content-map footer__link">202 New Hampshire Avenue
+              Northwest #100, New York-2573</a>
+          </div>
+          <div class="footer__content-box footer__content-box--list">
+            <div class="footer__content-title title">Our company</div>
+            <ul class="footer__content-items">
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  About us
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  How it work
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Affiliates
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Testimonials
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Contact us
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Copyright Notice
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Blog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="footer__content-box footer__content-box--list">
+            <span class="footer__content-title title">Help support</span>
+            <ul class="footer__content-items">
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Support forum
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Terms & conditions
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  support policy
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  refund policy
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  FAQs
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Buyers Faq
+                </a>
+              </li>
+              <li class="footer__content-item">
+                <a class="footer__content-link footer__link" href="#">
+                  Sellets Faq
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__content-box footer__content-box--form">
+            <div class="footer__content-title title">Newsletter</div>
+            <span class="footer__content-text">Subscribe to get the latest news, update and offer information. Don't
+              worry,
+              we won't send spam!</span>
+            <form class="footer__content-form search-form">
+              <label class="footer__content-label" for="email">
+                <input class="footer__content-input search-input search-form__input" type="email" id="email"
+                  name="email" placeholder="Enter email" required>
+              </label>
+              <button class="footer__content-btn button search-form__btn" type="submit">Submit</button>
+            </form>
+            <div class="footer__content-mediabox">
+              <a href="#" class="footer__content-media footer__content-media--facebook">
+              </a>
+              <a href="#" class="footer__content-media footer__content-media--twitter">
+              </a>
+              <a href="#" class="footer__content-media footer__content-media--google">
+              </a>
+              <a href="#" class="footer__content-media footer__content-media--pininterest">
+              </a>
+              <a href="#" class="footer__content-media footer__content-media--linkedin">
+              </a>
+              <a href="#" class="footer__content-media footer__content-media--dribble">
+              </a>
             </div>
-          </article>
+          </div>
         </div>
-        <a class="feedback__btn button" href="#">View All Reviews</a>
       </div>
     </div>
+    <div class="footer__rights">
+      <div class="container-fluid--onecolor">
+        <div class="container">
+          ©2017 <span class="footer__rights--accent">MartPlace</span>. All rights reserved. Created by
+          <a href="" class="footer__rights-link">
+            AazzTech
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  </section>
 
 
+  <!-- NOTE ends footer -->
 
 
-
-  <!-- NOTE ends feedback section -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
 
 
 </body>

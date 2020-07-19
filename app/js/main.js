@@ -5,28 +5,26 @@ $(function () {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
+    prevArrow: '<button type="button" class="slick-btn slick-prev"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>'
   })
 
   $('.follow-slider__items').slick({
     arrows: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="../images/chevron-left.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="../images/chevron-right.svg" alt=""></button>'
+    prevArrow: '<button type="button" class="slick-btn slick-prev"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>'
   })
 
-  // like
-  $('.product-card__bottom-like').on('click', function (event, count) {
-    event.preventDefault()
+  $('.feedback__cards').slick({
+    arrows: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: '<button type="button" class="slick-btn slick-prev-feedback"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next-feedback"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>',
+    // appendArrows: '.slick-btn'
 
-    var $this = $(this),
-      count = $this.attr('data-count'),
-      active = $this.hasClass('active')
-
-    $.fn.noop = $.noop
-    $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active')
   })
 
   // raty
