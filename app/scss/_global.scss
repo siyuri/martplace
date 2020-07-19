@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -49,12 +48,6 @@ body {
   background: #eff1f5;
 }
 
-.product-card--stars {
-  .star-rating {
-    visibility: visible;
-  }
-}
-
 .button {
   font-size: 0.875rem;
   background-color: $theme-color-blue;
@@ -74,7 +67,7 @@ body {
 .lnr {
   width: 1.2em;
   height: 1.2em;
-  fill: #7e8fa1;
+  fill: currentColor;
 }
 
 .user-avatar {
@@ -115,21 +108,24 @@ body {
   margin-bottom: 1.667em;
 }
 
-.category-tag--wordpress,
-.category-tag--plugin {
-  background: url(../images/wordpress.svg) no-repeat;
-  background-size: 16px 16px;
-  background-position: left;
-}
+.category-tag {
 
-.category-tag--html {
-  background: url(../images/html5-brands.svg) no-repeat;
-  background-size: 16px 16px;
-  background-position: left;
-}
+  &--wordpress,
+  &--plugin {
+    background: url(../images/wordpress.svg) no-repeat;
+    background-size: 16px 16px;
+    background-position: left;
+  }
 
-.category-tag--ps {
-  background: url(../images/psd.svg) no-repeat;
-  background-size: 16px 16px;
-  background-position: left;
+  &--html {
+    background: url(../images/html5-brands.svg) no-repeat;
+    background-size: 16px 16px;
+    background-position: left;
+  }
+
+  &--ps {
+    background: url(../images/psd.svg) no-repeat;
+    background-size: 16px 16px;
+    background-position: left;
+  }
 }
