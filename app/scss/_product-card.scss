@@ -211,6 +211,7 @@
     line-height: 100%;
     border: 0.0625rem solid #fff;
     padding: 1em 2em;
+    outline: transparent;
 
     &+.button {
       margin-left: .5em;
@@ -220,6 +221,10 @@
       background-color: #fff;
       color: $theme-color-blue;
       transform: scale(.95);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.3rem rgba(115, 71, 193, 0.7);
     }
   }
 }
