@@ -7,7 +7,8 @@
 .header {
 
   &__top {
-    min-height: 100px;
+    max-height: 100px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,12 +20,13 @@
     flex-direction: flex-end;
     justify-content: space-evenly;
     align-items: center;
+    padding: 2em 0 1.5em;
+    position: relative;
   }
 
   &__logo {
     margin-left: .5em;
   }
-
 
   &__notification-btns {
     max-width: 9em;
@@ -33,6 +35,27 @@
     justify-content: space-between;
     padding: 1em;
     margin-right: 2.5em;
+  }
+
+  &__mail-box {
+    padding: 1.5rem 0;
+
+    //ANCHOR я, наверное, в принципе это как-то неправильно делаю...но такой вариант вроде рабочий у людей...оно у меня везде открывается не только на ховере, но и вылезает из "шва"...
+    &:hover {
+      .messages-dropdown {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__notification-box {
+    padding: 1.5rem 0;
+  }
+
+  &__cart-box {
+    padding: 1.5rem 0;
   }
 
   &__icon-btn {
@@ -58,12 +81,6 @@
 
     &--envelope:before {
       content: "\e818";
-
-      &:hover {
-        .messages__dropdown {
-          display: block;
-        }
-      }
     }
 
     &--cart:before {
@@ -132,6 +149,18 @@
     }
   }
 
+  &__user-box {
+    padding: 1.5em 0;
+
+    &:hover {
+      .header__dropdown-user {
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+
   &__user-avatar {
     display: block;
     width: 3.6em;
@@ -164,6 +193,22 @@
     color: $theme-color-blue;
   }
 
+  .dropdown-user {
+    z-index: 1;
+    min-width: 270px;
+    right: 0;
+    margin-top: 1rem;
+
+    &__items {
+      margin: 0;
+    }
+
+    &__link {
+      &:before {
+        margin-right: 1.5em;
+      }
+    }
+  }
 
   .messages-dropdown {
     z-index: 1;
@@ -171,46 +216,132 @@
     background-color: #fff;
     width: 100%;
     position: absolute;
+    left: -4.2em;
+    margin-top: 1.9rem;
 
-    &__top {
+    &__top,
+    &__top--pointer {
       display: flex;
       justify-content: space-between;
+      border-bottom: 1px solid #e8ebf0;
+      padding: 1.5em;
     }
 
-    &__title {
+    &__title,
+    &__title--pointer {
       font-size: 1.125rem;
       color: #000;
     }
 
-    &__all {
+    &__link,
+    &__link--pointer {
       color: $theme-color-blue;
       font-size: 0.9rem;
     }
 
-    &__img {
+    &__img,
+    &__img--pointer {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      margin-right: 1em;
     }
 
-    &__box {
+    &__box,
+    &__box--pointer {
       display: flex;
       align-items: center;
     }
 
-    &__items {
+    &__item,
+    &__item--pointer {
+      border-bottom: 1px solid #e8ebf0;
+      padding: 1.5em;
+      font-weight: 500;
+      color: $text-dark;
+
+      &:hover {
+        border-top: 1px solid $theme-color-blue;
+      }
+
+      &:focus {
+        border-bottom: 1px solid $theme-color-blue;
+      }
+    }
+
+    &__item--notread {
+      .messages-dropdown__name {
+        padding-right: 2em;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "\e818";
+          color: $theme-color-blue;
+          right: 0;
+          font-size: .9rem;
+          font-family: 'Linearicons-Free';
+        }
+      }
+
+      .messages-dropdown__time {
+        color: $theme-color-blue;
+      }
+    }
+
+    &__item--replied {
+      .messages-dropdown__name {
+        padding-right: 2em;
+        background-image: url(../images/replied.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+
+      }
+    }
+
+    &__items,
+    &__items--pointer {
       margin: 0;
       padding: 0;
       list-style: none;
+
+      &:last-child {
+        border: none;
+      }
     }
 
-    &__preview {}
+    &__time,
+    &__time--pointer {
+      font-size: 0.875rem;
+      color: #747a86;
+    }
 
-    &__topline {
+    &__text,
+    &__text--pointer {
+      margin: 0;
+      padding: 0;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 250px;
+      color: $text;
+    }
+
+    &__topline,
+    &__topline--pointer {
       display: flex;
       justify-content: space-between;
     }
+
+    &__name,
+    &__name--pointer {
+      font-weight: 500;
+      color: $text-dark;
+    }
   }
+
+
 
   /*header__top ends*/
 
@@ -240,22 +371,34 @@
   &__bottom-item {
     display: inline;
     padding: 30px 0;
-    position: relative;
 
     &+.header__bottom-item {
       margin-left: 1.45em;
     }
 
     &:hover {
-      .dropdown-home {
-        display: block;
-      }
 
-      .dropdown-wordpress {
-        display: block;
+      .dropdown-home,
+      .dropdown-wordpress,
+      .dropdown-pages,
+      .dropdown-products {
+        opacity: 1;
+        height: auto;
+
       }
     }
   }
+
+  // ANCHOR Я и персонально обращалась к этому элементу, и обще, и не понимаю, почему меню пэйджес вылезает ВЕЗДЕ, как только подводишь курсор к боттом-хедеру
+  // &__bottom-item--pages {
+  //   &:hover {
+  //     .dropdown-pages {
+  //       opacity: 1;
+  //       height: auto;
+  //       overflow: hidden;
+  //     }
+  //   }
+  // }
 
   &__bottom-link {
     text-transform: uppercase;
@@ -280,18 +423,37 @@
 
   &__bottom-dropdown-wordpress {
     min-width: 270px;
-    left: 0;
+    left: 19%;
+  }
+
+  &__bottom-dropdown-products {
+    min-width: 270px;
+    left: 6.5%;
   }
 }
 
 /*drop-down & mega-menu*/
 .dropdown {
-  display: none;
+
+  transition: opacity .5s ease-out;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
   position: absolute;
   background-color: #fff;
   border-top: 1px solid $theme-color-blue;
   margin-top: 1.7rem;
   transition: .8s;
+  box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+
+  &--pointer:before {
+    content: '';
+    position: absolute;
+    right: 1.5em;
+    top: -1.3em;
+    border: 10px solid;
+    border-color: transparent transparent $theme-color-blue transparent;
+  }
 
   &__items {
     display: block;
@@ -324,6 +486,62 @@
 
     &:focus {
       font-weight: 500;
+    }
+  }
+}
+
+.dropdown-pages {
+  z-index: 1;
+  left: 0;
+  max-width: 1140px;
+  margin-top: 1.7rem;
+
+  &__wrapper {
+    display: inline-flex;
+    padding: 1.3em 0;
+  }
+
+  &__items {
+    list-style: none;
+
+    &--multiple-columns {
+      -moz-column-count: 2;
+      -webkit-column-width: 200px;
+      -moz-column-width: 200px;
+      column-width: 200px;
+      -moz-column-gap: 2em;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 2em;
+      column-count: 2;
+      column-gap: 2em;
+    }
+  }
+
+  &__title {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+    border-bottom: 1px solid #e8ebf0;
+    padding: .7em 0 1em;
+    margin: 0 2em 2em;
+  }
+
+  &__link {
+    color: #54667a;
+    font-size: .9rem;
+
+    &+& {
+      margin-top: 1em;
+    }
+
+    &:hover {
+      font-weight: 500;
+      color: $theme-color-blue;
+    }
+
+    &:focus {
+      font-weight: 700;
     }
   }
 }

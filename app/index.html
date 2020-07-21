@@ -25,44 +25,118 @@
             <div class="header__user-panel">
               <a class="header__register-link button" href="#">Become a Seller</a>
               <div class="header__notification-btns">
-                <a class="header__icon-btn header__icon-btn--alarm" href="#">
-                  notification
-                  <span class="header__icon-badge header__icon-badge--active header__icon-badge--alarm">25</span>
-                </a>
+                <div class="header__notification-box">
+                  <a class="header__icon-btn header__icon-btn--alarm" href="#">
+                    notification
+                    <span class="header__icon-badge header__icon-badge--active header__icon-badge--alarm">25</span>
+                  </a>
+                </div>
                 <div class="header__mail-box">
                   <a class="header__icon-btn header__icon-btn--envelope" href="#">
                     your mail
                     <span class="header__icon-badge header__icon-badge--active header__icon-badge--envelope">6</span>
                   </a>
-                  <div class="messages-dropdown dropdown">
-                    <div class="messages-dropdown__top">
-                      <span class="messages-dropdown__title title">My Messages</span>
-                      <a class="messages-dropdown__all" href="#">View all</a>
+                  <div class="messages-dropdown dropdown dropdown--pointer">
+                    <div class="messages-dropdown__top dropdown__top--pointer">
+                      <span class="messages-dropdown__title dropdown__title--pointer title">My Messages</span>
+                      <a class="messages-dropdown__link dropdown__link--pointer" href="#">View all</a>
                     </div>
-                    <ul class="messages-dropdown__items">
-                      <li class="messages-dropdown__item">
-                        <div class="messages-dropdown__box">
+                    <ul class="messages-dropdown__items dropdown__items--pointer">
+                      <li class="messages-dropdown__item dropdown__item--pointer messages-dropdown__item--notread">
+                        <a class="messages-dropdown__box dropdown__box--pointer" href="#">
+                          <img class="messages-dropdown__img dropdown__img--pointer" src="images/avatar.jpg"
+                            alt="avatar">
+                          <div class="messages-dropdown__preview dropdown__preview--pointer">
+                            <div class="messages-dropdown__topline dropdown__topline--pointer">
+                              <span class="messages-dropdown__name dropdown__name--pointer">
+                                Washim
+                              </span>
+                              <time class="messages-dropdown__time dropdown__time--pointer"
+                                datetime="2020-07-20 20:51">Just now</time>
+                            </div>
+                            <p class="messages-dropdown__text dropdown__text--pointer">
+                              Hello John Smith! Nunc placerat id drfsEF
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="messages-dropdown__item messages-dropdown__item--notread">
+                        <a class="messages-dropdown__box" href="#">
                           <img class="messages-dropdown__img" src="images/avatar.jpg" alt="avatar">
                           <div class="messages-dropdown__preview">
                             <div class="messages-dropdown__topline">
                               <span class="messages-dropdown__name">
-                                Washim
+                                Bulbul Ahmed
                               </span>
-                              <time class="messages-dropdown__time" datetime="2020-07-20 20:51">Just now</time>
+                              <time class="messages-dropdown__time" datetime="2020-07-20 20:51">2 hours ago</time>
                             </div>
                             <p class="messages-dropdown__text">
                               Hello John Smith! Nunc placerat id drfsEF
                             </p>
                           </div>
-                        </div>
+                        </a>
                       </li>
+
+                      <li class="messages-dropdown__item messages-dropdown__item--replied">
+                        <a class="messages-dropdown__box" href="#">
+                          <img class="messages-dropdown__img" src="images/avatar.jpg" alt="avatar">
+                          <div class="messages-dropdown__preview">
+                            <div class="messages-dropdown__topline">
+                              <span class="messages-dropdown__name">
+                                EchoTheme
+                              </span>
+                              <time class="messages-dropdown__time" datetime="2020-06-16 20:51">Jul 16</time>
+                            </div>
+                            <p class="messages-dropdown__text">
+                              Hello John Smith! Nunc placerat id drfsEF
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="messages-dropdown__item messages-dropdown__item">
+                        <a class="messages-dropdown__box" href="#">
+                          <img class="messages-dropdown__img" src="images/avatar.jpg" alt="avatar">
+                          <div class="messages-dropdown__preview">
+                            <div class="messages-dropdown__topline">
+                              <span class="messages-dropdown__name">
+                                Themeluva
+                              </span>
+                              <time class="messages-dropdown__time" datetime="2020-05-23 20:51">May 23</time>
+                            </div>
+                            <p class="messages-dropdown__text">
+                              Hello John Smith! Nunc placerat id drfsEF
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="messages-dropdown__item messages-dropdown__item">
+                        <a class="messages-dropdown__box" href="#">
+                          <img class="messages-dropdown__img" src="images/avatar.jpg" alt="avatar">
+                          <div class="messages-dropdown__preview">
+                            <div class="messages-dropdown__topline">
+                              <span class="messages-dropdown__name">
+                                Adnan
+                              </span>
+                              <time class="messages-dropdown__time" datetime="2020-04-26 20:51">Mar 26</time>
+                            </div>
+                            <p class="messages-dropdown__text">
+                              Hello John Smith! Nunc placerat id drfsEF
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+
                     </ul>
                   </div>
                 </div>
-                <a class="header__icon-btn header__icon-btn--cart" href="#">
-                  your cart
-                  <span class="header__icon-badge header__icon-badge--active header__icon-badge--cart">2</span>
-                </a>
+                <div class="header__cart-box">
+                  <a class="header__icon-btn header__icon-btn--cart" href="#">
+                    your cart
+                    <span class="header__icon-badge header__icon-badge--active header__icon-badge--cart">2</span>
+                  </a>
+                </div>
               </div>
               <div class="header__user-box">
                 <a class="header__user-info" href="#">
@@ -76,60 +150,60 @@
                     </span>
                   </div>
                 </a>
-                <div class="header__dropdown-user dropdown-user dropdown">
+                <div class="header__dropdown-user dropdown-user dropdown dropdown--pointer">
                   <ul class="dropdown-user__items dropdown__items">
                     <li class="dropdown-user__item dropdown__item dropdown__item--active">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-user dropdown__link" href="#">
                         Profile Page
                       </a>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-home dropdown__link" href="#">
                         Account Settings
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-cog dropdown__link" href="#">
                         Dashboard
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-cart dropdown__link" href="#">
                         Your Purchases
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-heart dropdown__link" href="#">
                         Your Favorites
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-dice  dropdown__link" href="#">
                         Add Credits
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-chart-bars dropdown__link" href="#">
                         Sales Statements
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-upload dropdown__link" href="#">
                         Upload Item
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-book dropdown__link" href="#">
                         Edit Item
                       </a>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-briefcase dropdown__link" href="#">
                         Withdrawals
                       </a>
                     </li>
                     </li>
                     <li class="dropdown-user__item dropdown__item">
-                      <a class="dropdown-user__link dropdown__link" href="#">
+                      <a class="dropdown-user__link lnr lnr-exit dropdown__link" href="#">
                         Logout
                       </a>
                     </li>
@@ -175,6 +249,45 @@
                     <a class="header__bottom-link" href="#">
                       all products
                     </a>
+                    <div class="header__bottom-dropdown-products dropdown-products dropdown">
+                      <ul class="dropdown-products__items dropdown__items">
+                        <li class="dropdown-products__item dropdown__item dropdown__item--active">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Recent Items
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Popular Items
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Featured Items
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Free Templates
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Follow Feed
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            eCommerce
+                          </a>
+                        </li>
+                        <li class="dropdown-products__item dropdown__item">
+                          <a class="dropdown-products__link dropdown__link" href="#">
+                            Top Authors
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li class="header__bottom-item">
                     <a class="header__bottom-link" href="#">
@@ -223,16 +336,318 @@
                           </a>
                         </li>
                       </ul>
+                    </div>
                   </li>
                   <li class="header__bottom-item">
                     <a class="header__bottom-link" href="#">
                       features
                     </a>
                   </li>
-                  <li class="header__bottom-item">
+                  <li class="header__bottom-item header__bottom-item--pages ">
                     <a class="header__bottom-link" href="#">
                       Pages
                     </a>
+                    <div class="header__bottom-dropdown-pages dropdown-pages dropdown">
+                      <div class="dropdown-pages__wrapper">
+                        <div class="dropdown-pages__section">
+                          <span class="dropdown-pages__title title">MartPlace pages</span>
+                          <ul class="dropdown-pages__items dropdown-pages__items--multiple-columns">
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Home Page One
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Home Page Two
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Home Page Three
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Products Grid
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Products List
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Category Grid Sidebar
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Category List Sidebar
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Search Product
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Product V-1
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Product V-2
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Product V-3
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Items Comments
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Items Reviews
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Items Support
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Single Items FAQs
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Favorites Items
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Author Profile
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Author Items
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Customer Reviews
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Followers
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Following
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Product View Variations
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="dropdown-pages__section">
+                          <span class="dropdown-pages__title title">Dashboard</span>
+                          <ul class="dropdown-pages__items">
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Dashboard
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Account Settings
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Author Purchases
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Items Rating
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Add Credits
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Statements
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Invoice
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Upload Item
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Edit Items
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Withdrawals
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Add Payment Method
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="dropdown-pages__section">
+                          <span class="dropdown-pages__title title">Other pages</span>
+                          <ul class="dropdown-pages__items dropdown-pages__items--multiple-columns">
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Notifications
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Message Inbox
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Message Compose
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Shopping Cart
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Checkout
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Login
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Register
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item"><a
+                                class="dropdown-pages__link" href="#">
+                                Recovery Password
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Support Forum
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Forum Details
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                How It Works
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                About Us
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Pricing Plan
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Testimonials
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item"><a
+                                class="dropdown-pages__link" href="#">
+                                FAQs
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                FAQs Details
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Affiliates
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Terms & Conditions
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Blog V-1
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Blog V-2
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Blog Details
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Contact Us
+                              </a>
+                            </li>
+                            <li class="dropdown-pages__link" class="dropdown-pages__item">
+                              <a class="dropdown-pages__link" href="#">
+                                Menu & Footer Variation
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </nav>
