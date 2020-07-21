@@ -192,19 +192,21 @@
       height: 40px;
       border-radius: 50%;
     }
-&__box{
-  display: flex;
-  align-items: center;
-}
+
+    &__box {
+      display: flex;
+      align-items: center;
+    }
+
     &__items {
       margin: 0;
       padding: 0;
       list-style: none;
     }
-    &__preview{
 
-    }
-    &__topline{
+    &__preview {}
+
+    &__topline {
       display: flex;
       justify-content: space-between;
     }
@@ -284,7 +286,7 @@
 
 /*drop-down & mega-menu*/
 .dropdown {
- // display: none;
+  display: none;
   position: absolute;
   background-color: #fff;
   border-top: 1px solid $theme-color-blue;
