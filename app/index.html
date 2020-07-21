@@ -27,16 +27,44 @@
               <div class="header__notification-btns">
                 <a class="header__icon-btn header__icon-btn--alarm" href="#">
                   notification
-                  <span class="header__icon-badge header__icon-badge--alarm">25</span>
+                  <span class="header__icon-badge header__icon-badge--active header__icon-badge--alarm">25</span>
                 </a>
+                <div class="header__mail-box">
                 <a class="header__icon-btn header__icon-btn--envelope" href="#">
                   your mail
-                  <span class="header__icon-badge header__icon-badge--envelope">6</span>
+                  <span class="header__icon-badge header__icon-badge--active header__icon-badge--envelope">6</span>
                 </a>
+                <div class="messages-dropdown dropdown">
+                  <div class="messages-dropdown__top">
+                    <span class="messages-dropdown__title title">My Messages</span>
+                    <a class="messages-dropdown__all" href="#">View all</a>
+                  </div>
+                  <ul class="messages-dropdown__items">
+                    <li class="messages-dropdown__item">
+                      <div class="messages-dropdown__box">
+                        <img class="messages-dropdown__img" src="images/avatar.jpg" alt="avatar">
+                        <div class="messages-dropdown__preview">
+                          <div class="messages-dropdown__topline">
+                            <span class="messages-dropdown__name">
+                              Washim
+                            </span>
+                            <time class="messages-dropdown__time" datetime="2020-07-20 20:51">Just now</time>
+                          </div>
+                          <p class="messages-dropdown__text">
+                            Hello John Smith! Nunc placerat id drfsEF
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
                 <a class="header__icon-btn header__icon-btn--cart" href="#">
                   your cart
-                  <span class="header__icon-badge header__icon-badge--cart">2</span>
-                </a></div>
+                  <span class="header__icon-badge header__icon-badge--active header__icon-badge--cart">2</span>
+                </a>
+              </div>
+              
               <a class="header__user-info" href="#">
                 <img class="header__user-avatar" src="images/avatar.jpg" alt="user avatar">
                 <div class="header__user-profile">
@@ -48,7 +76,6 @@
                   </span>
                 </div>
               </a>
-
             </div>
           </div>
 
@@ -64,6 +91,25 @@
                     <a class="header__bottom-link header__bottom-link--active" href="#">
                       HOME
                     </a>
+                    <div class="header__bottom-dropdown-home dropdown-home dropdown">
+                      <ul class="dropdown-home__items dropdown__items">
+                        <li class="dropdown-home__item dropdown__item dropdown__item--active">
+                          <a class="dropdown-home__link dropdown__link" href="#">
+                            Home One Multi User
+                          </a>
+                        </li>
+                        <li class="dropdown-home__item dropdown__item">
+                          <a class="dropdown-home__link dropdown__link" href="#">
+                            Home Two Single User
+                          </a>
+                        </li>
+                        <li class="dropdown-home__item dropdown__item">
+                          <a class="dropdown-home__link dropdown__link" href="#">
+                            Home Three Product
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li class="header__bottom-item">
                     <a class="header__bottom-link" href="#">
@@ -74,6 +120,49 @@
                     <a class="header__bottom-link" href="#">
                       wordpress
                     </a>
+                    <div class="header__bottom-dropdown-wordpress dropdown-wordpress dropdown">
+                      <ul class="dropdown-wordpress__items dropdown__items">
+                        <li class="dropdown-wordpress__item dropdown__item dropdown__item--active">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Popular Items
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Admin Templates
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Blog / Magazine / News
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Corporate Business
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Resume Portfolio
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            eCommerce
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Entertainment
+                          </a>
+                        </li>
+                        <li class="dropdown-wordpress__item dropdown__item">
+                          <a class="dropdown-wordpress__link dropdown__link" href="#">
+                            Landing Pages
+                          </a>
+                        </li>
+                      </ul>
                   </li>
                   <li class="header__bottom-item">
                     <a class="header__bottom-link" href="#">
