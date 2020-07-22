@@ -1,7 +1,7 @@
+@import "libs";
 @import "fonts";
 @import "vars";
 @import "global";
-@import "libs";
 @import "product-card";
 
 .header {
@@ -40,7 +40,6 @@
   &__mail-box {
     padding: 1.5rem 0;
 
-    //ANCHOR я, наверное, в принципе это как-то неправильно делаю...но такой вариант вроде рабочий у людей...оно у меня везде открывается не только на ховере, но и вылезает из "шва"...
     &:hover {
       .messages-dropdown {
         height: auto;
@@ -64,17 +63,20 @@
 
   &__cart-box {
     padding: 1.5rem 0;
+
+    &:hover {
+      .cart-dropdown {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__icon-btn {
     position: relative;
     font-size: 0;
 
-    &:hover {
-      .dropdown {
-        display: block;
-      }
-    }
 
     &:before {
       position: absolute;
@@ -219,7 +221,7 @@
   }
 
   .messages-dropdown {
-    left: -4.2em;
+    right: 42%;
 
     &__item {
 
@@ -267,36 +269,48 @@
   }
 
   .notifications-dropdown {
-    left: -22.5%;
+    right: 3%;
+
+    &__name {
+      &:after {
+        content: "";
+        font-weight: normal;
+        color: #747a86;
+        font-size: 0.9rem;
+      }
+    }
+
+    &__box {
+      position: relative;
+
+      &:after {
+        right: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        position: absolute;
+        content: "";
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: 'Linearicons-Free';
+        padding: 5px 5px 5px 8.5px;
+      }
+    }
 
     &--favourite {
       .notifications-dropdown__name {
         &:after {
           content: "added to Favourite";
-          font-weight: normal;
-          color: #747a86;
-          font-size: 0.9rem;
         }
       }
 
       .notifications-dropdown__box {
-        position: relative;
-
         &:after {
-          right: 0;
-          bottom: 50%;
-          transform: translateY(50%);
-          position: absolute;
           content: "\e813";
           color: $theme-color-blue;
-          width: 33px;
-          height: 33px;
-          border-radius: 50%;
           background-color: rgba(6, 116, 236, .10);
-          font-size: 1rem;
-          font-weight: 600;
-          font-family: 'Linearicons-Free';
-          padding: 5px 5px 5px 8.5px;
         }
       }
     }
@@ -305,34 +319,19 @@
       .notifications-dropdown__name {
         &:after {
           content: "commented on";
-          font-weight: normal;
-          color: #747a86;
-          font-size: 0.9rem;
         }
       }
 
-      .notifications-dropdown__name {
+      .notifications-dropdown__name,
+      .notifications-dropdown__work {
         display: inline;
       }
 
       .notifications-dropdown__box {
-        position: relative;
-
         &:after {
-          right: 0;
-          bottom: 50%;
-          transform: translateY(50%);
-          position: absolute;
           content: "\e83f";
           color: $theme-color-purple;
-          width: 33px;
-          height: 33px;
-          border-radius: 50%;
           background-color: rgba(115, 71, 193, .10);
-          font-size: 1rem;
-          font-weight: 600;
-          font-family: 'Linearicons-Free';
-          padding: 4px 4px 5px 8.5px;
         }
       }
     }
@@ -341,30 +340,14 @@
       .notifications-dropdown__name {
         &:after {
           content: "Purchased";
-          font-weight: normal;
-          color: #747a86;
-          font-size: 0.9rem;
         }
       }
 
       .notifications-dropdown__box {
-        position: relative;
-
         &:after {
-          right: 0;
-          bottom: 50%;
-          transform: translateY(50%);
-          position: absolute;
           content: "\e82e";
           color: $theme-color-red;
-          width: 33px;
-          height: 33px;
-          border-radius: 50%;
           background-color: rgba(255, 106, 108, .10);
-          font-size: 1rem;
-          font-weight: 600;
-          font-family: 'Linearicons-Free';
-          padding: 4px 4px 5px 8.5px;
         }
       }
     }
@@ -373,30 +356,14 @@
       .notifications-dropdown__name {
         &:after {
           content: "wrote a review on";
-          font-weight: normal;
-          color: #747a86;
-          font-size: 0.9rem;
         }
       }
 
       .notifications-dropdown__box {
-        position: relative;
-
         &:after {
-          right: 0;
-          bottom: 50%;
-          transform: translateY(50%);
-          position: absolute;
           content: "\e814";
           color: $theme-color-green;
-          width: 33px;
-          height: 33px;
-          border-radius: 50%;
           background-color: rgba(98, 208, 58, .10);
-          font-size: 1rem;
-          font-weight: 600;
-          font-family: 'Linearicons-Free';
-          padding: 4px 4px 5px 8.5px;
         }
       }
     }
@@ -425,6 +392,131 @@
       display: block;
     }
   }
+
+  .cart-dropdown {
+    right: 31%;
+    max-width: 400px;
+    width: 100%;
+
+
+    &__item {
+      display: flex;
+      padding: 0;
+      padding: .2em 1.2em 1.5em 1.4em;
+    }
+
+    &__name,
+    &__category {
+      display: block;
+    }
+
+    &__img {
+      width: 80px;
+      height: 70px;
+      border-radius: 0;
+      object-fit: cover;
+      margin-top: 1em;
+    }
+
+    &__name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: .5em;
+    }
+
+    &__category {
+      font-size: .9rem;
+      padding-left: 1.3em;
+    }
+
+    &__trash {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.4em;
+    }
+
+    &__trash-btn {
+      border: none;
+      outline: transparent;
+      color: $theme-color-green;
+      width: 33px;
+      height: 33px;
+      font-size: 0;
+      border-radius: 50%;
+      background-color: rgba(115, 71, 193, .1);
+      position: relative;
+      cursor: pointer;
+      margin-bottom: .7rem;
+
+      &:before {
+        position: absolute;
+        right: 5px;
+        bottom: 50%;
+        transform: translateY(50%);
+        content: "\e811";
+        font-size: .9rem;
+        font-weight: 600;
+        font-family: 'Linearicons-Free';
+        padding: 4px 4px 5px 10px;
+        color: #818c98;
+      }
+    }
+
+    &__total {
+      text-align: end;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-bottom: 1px solid #e8ebf0;
+      padding-bottom: 1.5em;
+      padding-top: 1em;
+      padding-right: 1.2em;
+      margin: 0;
+    }
+
+    &__total-price {
+      padding-left: 2em;
+    }
+
+    &__bottom {
+      display: inline-flex;
+      align-items: flex-start;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    &__button {
+      padding: 15px 0;
+      width: 50%;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      font-size: 0.9rem;
+
+
+      &--purple {
+        background-color: $theme-color-purple;
+      }
+
+      &--blue {
+        background-color: $theme-color-blue;
+      }
+
+      &:hover {
+        font-weight: 500;
+      }
+
+      &:focus {
+        font-weight: 700;
+      }
+
+    }
+
+  }
+
 
   /*header__top ends*/
 
@@ -455,7 +547,7 @@
     display: inline;
     padding: 30px 0;
 
-    &+.header__bottom-item {
+    &+& {
       margin-left: 1.45em;
     }
 
@@ -471,17 +563,6 @@
       }
     }
   }
-
-  // ANCHOR Я и персонально обращалась к этому элементу, и обще, и не понимаю, почему меню пэйджес вылезает ВЕЗДЕ, как только подводишь курсор к боттом-хедеру
-  // &__bottom-item--pages {
-  //   &:hover {
-  //     .dropdown-pages {
-  //       opacity: 1;
-  //       height: auto;
-  //       overflow: hidden;
-  //     }
-  //   }
-  // }
 
   &__bottom-link {
     text-transform: uppercase;
@@ -536,22 +617,28 @@
     width: 100%;
     position: absolute;
     margin-top: 1.9rem;
-  }
 
-  &--pointer:before {
-    content: '';
-    position: absolute;
-    right: 1.5em;
-    top: -1.3em;
-    border: 10px solid;
-    border-color: transparent transparent $theme-color-blue transparent;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 2.5em;
+      top: -1.3em;
+      border: 10px solid;
+      border-color: transparent transparent $theme-color-blue transparent;
+    }
+
+    &.notifications-dropdown {
+      &:before {
+        right: auto;
+        left: 2.5em;
+      }
+    }
   }
 
   &__items {
     display: block;
     list-style: none;
-    padding: 0;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
 
     &--pointer {
       margin: 0;
@@ -569,6 +656,7 @@
     height: 40px;
     border-radius: 50%;
     margin-right: 1em;
+    align-self: flex-start;
   }
 
   &__item {
@@ -580,7 +668,7 @@
 
     &--pointer {
       border-bottom: 1px solid #e8ebf0;
-      padding: 1.5em;
+      padding: 1.1em 1.5em .8em 1.5em;
       font-weight: 500;
       color: $text-dark;
 
@@ -589,7 +677,7 @@
       }
 
       &:focus {
-        border-bottom: 1px solid $theme-color-blue;
+        border-bottom: 2px solid $theme-color-blue;
       }
     }
 
@@ -608,7 +696,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e8ebf0;
-    padding: 1.5em;
+    padding: 1.5em 1.5em 1em;
   }
 
   &__topline--pointer {
@@ -619,6 +707,7 @@
   &__name--pointer {
     font-weight: 500;
     color: $text-dark;
+    line-height: 100%;
   }
 
   &__time--pointer {
@@ -1014,7 +1103,6 @@
     margin-left: .7em;
   }
 
-  // NOTE да, я понимаю, что карточка больше, чем надо. как решить проблему, чтобы картинка делалась меньше, когда текста меньше, чем эта картинка, я так и не нашла
   &__item-info {
     width: 51.5%;
     flex: 1 1 0;
@@ -1367,56 +1455,47 @@
       transform: translatex(-50%);
       width: 50px;
       height: 60px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 50px 60px;
+    }
+
+    &--terms {
+      color: #feb71d;
+
+      &:before {
+        background-image: url(../images/lnr-briefcase.svg);
+      }
+    }
+
+    &--sales {
+      color: #499cb5;
+
+      &:before {
+        background-image: url(../images/lnr-cloud-download.svg);
+      }
+    }
+
+    &--customers {
+      color: #71d14e;
+
+      &:before {
+        background-image: url(../images/lnr-smile.svg);
+      }
+    }
+
+    &--members {
+      color: #ff6a6d;
+
+      &:before {
+        background-image: url(../images/lnr-users.svg);
+      }
     }
   }
 
   &__item-number {
     font-size: 2.25rem;
     line-height: 165%;
-  }
-
-  .item--terms {
-    color: #feb71d;
-
-    &:before {
-      background: url(../images/lnr-briefcase.svg);
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: 50px 60px;
-    }
-  }
-
-  .item--sales {
-    color: #499cb5;
-
-    &:before {
-      background: url(../images/lnr-cloud-download.svg);
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: 50px 60px;
-    }
-  }
-
-  .item--customers {
-    color: #71d14e;
-
-    &:before {
-      background: url(../images/lnr-smile.svg);
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: 50px 60px;
-    }
-  }
-
-  .item--members {
-    color: #ff6a6d;
-
-    &:before {
-      background: url(../images/lnr-users.svg);
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: 50px 60px;
-    }
   }
 
   &__item-text {
@@ -1495,8 +1574,35 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 65px;
-      height: 65px;
+      background-repeat: no-repeat;
+      background-position: top center;
+      width: 60px;
+      height: 60px;
+      background-size: 60px 60px;
+    }
+
+    &--payment:before {
+      background-image: url(../images/lnr-license.svg);
+    }
+
+    &--quality:before {
+      background-image: url(../images/lnr-magic-wand.svg);
+    }
+
+    &--security:before {
+      background-image: url(../images/lnr-lock.svg);
+    }
+
+    &--code:before {
+      background-image: url(../images/lnr-chart-bars.svg);
+    }
+
+    &--update:before {
+      background-image: url(../images/lnr-leaf.svg);
+    }
+
+    &--support:before {
+      background-image: url(../images/lnr-phone.svg);
     }
   }
 
@@ -1505,47 +1611,6 @@
   }
 }
 
-.title--payment:before {
-  background: url(../images/lnr-license.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
-
-.title--quality:before {
-  background: url(../images/lnr-magic-wand.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
-
-.title--security:before {
-  background: url(../images/lnr-lock.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
-
-.title--code:before {
-  background: url(../images/lnr-chart-bars.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
-
-.title--update:before {
-  background: url(../images/lnr-leaf.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
-
-.title--support:before {
-  background: url(../images/lnr-phone.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 60px 60px;
-}
 
 /*ends advantages*/
 
@@ -1674,7 +1739,7 @@
     padding: 3em 0;
     margin-bottom: 2em;
 
-    &+.feedback__card {
+    &+& {
       margin-left: 1.5em;
     }
 
@@ -1825,6 +1890,7 @@
 
   &__date {
     position: relative;
+    display: block;
     padding-left: 1.5em;
     color: #999;
 
@@ -2059,6 +2125,7 @@
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
+    font-style: normal;
 
     &--about {
 
@@ -2127,58 +2194,6 @@
       left: 0;
       transform: translateY(-50%);
       content: "\e833";
-    }
-  }
-
-  &__content-media {
-    color: #FFF;
-    margin-top: 1em;
-
-    &:hover {
-      &:before {
-        background-color: $theme-color-blue;
-      }
-    }
-
-    &+& {
-      margin-left: 1em;
-    }
-
-    &:before {
-      font-family: 'icomoon' !important;
-      font-size: 1rem;
-      padding: .65em;
-      border-radius: 50%;
-    }
-
-    &--facebook:before {
-      content: "\ea90";
-      background-color: #395799;
-    }
-
-    &--twitter:before {
-      content: "\ea96";
-      background-color: #19b2f5;
-    }
-
-    &--google:before {
-      content: "\ea88";
-      background-color: #f05b44;
-    }
-
-    &--pininterest:before {
-      content: "\ead1";
-      background-color: #9c0c1c;
-    }
-
-    &--linkedin:before {
-      content: "\eaca";
-      background-color: #0da6be;
-    }
-
-    &--dribble:before {
-      content: "\eaa7";
-      background-color: #ea4c89;
     }
   }
 

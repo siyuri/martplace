@@ -106,6 +106,7 @@ body {
   border-radius: 0.25rem;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
   margin-bottom: 1.667em;
+
 }
 
 .category-tag {
@@ -127,5 +128,68 @@ body {
     background: url(../images/psd.svg) no-repeat;
     background-size: 16px 16px;
     background-position: left;
+  }
+}
+
+.mediabox {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+
+    &+& {
+      margin-left: 1em;
+    }
+
+    &:hover {
+      .mediabox__link:before {
+        background-color: $theme-color-blue;
+      }
+    }
+  }
+
+
+  &__link {
+    font-family: 'icomoon' !important;
+    font-size: 0;
+
+    &:before {
+      font-size: 1rem;
+      color: #fff;
+      padding: .8em;
+      border-radius: 50%;
+    }
+
+    &--facebook:before {
+      content: "\ea90";
+      background-color: #395799;
+    }
+
+    &--twitter:before {
+      content: "\ea96";
+      background-color: #19b2f5;
+    }
+
+    &--google:before {
+      content: "\ea88";
+      background-color: #f05b44;
+    }
+
+    &--pininterest:before {
+      content: "\ead1";
+      background-color: #9c0c1c;
+    }
+
+    &--linkedin:before {
+      content: "\eaca";
+      background-color: #0da6be;
+    }
+
+    &--dribble:before {
+      content: "\eaa7";
+      background-color: #ea4c89;
+    }
   }
 }

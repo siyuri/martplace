@@ -126,8 +126,10 @@
     border: none;
     outline: transparent;
     position: relative;
-    margin-left: .5em;
+    margin-left: .4rem;
+    padding-right: 1rem;
     cursor: pointer;
+    font-size: 0;
 
     &:hover {
       &:before {
@@ -139,12 +141,14 @@
       position: absolute;
       content: "\e813";
       font-family: 'Linearicons-Free';
+      font-size: .9rem;
       top: -.4em;
       color: $theme-color-purple;
     }
 
     &:after {
       color: #6f7d8d;
+      font-size: .9rem;
       content: attr(data-count);
       left: 1.8em;
       top: -.4em;
@@ -155,6 +159,7 @@
   &__bottom-rating {
     visibility: hidden;
     display: flex;
+    margin-left: 2.3em;
   }
 
   &__bottom-cart {
@@ -162,19 +167,22 @@
     border: none;
     outline: transparent;
     position: relative;
-    margin-left: .5em;
+    margin-left: 3.5rem;
     cursor: pointer;
+    font-size: 0;
 
     &:before {
       position: absolute;
       content: "\e82e";
       font-family: 'Linearicons-Free';
+      font-size: .9rem;
       top: -.45em;
       left: -1.8em;
       color: $theme-color-blue;
     }
 
     &:after {
+      font-size: .9rem;
       content: attr(data-count);
       left: -.2em;
       top: -.45em;
