@@ -10,7 +10,6 @@ html {
 
 a {
   text-decoration: none;
-
 }
 
 body {
@@ -112,24 +111,33 @@ body {
 }
 
 .category-tag {
+  font-size: .9rem;
+  color: $theme-color-purple;
+  padding-left: 1.5em;
+  cursor: pointer;
+  outline: transparent;
+  position: relative;
 
-  &--wordpress,
-  &--plugin {
-    background: url(../images/wordpress.svg) no-repeat;
-    background-size: 16px 16px;
-    background-position: left;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: .15em;
   }
 
-  &--html {
-    background: url(../images/html5-brands.svg) no-repeat;
-    background-size: 16px 16px;
-    background-position: left;
+  &--wordpress:before,
+  &--plugin:before {
+    content: url(../images/wordpress.svg);
   }
 
-  &--ps {
-    background: url(../images/psd.svg) no-repeat;
-    background-size: 16px 16px;
-    background-position: left;
+  &--html:before {
+    content: url(../images/html5-brands.svg);
+  }
+
+  &--ps:before {
+    content: url(../images/psd.svg);
   }
 }
 

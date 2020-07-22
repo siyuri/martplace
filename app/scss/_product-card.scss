@@ -76,13 +76,6 @@
     margin-right: 1.7em;
   }
 
-  &__top-category {
-    color: $theme-color-purple;
-    padding-left: 1.3em;
-    cursor: pointer;
-    outline: transparent;
-  }
-
   &__top-description {
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;

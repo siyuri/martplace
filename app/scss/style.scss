@@ -26,6 +26,10 @@
 
   &__logo {
     margin-left: .5em;
+
+    &:focus {
+      filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
+    }
   }
 
   &__notification-btns {
@@ -76,7 +80,6 @@
   &__icon-btn {
     position: relative;
     font-size: 0;
-
 
     &:before {
       position: absolute;
@@ -190,6 +193,11 @@
         border: 1px solid $theme-color-blue;
         outline: transparent;
         transition: .2s;
+      }
+
+      &:focus {
+        font-weight: 700;
+        outline: rgb(114, 33, 160);
       }
     }
   }
@@ -435,11 +443,6 @@
       font-weight: 600;
       color: #000;
       margin-bottom: .5em;
-    }
-
-    &__category {
-      font-size: .9rem;
-      padding-left: 1.3em;
     }
 
     &__trash {
@@ -703,6 +706,7 @@
 
     &:focus {
       border: .5px solid #fff;
+      outline: rgb(114, 33, 160);
     }
   }
 }
@@ -797,6 +801,7 @@
       right: 0.9375rem;
       border-radius: 0.375rem;
       box-shadow: rgba(255, 255, 255, 0.5) 0 -1.5625rem 0 0;
+      //есть простое решение с width: calc(100% - 40px);, но мне нравится моё. пусть стоят оба. ;Р
     }
 
     &:after {
@@ -870,7 +875,7 @@
     appearance: none;
 
     &:focus {
-      outline: transparent;
+      outline: rgba(115, 71, 193, 1)
     }
   }
 
@@ -1023,6 +1028,7 @@
 
     &:focus {
       box-shadow: 0 0 0 0.1rem rgba(115, 71, 193, 0.7);
+      outline: rgba(115, 71, 193, 1);
     }
   }
 
@@ -1055,6 +1061,12 @@
   color: #fff;
   top: 50%;
   transform: translateY(-50%);
+
+  &:hover,
+  &:focus {
+    outline: rgba(115, 71, 193, .5);
+    font-weight: 700;
+  }
 
   &:before {
     position: absolute;
