@@ -203,6 +203,10 @@
     color: $theme-color-blue;
   }
 
+  /*ANCHOR DROPDOWN ICONS STARTS*/
+
+  /*dropdown user starts*/
+
   .dropdown-user {
     z-index: 1;
     min-width: 270px;
@@ -220,6 +224,9 @@
     }
   }
 
+  /*dropdown user ends*/
+
+  /*dropdown messages starts*/
   .messages-dropdown {
     right: 42%;
 
@@ -251,7 +258,6 @@
           background-image: url(../images/replied.svg);
           background-repeat: no-repeat;
           background-position: right;
-
         }
       }
     }
@@ -268,6 +274,9 @@
     }
   }
 
+  /*dropdown messages ends*/
+
+  /*dropdown notification starts*/
   .notifications-dropdown {
     right: 3%;
 
@@ -393,11 +402,14 @@
     }
   }
 
+  /*dropdown notification ends*/
+
+  /*dropdown cart starts*/
+
   .cart-dropdown {
     right: 31%;
     max-width: 400px;
     width: 100%;
-
 
     &__item {
       display: flex;
@@ -496,7 +508,6 @@
       margin: 0;
       font-size: 0.9rem;
 
-
       &--purple {
         background-color: $theme-color-purple;
       }
@@ -512,12 +523,11 @@
       &:focus {
         font-weight: 700;
       }
-
     }
-
   }
 
-
+  /*dropdown cart starts*/
+  // ANCHOR dropdown icons ends
   /*header__top ends*/
 
 
@@ -559,7 +569,6 @@
       .dropdown-products {
         opacity: 1;
         height: auto;
-
       }
     }
   }
@@ -593,150 +602,6 @@
   &__bottom-dropdown-products {
     min-width: 270px;
     left: 6.5%;
-  }
-}
-
-/*drop-down & mega-menu*/
-.dropdown {
-
-  transition: opacity .5s ease-out;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  position: absolute;
-  background-color: #fff;
-  border-top: 1px solid $theme-color-blue;
-  margin-top: 1.7rem;
-  transition: .8s;
-  box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
-
-  &--pointer {
-    z-index: 1;
-    max-width: 370px;
-    background-color: #fff;
-    width: 100%;
-    position: absolute;
-    margin-top: 1.9rem;
-
-    &:before {
-      content: '';
-      position: absolute;
-      right: 2.5em;
-      top: -1.3em;
-      border: 10px solid;
-      border-color: transparent transparent $theme-color-blue transparent;
-    }
-
-    &.notifications-dropdown {
-      &:before {
-        right: auto;
-        left: 2.5em;
-      }
-    }
-  }
-
-  &__items {
-    display: block;
-    list-style: none;
-    padding: 20px 20px 20px 20px;
-
-    &--pointer {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      &:last-child {
-        border: none;
-      }
-    }
-  }
-
-  &__img--pointer {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 1em;
-    align-self: flex-start;
-  }
-
-  &__item {
-    width: 100%;
-    font-size: 0.9rem;
-    background-color: #fff;
-    padding: 15px 10px;
-    transition: .8s;
-
-    &--pointer {
-      border-bottom: 1px solid #e8ebf0;
-      padding: 1.1em 1.5em .8em 1.5em;
-      font-weight: 500;
-      color: $text-dark;
-
-      &:hover {
-        border-top: 1px solid $theme-color-blue;
-      }
-
-      &:focus {
-        border-bottom: 2px solid $theme-color-blue;
-      }
-    }
-
-    &--active,
-    &:hover {
-      transition: .3s;
-      background-color: $theme-color-blue;
-
-      .dropdown__link {
-        color: #fff;
-      }
-    }
-  }
-
-  &__top--pointer {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e8ebf0;
-    padding: 1.5em 1.5em 1em;
-  }
-
-  &__topline--pointer {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__name--pointer {
-    font-weight: 500;
-    color: $text-dark;
-    line-height: 100%;
-  }
-
-  &__time--pointer {
-    font-size: 0.875rem;
-    color: #747a86;
-  }
-
-  &__box--pointer {
-    display: flex;
-    align-items: center;
-  }
-
-  &__title--pointer {
-    font-size: 1.125rem;
-    color: #000;
-  }
-
-  &__link {
-    text-align: start;
-    color: #54667a;
-
-    &--pointer {
-      color: $theme-color-blue;
-      font-size: 0.9rem;
-    }
-
-    &:focus {
-      font-weight: 500;
-    }
   }
 }
 
@@ -842,9 +707,9 @@
   }
 }
 
-/*end header*/
+/*ANCHOR end header*/
 
-/*start top*/
+/*ANCHOR start top*/
 
 .top {
   color: #fff;
@@ -905,9 +770,9 @@
   }
 }
 
-/*end top*/
+/*ANCHOR end top*/
 
-/*start about*/
+/*ANCHOR start about*/
 
 .about {
   &__inner {
@@ -1059,19 +924,11 @@
   }
 }
 
-/*end about*/
+/*ANCHOR end about*/
 
-/*start slider-feature*/
+/*ANCHOR start slider-feature*/
 
 .slider-featured {
-  &__top {
-    background-color: #fff;
-    width: 100%;
-    padding: 2.5em 1.85em;
-    border-radius: 0.25rem;
-    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-    margin-bottom: 3em;
-  }
 
   &__title {
     font-size: 1.875rem;
@@ -1196,44 +1053,46 @@
   border: none;
   outline: transparent;
   color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
 
   &:before {
     position: absolute;
     color: #fff;
     font-family: 'Linearicons-Free';
+    top: 50%;
+    right: 30%;
+    transform: translateY(-50%);
   }
 }
 
 .slick-prev {
-  width: 55px;
-  height: 45px;
   border-top-left-radius: 3em;
   border-bottom-left-radius: 3em;
   background-color: $theme-color-purple;
-  top: -125px;
-  right: 84px;
+  right: 2.5em;
 
   &:before {
     content: "\e875";
+    font-size: 1rem;
   }
 }
 
 .slick-next {
-  width: 55px;
-  height: 45px;
-  top: -125px;
-  right: 29px;
   border-top-right-radius: 3em;
   border-bottom-right-radius: 3em;
   background-color: $theme-color-purple;
+  right: 1em;
 
   &:before {
     content: "\e876";
+    font-size: 1rem;
   }
 }
 
-//start newest-product
+//ANCHOR ends slider-featured
 
+//ANCHOR start newest-product
 .newest-products {
 
   .container-fluid--onecolor {
@@ -1249,14 +1108,12 @@
     margin-bottom: 3.2em;
   }
 
-  .title--top {
-    padding-bottom: 1em;
-  }
-
   &__top {
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding: 2.5em 2em 1.5em;
+    margin-bottom: 1em;
   }
 
   &__filter {
@@ -1404,6 +1261,9 @@
   }
 }
 
+//ANCHOR newest-slider ends
+
+//ANCHOR follow-slider starts
 .follow-slider {
   &__inner {
     padding: 7.5em 0;
@@ -1426,9 +1286,9 @@
   }
 }
 
-/*end slider-featured*/
+//ANCHOR follow-slider ends
 
-/*starts fact-area*/
+/*ANCHOR starts fact-area*/
 .fact-area {
   text-align: center;
 
@@ -1505,10 +1365,9 @@
   }
 }
 
-/*ends fact-area*/
+/*ANCHOR ends fact-area*/
 
-/*starts advantages*/
-
+/*ANCHOR starts advantages*/
 .advantages {
   padding: 7.3em 0 3.8em;
   text-align: center;
@@ -1611,14 +1470,10 @@
   }
 }
 
+/*ANCHOR ends advantages*/
 
-/*ends advantages*/
-
-/*starts activity*/
-
+/*ANCHOR starts activity*/
 .activity {
-
-
   &__inner {
     display: flex;
     flex-wrap: wrap;
@@ -1627,24 +1482,24 @@
   &__left,
   &__right {
     padding: 6.4em 0 4em;
-    flex: 1 0 50%; //ANCHOR и вопрос вот по этому вот. как сделать, чтоб они раньше начали прыгать, но при этом оставлять 50% шириныв процентах?
+    flex: 1 0 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
 
   &__left {
-    background: url(../images/waves-blue.svg) no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/waves-blue.svg);
     background-color: $theme-color-blue;
   }
 
   &__right {
-    background: url(../images/waves-purple.svg) no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/waves-purple.svg);
     background-color: $theme-color-purple;
   }
 
@@ -1661,6 +1516,19 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      background-position: top center;
+      background-repeat: no-repeat;
+      color: #FFF;
+      width: 120px;
+      height: 120px;
+    }
+
+    &--selling:before {
+      background-image: url(../images/icon-left.svg);
+    }
+
+    &--shopping:before {
+      background-image: url(../images/icon-right.svg);
     }
   }
 
@@ -1697,22 +1565,9 @@
   }
 }
 
-.title--selling {
-  background: url(../images/icon-left.svg) no-repeat;
-  background-position: top center;
-  background-size: 120px 100px;
-}
+/* ANCHOR ends activity*/
 
-.title--shopping {
-  background: url(../images/icon-right.svg) no-repeat;
-  background-position: top center;
-  background-size: 100px 100px;
-}
-
-/* ends activity*/
-
-
-/* feedback starts*/
+/* ANCHOR feedback starts*/
 
 .feedback {
   text-align: center;
@@ -1743,7 +1598,7 @@
       margin-left: 1.5em;
     }
 
-    flex: 1 0 555px; //NOTE  вот тут тоже самое, я хочу чтоб было 1 0 45%, но с 45% оно вообще не прыгает при адаптиве
+    flex: 1 0 555px;
     background: #fff;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
     border-radius: .245rem;
@@ -1772,7 +1627,6 @@
     color: #000;
     cursor: pointer;
   }
-
 
   &__card-avatar {
     width: 4em;
@@ -1806,7 +1660,6 @@
     margin: 0 17px;
   }
 
-  /* the parent */
   .slick-list {
     margin: 0 -17px;
   }
@@ -1848,9 +1701,9 @@
   }
 }
 
-/*feedback ends*/
+/* ANCHOR feedback ends*/
 
-/*news start*/
+/* ANCHOR news start*/
 
 .news {
   &__inner {
@@ -1872,7 +1725,6 @@
     line-height: 180%;
     margin-bottom: 3.7em;
   }
-
 
   &__items {
     display: grid;
@@ -1928,7 +1780,6 @@
     }
   }
 
-
   &__views {
     position: relative;
     color: #999;
@@ -1960,7 +1811,7 @@
   }
 }
 
-/*news ends*/
+/* ANCHOR news ends*/
 
 /*guarantee start*/
 
@@ -1971,7 +1822,6 @@
     list-style: none;
     margin: 0;
   }
-
 
   &__item {
     font-size: 1.5rem;
@@ -2017,12 +1867,11 @@
       bottom: 30%;
     }
   }
-
 }
 
-/*guarantee ends*/
+/* ANCHOR guarantee ends*/
 
-/*join starts*/
+/* ANCHOR join starts*/
 
 .join {
   color: #FFF;
@@ -2069,10 +1918,9 @@
   }
 }
 
-/*join ends*/
+/* ANCHOR join ends*/
 
-
-/*footer starts*/
+/* ANCHOR footer starts*/
 
 .footer {
   .container-fluid--onecolor {
@@ -2128,7 +1976,6 @@
     font-style: normal;
 
     &--about {
-
       max-width: 19em;
       width: 100%;
 
@@ -2199,7 +2046,6 @@
 
   &__content-form {
     margin: .8em 0 4em;
-
   }
 
   &__content-input {
@@ -2221,7 +2067,6 @@
     }
   }
 
-
   &__rights {
     text-align: center;
     padding: 2.2em 0;
@@ -2240,9 +2085,5 @@
     color: #fff;
   }
 }
-
-
-
-
 
 @import "media";
