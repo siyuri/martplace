@@ -15,10 +15,8 @@
   }
 
   &__user-panel {
-    min-width: 48%;
     display: flex;
-    flex-direction: flex-end;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     padding: 2em 0 1.5em;
     position: relative;
@@ -108,6 +106,7 @@
     &:focus {
       &:before {
         color: $theme-color-blue;
+        outline: rgba(115, 71, 193, .5);
       }
     }
   }
@@ -529,13 +528,11 @@
     }
   }
 
-  /*dropdown cart starts*/
+  /*dropdown cart ends*/
   // ANCHOR dropdown icons ends
   /*header__top ends*/
 
-
   /*header__bottom starts*/
-
   &__bottom {
     min-height: 80px;
     position: relative;
@@ -572,6 +569,7 @@
       .dropdown-products {
         opacity: 1;
         height: auto;
+        overflow: auto;
       }
     }
   }
@@ -585,6 +583,10 @@
     &:hover,
     &:focus {
       color: $theme-color-blue;
+    }
+
+    &:focus {
+      @extend %outline;
     }
 
     &--active {
@@ -766,11 +768,6 @@
       transition: all .5s;
       transform: scale(0.9);
     }
-
-    &:focus {
-      transition: .4s;
-      transform: scale(0.95);
-    }
   }
 }
 
@@ -823,7 +820,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    padding: 2.3em 0;
+    padding: 2.3em 1em;
   }
 
   &__search-label {
@@ -1638,6 +1635,11 @@
     margin-bottom: 1.2em;
     color: #000;
     cursor: pointer;
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
+    }
   }
 
   &__card-avatar {
@@ -1780,6 +1782,11 @@
     color: #999;
     margin-right: 1em;
 
+    &:focus,
+    &:hover {
+      filter: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -1917,8 +1924,6 @@
 
     &:hover {
       transition: 2s;
-      transform: scale(1.2);
-      font-size: 1rem;
       background: linear-gradient(to right, rgba(13, 62, 242, 20%) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
       color: #FFF;
       border: 1px solid #FFF;
@@ -1954,6 +1959,11 @@
   &__content-logo {
     display: block;
     margin-bottom: .3em;
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+    }
   }
 
   &__content-items {
@@ -1967,6 +1977,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus {
+      @extend %outline;
     }
   }
 

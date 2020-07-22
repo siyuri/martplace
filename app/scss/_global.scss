@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -20,14 +25,26 @@ body {
   line-height: 150%;
   overflow-x: hidden;
   transition: all 5s;
+}
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
 }
 
 .container {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-
 }
 
 .container-fluid {
@@ -91,6 +108,17 @@ body {
   font-size: 1.875rem;
   line-height: 100%;
   text-transform: capitalize;
+  outline: transparent;
+
+  &.title--link:hover {
+    font-weight: 500;
+    color: $theme-color-blue;
+  }
+
+  &.title--link:focus {
+    @extend %outline;
+    font-weight: 700;
+  }
 }
 
 .title--accent {
@@ -117,6 +145,11 @@ body {
   cursor: pointer;
   outline: transparent;
   position: relative;
+
+  &:focus,
+  &:hover {
+    filter: drop-shadow(2px 2px 2px rgb(165, 156, 187));
+  }
 
   &:before {
     position: absolute;
@@ -156,6 +189,12 @@ body {
     &:hover {
       .mediabox__link:before {
         background-color: $theme-color-blue;
+      }
+    }
+
+    &:focus {
+      .mediabox__link:before {
+        filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
       }
     }
   }

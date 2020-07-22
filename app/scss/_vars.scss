@@ -6,3 +6,9 @@ $form: #898f96;
 $bg-grey: #eef1f3;
 $theme-color-red: #ff6a6c;
 $theme-color-green: #62d03a;
+
+%outline {
+  border-bottom: 3px double rgba(115, 71, 193, 0.5);
+}
+
+//@extend %outline;
