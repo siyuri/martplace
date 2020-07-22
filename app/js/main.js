@@ -16,7 +16,14 @@ $(function () {
     slidesToScroll: 3,
     prevArrow: '<button type="button" class="slick-btn slick-prev"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>',
-    appendArrows: $('.follow-slider__title')
+    appendArrows: $('.follow-slider__title'),
+    responsive: [{
+      breakpoint: 1066,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
   })
 
   $('.feedback__cards').slick({

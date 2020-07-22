@@ -237,7 +237,7 @@
 
   /*dropdown messages starts*/
   .messages-dropdown {
-    right: 42%;
+    left: 26.5%;
 
     &__item {
 
@@ -287,7 +287,7 @@
 
   /*dropdown notification starts*/
   .notifications-dropdown {
-    right: 3%;
+    right: 1.5%;
 
     &__name {
       &:after {
@@ -416,7 +416,7 @@
   /*dropdown cart starts*/
 
   .cart-dropdown {
-    right: 31%;
+    right: 20.5%;
     max-width: 400px;
     width: 100%;
 
@@ -1312,11 +1312,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 1em;
   }
 
   &__item {
     padding-top: 5.2em;
     position: relative;
+    flex-grow: 1;
 
     &:before {
       content: '';
