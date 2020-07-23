@@ -1,1 +1,136 @@
-@media screen and (max-width:1065px) {}
+@media screen and (max-width:1065px) {
+
+
+
+
+
+
+
+
+    .about {
+        &__box {
+            flex-direction: column;
+        }
+
+        &__box-item {
+            flex: 100%;
+        }
+
+        &__box-text {
+            padding: 0 10em;
+        }
+
+        &__search-btn {
+            font-size: 0;
+            padding: 2rem 2rem;
+            margin-left: 1rem;
+            position: relative;
+            border-radius: 50%;
+
+            &:before {
+                content: "\e86f";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+                color: #fff;
+                font-family: 'Linearicons-Free';
+            }
+        }
+    }
+
+    .activity {
+        &__inner {
+            flex-direction: column;
+        }
+    }
+
+    .feedback {
+        &__card {
+            width: 75% !important;
+        }
+    }
+
+    .footer {
+        text-align: center;
+
+        &__content-box {
+
+            flex: 100%;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 1em;
+            padding-bottom: 2em;
+            border-bottom: 1px solid $form;
+        }
+
+        &__content-item {
+            display: inline;
+
+            &+& {
+                margin-left: 2em;
+            }
+        }
+
+        &__content {
+            padding: 5em 0;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width:964px) {
+
+.header{}
+
+
+    .about {
+        &__search-label {
+            min-width: 30em;
+        }
+
+        &__search-btn {
+            padding: 1.5rem 1.5rem;
+
+            &:before {
+                font-size: 1.5rem;
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+    @media screen and (max-width:500px) {
+        .footer {
+
+            &__content-map {
+                max-width: 12em;
+            }
+
+            &__content-input {
+                padding: 1em 9em 1em 1.7em;
+                width: 18em;
+            }
+
+            &__content-form {
+                margin-bottom: 2em;
+            }
+
+            .mediabox__link {
+                &:before {
+                    font-size: .8rem;
+                    padding: .6em;
+                }
+            }
+
+        }
+    }

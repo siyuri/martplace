@@ -43,12 +43,14 @@
 
   &__mail-box {
     padding: 1.5rem 0;
+    outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
 
     &:hover {
       .messages-dropdown {
         height: auto;
         overflow: visible;
         opacity: 1;
+        border-top: 1px solid $theme-color-blue;
       }
     }
   }
@@ -61,6 +63,7 @@
         height: auto;
         overflow: visible;
         opacity: 1;
+        border-top: 1px solid $theme-color-blue;
       }
     }
   }
@@ -73,6 +76,7 @@
         height: auto;
         overflow: visible;
         opacity: 1;
+        border-top: 1px solid $theme-color-blue;
       }
     }
   }
@@ -109,7 +113,8 @@
     &:focus {
       &:before {
         color: $theme-color-blue;
-        outline: rgba(115, 71, 193, .5);
+        font-weight: 700;
+        outline: rgba(115, 71, 193, 1);
       }
     }
   }
@@ -165,13 +170,14 @@
   }
 
   &__user-box {
-    padding: 1.5em 0;
+    padding: 1em 0;
 
     &:hover {
       .header__dropdown-user {
         opacity: 1;
         height: auto;
         overflow: visible;
+        border-top: 1px solid $theme-color-blue;
       }
     }
   }
@@ -467,6 +473,8 @@
       position: relative;
       cursor: pointer;
       margin-bottom: .7rem;
+      outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+      ;
 
       &:before {
         position: absolute;
@@ -479,6 +487,19 @@
         font-family: 'Linearicons-Free';
         padding: 4px 4px 5px 10px;
         color: #818c98;
+      }
+
+      &:hover {
+        &:before {
+          color: $theme-color-blue;
+        }
+      }
+
+      &:focus {
+        &:before {
+          font-weight: 700;
+          filter: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+        }
       }
     }
 
@@ -558,7 +579,7 @@
 
   &__bottom-item {
     display: inline;
-    padding: 30px 0;
+    padding: 29px 0;
 
     &+& {
       margin-left: 1.45em;
@@ -573,6 +594,7 @@
         opacity: 1;
         height: auto;
         overflow: auto;
+        border-top: 1px solid $theme-color-blue;
       }
     }
   }
@@ -582,6 +604,7 @@
     color: $text-dark;
     font-weight: 500;
     font-size: 1rem;
+
 
     &:hover,
     &:focus {
@@ -665,6 +688,7 @@
 
     &:focus {
       font-weight: 700;
+      outline: rgb(114, 33, 160);
     }
   }
 }
@@ -875,7 +899,8 @@
     appearance: none;
 
     &:focus {
-      outline: rgba(115, 71, 193, 1)
+      outline: rgba(115, 71, 193, 1);
+      border: 1px solid $theme-color-purple;
     }
   }
 
@@ -905,7 +930,8 @@
   }
 
   &__box-item {
-    flex-basis: 22.7em;
+    // flex-basis: 22.7em;
+    flex: 1;
     padding: 12em 1em 2em;
 
     &:hover {
@@ -1160,6 +1186,15 @@
       background: url(../images/ellipsis-v-solid.svg) no-repeat;
       background-position: right;
       background-size: .25em;
+    }
+
+    &:hover {
+      font-weight: 700;
+
+    }
+
+    &:focus {
+      outline: 1px solid $theme-color-purple;
     }
   }
 
@@ -1845,6 +1880,7 @@
     color: #000;
     list-style: none;
     margin: 0;
+    text-align: center
   }
 
   &__item {
@@ -2007,8 +2043,10 @@
     font-style: normal;
 
     &--about {
-      max-width: 19em;
-      width: 100%;
+
+      //  max-width: 19em;
+      //   width: 100%;
+      flex: 2.3;
 
       .footer__link {
         padding-left: 2em;
@@ -2029,17 +2067,20 @@
     }
 
     &--list {
-      max-width: 9em;
-      width: 100%;
+      // max-width: 9em;
 
-      &+& {
-        margin-left: 3.5em;
-      }
+      // width: 100%;
+      flex: 1.5;
+
+      // &+& {
+      //   margin-left: 3.5em;
+      // }
     }
 
     &--form {
-      max-width: 25em;
-      width: 100%;
+      //  max-width: 25em;
+      flex: 3;
+      //   width: 100%;
     }
   }
 

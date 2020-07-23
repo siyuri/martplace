@@ -129,12 +129,6 @@
     cursor: pointer;
     font-size: 0;
 
-    &:hover {
-      &:before {
-        color: red;
-      }
-    }
-
     &:before {
       position: absolute;
       content: "\e813";
@@ -152,6 +146,18 @@
       top: -.4em;
       position: absolute;
     }
+
+    &:hover {
+      &:before {
+        font-weight: 700;
+      }
+    }
+
+    &:focus {
+      &:before {
+        color: red;
+      }
+    }
   }
 
   &__bottom-rating {
@@ -168,6 +174,11 @@
     margin-left: 3.5rem;
     cursor: pointer;
     font-size: 0;
+
+    &:focus {
+      font-weight: 700;
+      outline: $theme-color-purple;
+    }
 
     &:before {
       position: absolute;
