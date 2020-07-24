@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
   // slickliders
   $('.slider-featured__products').slick({
     infinite: true,
@@ -22,19 +22,23 @@ $(function () {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
+      },
+      breakpoint: 855,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }]
   })
 
-  var slider = $('.follow-slider__items');
+  var slider = $('.follow-slider__items')
 
-  $('.follow-slider__title .slick-prev').on('click', function() {
-    $(slider).slick('slickPrev');
-  });
-  $('.follow-slider__title .slick-next').on('click', function() {
-    $(slider).slick('slickNext');
-  });
-
+  $('.follow-slider__title .slick-prev').on('click', function () {
+    $(slider).slick('slickPrev')
+  })
+  $('.follow-slider__title .slick-next').on('click', function () {
+    $(slider).slick('slickNext')
+  })
 
   $('.feedback__cards').slick({
     arrows: true,
@@ -49,19 +53,19 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        arrows:false
+        arrows: false
       }
     }]
   })
 
-  $('.header').on('click', '.search-toggle', function(e) {
-    var selector = $(this).data('selector');
-  
-    $(selector).toggleClass('show').find('.search-form__input').focus();
-    $(this).toggleClass('active');
-  
-    e.preventDefault();
-  });
+  $('.header').on('click', '.search-toggle', function (e) {
+    var selector = $(this).data('selector')
+
+    $(selector).toggleClass('show').find('.search-form__input').focus()
+    $(this).toggleClass('active')
+
+    e.preventDefault()
+  })
 
   // raty
   $('.star-rating').raty({
@@ -75,6 +79,51 @@ $(function () {
     halfShow: true,
     space: false
   })
+
+  $('.header__bottom-nav-btn').on('click', function () {
+    $('.header__bottom-items').slideToggle()
+  })
+
+  const selectElement = (element) => document.querySelector(element)
+  selectElement('.header__bottom-nav-btn').addEventListener('click', () => {
+    selectElement('.header__bottom-items').classList.toggle('.active')
+  })
+  // ('.count').counterUp({
+  //   delay: 10,
+  //   time: 1000
+  // })
+
+  var isBreakPoint = function (bp) {
+    var bps = [320, 885, 1440],
+      w = $(window).width(),
+      min, max
+    for (var i = 0, l = bps.length; i < l; i++) {
+      if (bps[i] === bp) {
+        min = bps[i - 1] || 0
+        max = bps[i]
+        break
+      }
+    }
+    return w > min && w <= max
+  }
+
+  if (isBreakPoint(885)) {
+    // $('#appendTo').click(function () {
+    //   $('#moveMeIntoMain').appendTo($('#main'))
+    // })//CLICK END
+    // $('.header__user-info').click(function () {
+    //   $('.header__notification-btns').prependTo($('.header__dropdown-user'))
+    // }) //CLICK BEGGINING
+    // $('.header__notification-btns').prependTo($('.header__dropdown-user')),
+
+    // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?((
+
+    $('.header__register-link').appendTo($('.header__bottom'))
+  } // Breakpoint between 320 and 480
+  // var $window = $(window)
+  // if ($window.width() == 885) {
+  //   location.reload(true)
+  // }
 
   if ($('.newest-products__items').length) {
     var mixer = mixitup('.newest-products__items')

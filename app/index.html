@@ -364,12 +364,17 @@
             <div class="header__bottom">
               <div class="header__bottom-inner">
                 <nav class="header__bottom-menu">
+                  <div class="header__bottom-menu-i">
+                    <button class="header__bottom-nav-btn lnr lnr-menu">menubtn</button>
+                    <button class="header__bottom-nav-btn lnr lnr-cross-circle">menubtnclose</button>
+                  </div>
                   <ul class="header__bottom-items">
                     <li class="header__bottom-item">
                       <a class="header__bottom-link header__bottom-link--active" href="#">
                         HOME
+                        <span class="header__bottom-drop lnr lnr-arrow-down">submenu</span>
                       </a>
-                      <div class="header__bottom-dropdown-home dropdown-home dropdown">
+                      <div class="header__bottom-dropdown header__bottom-dropdown--home dropdown">
                         <ul class="dropdown-home__items dropdown__items">
                           <li class="dropdown-home__item dropdown__item dropdown__item--active">
                             <a class="dropdown-home__link dropdown__link" href="#">
@@ -392,8 +397,9 @@
                     <li class="header__bottom-item">
                       <a class="header__bottom-link" href="#">
                         all products
+                        <span class="header__bottom-drop lnr lnr-arrow-down">submenu</span>
                       </a>
-                      <div class="header__bottom-dropdown-products dropdown-products dropdown">
+                      <div class="header__bottom-dropdown header__bottom-dropdown--products dropdown">
                         <ul class="dropdown-products__items dropdown__items">
                           <li class="dropdown-products__item dropdown__item dropdown__item--active">
                             <a class="dropdown-products__link dropdown__link" href="#">
@@ -436,8 +442,9 @@
                     <li class="header__bottom-item">
                       <a class="header__bottom-link" href="#">
                         wordpress
+                        <span class="header__bottom-drop lnr lnr-arrow-down">submenu</span>
                       </a>
-                      <div class="header__bottom-dropdown-wordpress dropdown-wordpress dropdown">
+                      <div class="header__bottom-dropdown header__bottom-dropdown--wordpress dropdown">
                         <ul class="dropdown-wordpress__items dropdown__items">
                           <li class="dropdown-wordpress__item dropdown__item dropdown__item--active">
                             <a class="dropdown-wordpress__link dropdown__link" href="#">
@@ -490,8 +497,9 @@
                     <li class="header__bottom-item header__bottom-item--pages ">
                       <a class="header__bottom-link" href="#">
                         Pages
+                        <span class="header__bottom-drop lnr lnr-arrow-down">submenu</span>
                       </a>
-                      <div class="header__bottom-dropdown-pages dropdown-pages dropdown">
+                      <div class="header__bottom-dropdown header__bottom-dropdown--pages dropdown">
                         <div class="dropdown-pages__wrapper">
                           <div class="dropdown-pages__section">
                             <span class="dropdown-pages__title title">MartPlace pages</span>
@@ -793,6 +801,14 @@
                   </ul>
                 </nav>
                 <form class="header__bottom-search search-form">
+                  <div class="header__bottom-select-wrap about__search-select-wrapper">
+                    <select class="header__bottom-select about__search-select" name="search-category"
+                      id="select-products-top">
+                      <option value="all">All Categories</option>
+                      <option value="newest">Newest</option>
+                      <option value="popular">Popular</option>
+                    </select>
+                  </div>
                   <label class="header__bottom-label" for="search">
                     <input class="search-form__input search-input" type="search" placeholder="Search product here..."
                       name="search" id="search">
@@ -835,7 +851,7 @@
         <!-- NOTE - about section starts -->
         <section class="about">
           <div class="container">
-            <div class="about__inner">
+            <div class="about__inner inner">
               <div class="about__search">
                 <form class="about__search-form" action="">
                   <label class="about__search-label" for="search-product">
@@ -898,7 +914,7 @@
         <section class="slider-featured">
           <div class="container-fluid--onecolor">
             <div class="container">
-              <div class="slider-featured__inner">
+              <div class="slider-featured__inner inner">
                 <span class="slider-featured__top title title--top">
                   Weekly Featured Products
                 </span>
@@ -1098,7 +1114,7 @@
         <section class="newest-products">
           <div class="container-fluid--onecolor">
             <div class="container">
-              <div class="newest-products__inner">
+              <div class="newest-products__inner inner">
                 <div class="newest-products__navigation">
                   <div class="newest-products__navigation-inner">
                     <div class="newest-products__top title--top">
@@ -1450,7 +1466,7 @@
         <section class="follow-slider">
           <div class="container-fluid--onecolor">
             <div class="container">
-              <div class="follow-slider__inner">
+              <div class="follow-slider__inner inner">
                 <span class="follow-slider__title title title--top">
                   Your Followers Feed
                 </span>
@@ -1754,21 +1770,21 @@
         <section class="fact-area">
           <div class="container-fluid--onecolor">
             <div class="container">
-              <div class="fact-area__inner">
+              <div class="fact-area__inner inner">
                 <div class="fact-area__item fact-area__item--terms">
-                  <span class="fact-area__item-number counter">38,436</span>
+                  <span class="fact-area__item-number count">38,436</span>
                   <span class="fact-area__item-text">terms for sale</span>
                 </div>
                 <div class="fact-area__item fact-area__item--sales">
-                  <span class="fact-area__item-number counter">3,736</span>
+                  <span class="fact-area__item-number count">3,736</span>
                   <span class="fact-area__item-text">total sales</span>
                 </div>
                 <div class="fact-area__item fact-area__item--customers">
-                  <span class="fact-area__item-number counter">2,736</span>
+                  <span class="fact-area__item-number count">2,736</span>
                   <span class="fact-area__item-text">happy customers</span>
                 </div>
                 <div class="fact-area__item fact-area__item--members">
-                  <span class="fact-area__item-number counter">25,736</span>
+                  <span class="fact-area__item-number count">25,736</span>
                   <span class="fact-area__item-text">members</span>
                 </div>
               </div>
@@ -1780,7 +1796,7 @@
         <!-- NOTE start advantages -->
         <section class="advantages">
           <div class="container">
-            <div class="advantages__inner">
+            <div class="advantages__ inner">
               <div class="advantages__top">
                 <span class="advantages__title title">
                   Why Choose<span class="advantages__title-accent title--accent">MartPlace</span>
@@ -1859,7 +1875,7 @@
         <!-- NOTE start activity -->
         <section class="activity">
           <div class="container-fluid">
-            <div class="activity__inner">
+            <div class="activity__inner inner">
               <article class="activity__left">
                 <span class="activity__title title activity__title--selling">
                   Sell your product
@@ -1892,7 +1908,7 @@
         <!-- NOTE start feedback section -->
         <section class="feedback">
           <div class="container">
-            <div class="feedback__inner">
+            <div class="feedback__inner inner">
               <span class="feedback__title title">
                 Our Clients <span class="feedback__title-accent title--accent">
                   Feedback
@@ -1985,7 +2001,7 @@
         <section class="news">
           <div class="container-fluid--onecolor">
             <div class="container">
-              <div class="news__inner">
+              <div class="news__inner inner">
                 <div class="news__top">
                   <span class="news__title title">
                     Latest <span class="news__title-accent title--accent">
@@ -2089,7 +2105,7 @@
         <!-- NOTE starts guarantee section -->
         <section class="guarantee">
           <div class="container">
-            <ul class="guarantee__inner">
+            <ul class="guarantee__inner inner">
               <li class="guarantee__item guarantee__item--money">30 Days Money Back
                 <span class="guarantee__item--blue">Guarantee</span>
               </li>
@@ -2107,7 +2123,7 @@
         <section class="join">
           <div class="container-fluid--gradient">
             <div class="container">
-              <div class="join__inner">
+              <div class="join__inner inner">
                 <span class="join__title title">
                   Ready to Join Our Marketplace!
                 </span>
@@ -2286,7 +2302,6 @@
 
 
   <!-- NOTE ends footer -->
-
 
 
   <script src="js/libs.min.js"></script>

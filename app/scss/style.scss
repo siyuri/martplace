@@ -42,6 +42,7 @@
   }
 
   &__mail-box {
+    max-width: 2.5rem;
     padding: 1.5rem 0;
     outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
 
@@ -57,6 +58,7 @@
 
   &__notifications-box {
     padding: 1.5rem 0;
+    max-width: 2.5rem;
 
     &:hover {
       .notifications-dropdown {
@@ -70,6 +72,7 @@
 
   &__cart-box {
     padding: 1.5rem 0;
+    max-width: 2.5rem;
 
     &:hover {
       .cart-dropdown {
@@ -573,6 +576,7 @@
   }
 
   &__bottom-items {
+    display: flex;
     margin: 0;
     padding: 0;
   }
@@ -587,10 +591,10 @@
 
     &:hover {
 
-      .dropdown-home,
-      .dropdown-wordpress,
-      .dropdown-pages,
-      .dropdown-products {
+      .header__bottom-dropdown--home,
+      .header__bottom-dropdown--wordpress,
+      .header__bottom-dropdown--pages,
+      .header__bottom-dropdown--products {
         opacity: 1;
         height: auto;
         overflow: auto;
@@ -604,7 +608,7 @@
     color: $text-dark;
     font-weight: 500;
     font-size: 1rem;
-
+    transition: color 650ms;
 
     &:hover,
     &:focus {
@@ -621,18 +625,67 @@
     }
   }
 
-  &__bottom-dropdown-home {
+  &__bottom-dropdown--home {
     min-width: 315px;
   }
 
-  &__bottom-dropdown-wordpress {
+  &__bottom-dropdown--wordpress {
     min-width: 270px;
     left: 19%;
+    right: auto;
   }
 
-  &__bottom-dropdown-products {
-    min-width: 270px;
+  &__bottom-dropdown--products {
+    width: 270px;
+
     left: 6.5%;
+
+  }
+
+  &__bottom-drop {
+    display: none;
+    font-size: 0;
+
+    &:before {
+      font-size: .5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__bottom-nav-btn {
+    position: absolute;
+    background: transparent;
+    left: 0;
+    top: -50px;
+    border: none;
+    font-size: 0;
+    display: none;
+    outline: transparent;
+    transition: all .3s;
+    z-index: 80000;
+
+    &:hover {
+      &:before {
+        color: $theme-color-blue;
+      }
+    }
+
+    &:focus {
+      &:before {
+        font-weight: 700;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1%;
+    }
+  }
+
+  &__bottom-select-wrap {
+    display: none;
   }
 }
 
@@ -696,15 +749,16 @@
 .search-form {
   margin-top: 1em;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__input {
     border-radius: 2em;
     font-size: 0.9rem;
-    padding: 1em 6em 1em 1.7em;
+    padding: 1em 6em 1.1em 1.7em;
     width: 24.7em;
 
     &::placeholder {
+      position: absolute;
       font-size: 0.9rem;
       padding-right: 5em;
     }
@@ -805,7 +859,7 @@
 .about {
   &__inner {
     position: relative;
-    padding: 6.7em 0 6.1em;
+    // padding: 6.7em 0 6.1em;
   }
 
   &__search {
@@ -885,6 +939,7 @@
     min-height: 3.63em;
     position: absolute;
     border: none;
+    outline: transparent;
     background: transparent;
     color: $text;
     border-left: 0.0625rem solid #d9dfe5;
@@ -899,8 +954,7 @@
     appearance: none;
 
     &:focus {
-      outline: rgba(115, 71, 193, 1);
-      border: 1px solid $theme-color-purple;
+      filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
     }
   }
 
@@ -966,12 +1020,11 @@
   }
 
   &__inner {
-    padding: 7.5em 0;
+    // padding: 7.5em 0;
   }
 
   &__item {
     display: flex !important;
-    align-self: stretch;
   }
 
   &__item-preview {
@@ -1138,8 +1191,8 @@
   }
 
   &__inner {
-    padding-top: 7.5em;
-    padding-bottom: 7.5em;
+    // padding-top: 7.5em;
+    // padding-bottom: 7.5em;
   }
 
   &__navigation {
@@ -1313,7 +1366,7 @@
 //ANCHOR follow-slider starts
 .follow-slider {
   &__inner {
-    padding: 7.5em 0;
+    // padding: 7.5em 0;
   }
 
   &__items {
@@ -1761,7 +1814,8 @@
 
 .news {
   &__inner {
-    padding: 7.4em 0;
+    // padding: 7.4em 0;
+
   }
 
   &__top {
@@ -1942,7 +1996,7 @@
   }
 
   &__inner {
-    padding: 6.7em;
+    // padding: 6.7em;
     display: flex;
     flex-direction: column;
     align-items: center;
