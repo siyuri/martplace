@@ -1076,7 +1076,7 @@
   }
 
   &__item-info-top {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
 
   &__item-title {
@@ -1417,15 +1417,15 @@
   text-align: center;
   background-color: #212225;
 
-  .container-fluid--onecolor {
+  .container-fluid {
     padding: 5.5em 0 6em;
   }
 
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // NOTE какого они не встают с начал? Оо
     flex-wrap: wrap;
-    padding: 0 1em;
+    padding: 0;
   }
 
   &__item {
@@ -1495,7 +1495,7 @@
 
 /*ANCHOR starts advantages*/
 .advantages {
-  // padding: 7.3em 0 3.8em;
+  padding: 7.3em 0 3.8em;
   text-align: center;
 
   &__top {
@@ -1607,7 +1607,7 @@
 
   &__left,
   &__right {
-    padding: 6.4em 0 4em;
+    padding: 6.4em 0 6.4em;
     flex: 1 0 50%;
     display: flex;
     flex-direction: column;
@@ -1634,7 +1634,8 @@
     position: relative;
     font-size: 2.25rem;
     padding-top: 4em;
-    margin-bottom: .8em;
+    margin-bottom: .2em;
+    line-height: 100%;
 
     &:before {
       position: absolute;
@@ -1661,7 +1662,7 @@
   &__text {
     color: #FFF;
     padding: 0 11em;
-    margin-bottom: 3em;
+    margin-bottom: 3.2em;
   }
 
   &__btn {
@@ -1717,7 +1718,7 @@
   }
 
   &__card {
-    padding: 3em 0;
+    padding: 3.2em 0 2em;
     margin-bottom: 2em;
 
     &+& {
@@ -1802,7 +1803,7 @@
     background-color: #fff;
     box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.15);
     z-index: 1;
-    top: 38%;
+    top: 45%;
 
     &:before {
       position: absolute;
@@ -2074,6 +2075,7 @@
   &__content-logo {
     display: block;
     margin-bottom: .3em;
+    padding-left: 0;
 
     &:focus,
     &:hover {
@@ -2118,9 +2120,9 @@
 
     &--about {
 
-      //  max-width: 19em;
-      //   width: 100%;
-      flex: 2.3;
+      // max-width: 19em;
+      // width: 100%;
+      flex: .75;
 
       .footer__link {
         padding-left: 2em;
@@ -2141,12 +2143,16 @@
     }
 
     &--list {
-      flex: 1.5;
+      flex: .5;
     }
 
     &--form {
-      flex: 3;
+      flex: .85;
     }
+  }
+
+  &__content-map {
+    max-width: 19em;
   }
 
   &__content-text {
