@@ -129,20 +129,28 @@ $(document).ready(function () {
     return w > min && w <= max
   }
 
-  if (isBreakPoint(885)) {
-    // $('#appendTo').click(function () {
-    //   $('#moveMeIntoMain').appendTo($('#main'))
-    // })//CLICK END
-    // $('.header__user-info').click(function () {
-    //   $('.header__notification-btns').prependTo($('.header__dropdown-user'))
-    // }) //CLICK BEGGINING
-    // $('.header__notification-btns').prependTo($('.header__dropdown-user')),
+  // if (isBreakPoint(885)) {
+  //   // $('#appendTo').click(function () {
+  //   //   $('#moveMeIntoMain').appendTo($('#main'))
+  //   // })//CLICK END
+  //   // $('.header__user-info').click(function () {
+  //   //   $('.header__notification-btns').prependTo($('.header__dropdown-user'))
+  //   // }) //CLICK BEGGINING
+  //   // $('.header__notification-btns').prependTo($('.header__dropdown-user')),
 
-    // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?(( тогда кнопень ваще убрать тут?
+  //   // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?(( тогда кнопень ваще убрать тут?
 
-    $('.header__register-link').appendTo($('.header__bottom'))
-  } // Breakpoint between 320 and 480
+  //   $('.header__register-link').appendTo($('.header__bottom'))
+  // } // Breakpoint between 320 and 480
 
+  window.addEventListener('resize', handleBrowserResize)
+
+  function handleBrowserResize() {
+    // your rest of the code to handle browser resize (if any)
+    if (isBreakPoint(885)) {
+      $('.header__register-link').appendTo($('.header__bottom'))
+    }
+  }
   // var $window = $(window)
   // if ($window.width() == 885) {
   //   location.reload(true)
