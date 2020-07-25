@@ -352,10 +352,12 @@
   .slider-featured {
     &__item {
       display: block !important;
+      height: 100%;
     }
 
     &__item-info {
       width: 100%;
+
     }
   }
 
