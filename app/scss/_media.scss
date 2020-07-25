@@ -1,4 +1,16 @@
+@media screen and (max-width:1165px) {
+  .dropdown--pointer:before {
+    border: none;
+  }
+}
+
 @media screen and (max-width:1065px) {
+  .header {
+    .messages-dropdown {
+      left: 20%;
+    }
+  }
+
   .about {
     &__box {
       flex-direction: column;
@@ -9,7 +21,7 @@
     }
 
     &__box-text {
-      padding: 0 10em;
+      padding: 0 8em;
     }
 
     &__search-btn {
@@ -134,7 +146,6 @@
   }
 
   .header {
-
     &__bottom {
       .header__register-link {
         border-radius: 0;
@@ -152,6 +163,10 @@
           transform: none;
         }
       }
+    }
+
+    .messages-dropdown {
+      left: 0;
     }
 
     &__notification-btns {
@@ -214,6 +229,7 @@
         .header__bottom-dropdown {
           opacity: 1;
           max-height: initial;
+          width: 100%;
         }
       }
 
@@ -226,32 +242,12 @@
       display: block;
     }
 
-    .header__bottom-dropdown {
+    &__bottom-dropdown {
       position: initial;
       box-shadow: none;
       margin: 0;
       opacity: 1;
       max-height: 0;
-
-      &-pages {
-        &__items {
-          &--multiple-columns {
-            -moz-column-count: 4;
-            -webkit-column-width: 100px;
-            -moz-column-width: 100px;
-            column-width: 100px;
-            -moz-column-gap: 2em;
-            -webkit-column-count: 4;
-            -webkit-column-gap: 2em;
-            column-count: 4;
-            column-gap: 2em;
-          }
-        }
-
-        &__item {
-          display: inline;
-        }
-      }
     }
 
     &__bottom-menu.active {
@@ -281,6 +277,17 @@
 
     }
 
+    .dropdown-pages {
+      &__wrapper {
+        flex-direction: column;
+        width: 100vw;
+      }
+
+      &__section {
+        margin-bottom: 2em;
+      }
+    }
+
     .search-form {
       display: flex;
       justify-content: center;
@@ -294,13 +301,27 @@
         }
 
         &::placeholder {
-          font-size: 1rem;
+          font-size: .8rem;
         }
       }
 
       &__btn {
         border-radius: 0;
       }
+    }
+  }
+
+  .about__box {
+    &-text {
+      padding: 0 4em;
+    }
+  }
+
+  .feedback,
+  .news,
+  .activity {
+    &__text {
+      padding: 0 4em;
     }
   }
 
@@ -313,8 +334,12 @@
     }
 
     &__item {
+      width: 100%;
+      text-align: center;
+
       &+& {
         margin-left: 0;
+
       }
     }
 
@@ -322,7 +347,6 @@
       border-right: none;
       border-bottom: 1px solid #e8eaf3;
     }
-
   }
 
   .slider-featured {
@@ -358,16 +382,235 @@
       left: -3.5rem;
     }
   }
+
+  .fact-area {
+    &__item {
+      flex: 50%;
+      padding-bottom: 3em;
+    }
+
+  }
 }
 
-@media screen and (max-width: 690) {}
+@media screen and (max-width:666px) {
+  .header {
+    &__bottom-select-wrap {
+      display: none;
+    }
 
+    &__notification-btns {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      max-width: 2em;
+    }
 
+    &__icon-btn {
+      &:before {
+        font-size: .9rem;
+        font-weight: 700;
+        padding: 0;
+      }
+    }
 
+    &__user-avatar {
+      margin-left: .6em;
+    }
+
+    &__mail-box,
+    &__notifications-box,
+    &__cart-box {
+      padding: 0;
+      height: 1.25em;
+
+      &:hover {
+
+        .messages-dropdown,
+        .notifications-dropdown,
+        .cart-dropdown {
+          display: none;
+        }
+
+      }
+    }
+
+    &__icon-badge {
+      &--active {
+        font-size: 0;
+        padding: .2rem;
+        border-radius: 100%;
+        top: -1rem;
+        right: -1.5rem;
+        left: auto;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .top__title-accent {
+    font-weight: 500;
+  }
+
+  .slider-featured {
+    &__item-price {
+      padding: 0 .6em;
+      font-size: .6rem;
+    }
+
+    &__item-info {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__item-bottom {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .product-card__bottom-like:before,
+  .product-card__bottom-like:after {
+    font-size: .7rem;
+  }
+
+  .activity {
+    &__title {
+      padding-top: 7em;
+    }
+  }
+
+  .about {
+    &__box-title {
+      padding-top: 8em;
+    }
+  }
+
+  .feedback {
+    &__cards {
+      display: none;
+    }
+  }
+}
 
 @media screen and (max-width:500px) {
-  .footer {
 
+  .header {
+    &__register-link {
+      display: none;
+    }
+
+    &__logo-img {
+      display: none;
+    }
+
+    &__logo-mini {
+      display: block;
+    }
+  }
+
+  .top {
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 3em;
+    }
+
+    &__button {
+      max-width: 8em;
+      font-size: .8rem;
+
+      &+& {
+        margin-left: 0;
+        margin-top: 1em;
+      }
+    }
+
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .newest-products {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &__filterby-btn {
+      line-height: 100%;
+    }
+  }
+
+  .about__box {
+    &-text {
+      padding: 0 1em;
+    }
+  }
+
+  .feedback,
+  .news,
+  .activity {
+    &__text {
+      padding: 0 1em;
+    }
+  }
+
+  .button--category {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    padding-right: .6rem;
+    font-size: .8rem;
+    border-right: 1px solid $form;
+  }
+
+  .category-tag {
+    display: none;
+  }
+
+  .star-rating {
+    display: none;
+  }
+
+  .news {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .advantages {
+    &__list {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .guarantee {
+    &__inner {
+      margin-left: 2.5rem;
+    }
+
+    &__item {
+      font-size: 1rem;
+
+      &+& {
+        margin-top: 1em;
+      }
+
+      &:before {
+        top: 0;
+      }
+    }
+  }
+
+  .slider-featured {
+    &__item-preview {
+      min-height: 230px;
+    }
+  }
+
+  .footer {
     &__content-map {
       max-width: 12em;
     }
@@ -387,8 +630,28 @@
         padding: .6em;
       }
     }
-
   }
+}
+
+@media screen and (max-width:380px) {
+  .advantages {
+    &__list {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+  }
+
+  .news {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+  }
+
+  .newest-products {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+  }
+
 }
 
 @media screen and (min-width:885px) {

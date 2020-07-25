@@ -7,7 +7,17 @@ $(document).ready(function () {
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="slick-btn slick-prev"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>',
-    appendArrows: $('.slider-featured__top')
+    appendArrows: $('.slider-featured__top'),
+    responsive: [{
+      breakpoint: 855,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+      }
+    }]
   })
 
   $('.follow-slider__items').slick({
@@ -18,17 +28,23 @@ $(document).ready(function () {
     nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>',
     appendArrows: $('.follow-slider__title'),
     responsive: [{
-      breakpoint: 1150,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
       },
-      breakpoint: 855,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+      {
+        breakpoint: 855,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false
+        }
       }
-    }]
+    ]
   })
 
   var slider = $('.follow-slider__items')
@@ -47,15 +63,22 @@ $(document).ready(function () {
     prevArrow: '<button type="button" class="slick-btn slick-prev-feedback"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next-feedback"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></button>',
     responsive: [{
-      breakpoint: 1065,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false
+        breakpoint: 1065,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 666,
+        settings: {
+          unslick: true
+        }
       }
-    }]
+    ]
   })
 
   $('.header').on('click', '.search-toggle', function (e) {
@@ -92,7 +115,6 @@ $(document).ready(function () {
   //   delay: 10,
   //   time: 1000
   // })
-
   var isBreakPoint = function (bp) {
     var bps = [320, 885, 1440],
       w = $(window).width(),
@@ -116,10 +138,11 @@ $(document).ready(function () {
     // }) //CLICK BEGGINING
     // $('.header__notification-btns').prependTo($('.header__dropdown-user')),
 
-    // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?((
+    // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?(( тогда кнопень ваще убрать тут?
 
     $('.header__register-link').appendTo($('.header__bottom'))
   } // Breakpoint between 320 and 480
+
   // var $window = $(window)
   // if ($window.width() == 885) {
   //   location.reload(true)
