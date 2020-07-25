@@ -55,18 +55,14 @@ body {
   padding: 7.5rem 0;
 }
 
-.container-fluid--sliced {
-  background: #fff;
-  box-shadow: inset 0 100px 0 0 $bg-grey
-}
+// .container-fluid--sliced {
+//   background: #fff;
+//   box-shadow: inset 0 100px 0 0 $bg-grey
+// }
 
-.container-fluid--gradient {
-  background: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
-}
-
-.container-fluid--onecolor {
-  background: #eff1f5;
-}
+// .container-fluid--onecolor {
+//   background: #eff1f5;
+// }
 
 .button {
   font-size: 0.875rem;
