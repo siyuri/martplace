@@ -5,6 +5,8 @@
 @import "product-card";
 
 .header {
+  background: #fff;
+  box-shadow: inset 0 100px 0 0 $bg-grey;
 
   &__top {
     max-height: 100px;
@@ -20,7 +22,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 2em 0 1.5em;
+    padding: 1.8em 0 1.5em;
     position: relative;
   }
 
@@ -37,16 +39,16 @@
   }
 
   &__notification-btns {
-    max-width: 9em;
+    max-width: 9.2em;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1.2em;
     margin-right: 2.5em;
   }
 
   &__mail-box {
-    max-width: 2.5rem;
+    max-width: 2.4rem;
     padding: 1.5rem 0;
     outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
 
@@ -62,7 +64,7 @@
 
   &__notifications-box {
     padding: 1.5rem 0;
-    max-width: 2.5rem;
+    max-width: 2.4rem;
 
     &:hover {
       .notifications-dropdown {
@@ -76,7 +78,7 @@
 
   &__cart-box {
     padding: 1.5rem 0;
-    max-width: 2.5rem;
+    max-width: 2.4rem;
 
     &:hover {
       .cart-dropdown {
@@ -138,7 +140,7 @@
     padding: 0 0.15em;
     height: 1.6em;
     border-radius: 0.8em;
-    top: -2em;
+    top: -2.2em;
     left: 0.8em;
     font-size: 0.9rem;
     line-height: 1.6em;
@@ -162,7 +164,7 @@
     padding: 0.5em 1.3em;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     margin-right: 2em;
-    margin-left: 1em;
+    margin-left: 1.5em;
 
     &:hover,
     &:focus {
@@ -224,6 +226,8 @@
   &__user-balance {
     display: block;
     color: $theme-color-blue;
+    line-height: 150%;
+    padding-bottom: .3em;
   }
 
   /*ANCHOR DROPDOWN ICONS STARTS*/
@@ -576,7 +580,7 @@
   }
 
   &__bottom-menu {
-    margin-top: 1.2em;
+    margin-top: 1em;
   }
 
   &__bottom-items {
@@ -772,7 +776,7 @@
     position: absolute;
     outline: transparent;
     right: 0;
-    max-width: 4.8rem;
+    max-width: 4rem;
     width: 100%;
     padding: 1rem 0;
     font-size: 0;
@@ -804,14 +808,16 @@
 
 .top {
   color: #fff;
-  padding-bottom: 5em;
+  padding-bottom: .5em;
+  background: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
 
   &__inner {
+    padding: 11em 0 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 41em;
+    // min-height: 41em;
     height: 100%;
     text-align: center;
   }
@@ -825,13 +831,14 @@
   &__title-accent {
     display: block;
     font-weight: 700;
+    line-height: 110%;
   }
 
   &__text {
     font-size: 1.25rem;
-    line-height: 250%;
+    line-height: 310%;
     font-weight: 500;
-    margin-bottom: 3.5em;
+    margin-bottom: 3.1em;
   }
 
   &__button {
@@ -868,7 +875,7 @@
 
   &__search {
     position: absolute;
-    top: -9em;
+    top: -4em;
     width: 100%;
     box-shadow: rgba(148, 94, 94, 0.08) 0 0.25rem 1.25rem 0;
     border-radius: 0.375rem;
@@ -985,12 +992,13 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    padding-top: 5.2em;
   }
 
   &__box-item {
     // flex-basis: 22.7em;
     flex: 1;
-    padding: 12em 1em 2em;
+    padding: 11em 1em 2em;
 
     &:hover {
       transition: .3s;
@@ -1018,20 +1026,16 @@
 /*ANCHOR start slider-feature*/
 
 .slider-featured {
-
+  background: #eff1f5;
 
   &__title {
     font-size: 1.875rem;
   }
 
-  &__inner {
-    // padding: 7.5em 0;
-  }
-
   &__item {
     display: flex !important;
-    min-height: 450px;
-    max-width: 555px;
+    height: 450px;
+    width: 100%;
   }
 
   &__item-preview {
@@ -1041,8 +1045,11 @@
     // width: 100%;
     height: 100%;
     overflow: hidden;
-    min-height: 450px;
+    // max-height: 450px;
+  }
 
+  &__img {
+    object-fit: fit;
   }
 
   &__item-link {
@@ -1064,8 +1071,12 @@
     align-self: stretch;
   }
 
+  &__item-description {
+    margin-bottom: 2rem;
+  }
+
   &__item-info-top {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
 
   &__item-title {
@@ -1171,7 +1182,7 @@
   border-top-left-radius: 3em;
   border-bottom-left-radius: 3em;
   background-color: $theme-color-purple;
-  right: 2.5em;
+  right: 2.8em;
 
   &:before {
     content: "\e875";
@@ -1183,7 +1194,7 @@
   border-top-right-radius: 3em;
   border-bottom-right-radius: 3em;
   background-color: $theme-color-purple;
-  right: 1em;
+  right: 1.3em;
 
   &:before {
     content: "\e876";
@@ -1195,6 +1206,7 @@
 
 //ANCHOR start newest-product
 .newest-products {
+  background-color: #f6f7fb;
 
   .container-fluid--onecolor {
     background-color: #f6f7fb;
@@ -1375,6 +1387,8 @@
 
 //ANCHOR follow-slider starts
 .follow-slider {
+  background-color: #eff1f5;
+
   &__inner {
     // padding: 7.5em 0;
   }
@@ -1401,17 +1415,17 @@
 /*ANCHOR starts fact-area*/
 .fact-area {
   text-align: center;
+  background-color: #212225;
 
-  .container-fluid--onecolor {
-    background-color: #212225;
+  .container-fluid {
     padding: 5.5em 0 6em;
   }
 
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // NOTE какого они не встают с начал? Оо
     flex-wrap: wrap;
-    padding: 0 1em;
+    padding: 0;
   }
 
   &__item {
@@ -1593,7 +1607,7 @@
 
   &__left,
   &__right {
-    padding: 6.4em 0 4em;
+    padding: 6.4em 0 6.4em;
     flex: 1 0 50%;
     display: flex;
     flex-direction: column;
@@ -1620,7 +1634,8 @@
     position: relative;
     font-size: 2.25rem;
     padding-top: 4em;
-    margin-bottom: .8em;
+    margin-bottom: .2em;
+    line-height: 100%;
 
     &:before {
       position: absolute;
@@ -1647,7 +1662,7 @@
   &__text {
     color: #FFF;
     padding: 0 11em;
-    margin-bottom: 3em;
+    margin-bottom: 3.2em;
   }
 
   &__btn {
@@ -1703,7 +1718,7 @@
   }
 
   &__card {
-    padding: 3em 0;
+    padding: 3.2em 0 2em;
     margin-bottom: 2em;
 
     &+& {
@@ -1788,7 +1803,7 @@
     background-color: #fff;
     box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.15);
     z-index: 1;
-    top: 38%;
+    top: 45%;
 
     &:before {
       position: absolute;
@@ -1823,10 +1838,7 @@
 /* ANCHOR news start*/
 
 .news {
-  &__inner {
-    // padding: 7.4em 0;
-
-  }
+  background-color: #eff1f5;
 
   &__top {
     text-align: center;
@@ -1999,11 +2011,9 @@
 
 .join {
   color: #FFF;
+  background-color: #000;
+  background: linear-gradient(to left, rgb(13, 62, 242) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
 
-  .container-fluid--gradient {
-    background-color: #000;
-    background: linear-gradient(to left, rgb(13, 62, 242) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
-  }
 
   &__inner {
     // padding: 6.7em;
@@ -2047,9 +2057,8 @@
 /* ANCHOR footer starts*/
 
 .footer {
-  .container-fluid--onecolor {
-    background-color: #262b30;
-  }
+  background-color: #262b30;
+
 
   &__content {
     display: flex;
@@ -2066,6 +2075,7 @@
   &__content-logo {
     display: block;
     margin-bottom: .3em;
+    padding-left: 0;
 
     &:focus,
     &:hover {
@@ -2110,9 +2120,9 @@
 
     &--about {
 
-      //  max-width: 19em;
-      //   width: 100%;
-      flex: 2.3;
+      // max-width: 19em;
+      // width: 100%;
+      flex: .75;
 
       .footer__link {
         padding-left: 2em;
@@ -2133,21 +2143,16 @@
     }
 
     &--list {
-      // max-width: 9em;
-
-      // width: 100%;
-      flex: 1.5;
-
-      // &+& {
-      //   margin-left: 3.5em;
-      // }
+      flex: .5;
     }
 
     &--form {
-      //  max-width: 25em;
-      flex: 3;
-      //   width: 100%;
+      flex: .85;
     }
+  }
+
+  &__content-map {
+    max-width: 19em;
   }
 
   &__content-text {
