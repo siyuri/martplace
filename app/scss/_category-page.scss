@@ -130,6 +130,14 @@
 
   }
 
+  .wrapper {
+    display: block;
+  }
+
+  &__cards-info {
+    height: 100%;
+  }
+
   &__cards-item {
     display: flex;
     flex-direction: column;
@@ -149,35 +157,11 @@
     margin-bottom: .8em;
   }
 
-  &__cards-info-top {
-    padding: .7em 1.2em .3em;
-  }
-
-  &__cards-info-line {
-    margin-bottom: 1em;
-  }
-
-  &__card-info-middle {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__cards-item-cart {
-    margin: .3rem 1.2rem 0;
-  }
-
-  &__cards-star {
-    margin: 0;
-  }
-
-  &__cards-review {
-    display: flex;
-    padding: .9rem 1.1rem;
-  }
 
   &__cards-description,
   &__cards-comments,
-  &__cards-item-like {
+  &__cards-item-like,
+  &__cards-star-count {
     display: none;
   }
 
@@ -202,16 +186,122 @@
 
     .page-content__cards-info {
       max-width: 100%;
+      width: 100%;
+      transition: all .8s ease; // ANCHOR почему не реагирует? :(
+      display: flex;
+      padding: 30px 0;
     }
 
     .page-content__cards-comments,
     .page-content__cards-description,
-    .page-content__cards-item-like {
+    .page-content__cards-item-like,
+    .page-content__cards-star-count {
       display: block;
     }
 
+    .page-content__cards-description {
+      max-width: 210px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 2;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      display: -webkit-box;
+      display: box;
+      word-wrap: break-word;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      margin-top: 0;
+    }
 
+    .page-content__cards-star {
+      margin: 0;
+      position: relative;
+      padding-right: 1rem;
+    }
 
+    .page-content__cards-info-line {
+      margin-bottom: 2.4rem;
+    }
+
+    .page-content__cards-star-count {
+      position: absolute;
+      right: 0;
+      top: -.2rem;
+      font-size: .9rem;
+      color: #6f7d8d;
+      display: inline;
+    }
+
+    .page-content__top-wrapper {
+      display: flex;
+    }
+
+    .page-content__cards-title {
+      max-width: 210px;
+    }
+
+    .page-content__cards-item-like {
+      &:before {
+        color: $theme-color-purple;
+        left: -.45rem;
+        ;
+      }
+
+      &:after {
+        content: " "attr(data-count) " loves";
+        left: .9rem;
+      }
+
+      margin-bottom: 1rem;
+    }
+
+    .page-content__cards-price {
+      margin-bottom: 2rem;
+    }
+
+    .page-content__cards-item-cart {
+      margin: 0 auto;
+    }
+
+    .page-content__cards-comments {
+      font-size: .9rem;
+      padding-left: 1.3rem;
+      margin-bottom: .5rem;
+
+      &:before {
+        color: $theme-color-purple;
+        left: 0;
+      }
+
+      &:after {
+        content: 'Comments';
+        font-size: .9rem;
+        padding-left: .2rem;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ececec;
+    }
+
+    .page-content__first-wrapper {
+      padding: 0 1.8rem 0 1.2rem;
+    }
+
+    .page-content__second-wrapper {
+      padding: 0 3.2rem 0 1.2rem;
+    }
+
+    .page-content__third-wrapper {
+      padding: 0 1.8rem 0 1.2rem;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
