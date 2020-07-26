@@ -137,16 +137,12 @@ $(document).ready(function () {
   //   //   $('.header__notification-btns').prependTo($('.header__dropdown-user'))
   //   // }) //CLICK BEGGINING
   //   // $('.header__notification-btns').prependTo($('.header__dropdown-user')),
-
-  //   // NOTE классная такая штука от которой у меня прям кружится голова от возможностей...но оно у меня не работает без обновлений страницы, и в общем..может ее и нельзя использовать?(( тогда кнопень ваще убрать тут?
-
   //   $('.header__register-link').appendTo($('.header__bottom'))
   // } // Breakpoint between 320 and 480
 
   window.addEventListener('resize', handleBrowserResize)
 
   function handleBrowserResize() {
-    // your rest of the code to handle browser resize (if any)
     if (isBreakPoint(885)) {
       $('.header__register-link').appendTo($('.header__bottom'))
     }
@@ -156,6 +152,17 @@ $(document).ready(function () {
   //   location.reload(true)
   // }
 
+  // page-content__view-btn--grid 
+  $('.page-content__view-btn--list').on('click', function () {
+    $('.page-content__cards').addClass('list')
+    $('.page-content__view-btn--list').addClass('active')
+    $('.page-content__view-btn--grid').removeClass('active')
+  })
+  $('.page-content__view-btn--grid').on('click', function () {
+    $('.page-content__cards').removeClass('list')
+    $('.page-content__view-btn--grid').addClass('active')
+    $('.page-content__view-btn--list').removeClass('active')
+  })
   if ($('.newest-products__items').length) {
     var mixer = mixitup('.newest-products__items')
   }

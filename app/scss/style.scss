@@ -3,6 +3,7 @@
 @import "vars";
 @import "global";
 @import "product-card";
+@import "category-page";
 
 .header {
   background: #fff;
@@ -28,6 +29,10 @@
 
   &__logo {
     margin-left: .5em;
+
+    .page {
+      margin-left: 0;
+    }
 
     &:focus {
       filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
@@ -1073,6 +1078,10 @@
 
   &__item-description {
     margin-bottom: 2rem;
+  }
+
+  &__item-star {
+    display: flex;
   }
 
   &__item-info-top {
