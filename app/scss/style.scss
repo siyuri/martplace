@@ -769,7 +769,7 @@
     border-radius: 2em;
     font-size: 0.9rem;
     padding: 1em 6em 1.1em 1.7em;
-    width: 24.7em;
+    max-width: 24.7em;
 
     &::placeholder {
       position: absolute;
@@ -912,68 +912,30 @@
   }
 
   &__search-form {
-    min-height: 8em;
+    min-height: 6.5em;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     z-index: 1;
-    padding: 2.3em 1em;
+    padding-left: 2.5em;
+    padding-top: 2em;
   }
 
   &__search-label {
-    min-width: 50.5em;
+    min-width: 38.2em;
   }
 
   &__search-input {
     font-size: 1rem;
-    max-width: 50.5em;
+    max-width: 38.2em;
     width: 100%;
-    border-radius: 0.25rem;
-    padding: 1.2em 13em 1.25em 1.6em;
+    border-radius: 0.25em 0 0 0.25em;
+    padding: 1.2em 13em 1.2em 1.6em;
 
     &::placeholder {
       padding-right: 20em;
     }
   }
-
-  // &__search-select-wrapper {
-  //   position: relative;
-
-  //   &:after {
-  //     position: absolute;
-  //     font-family: 'Linearicons-Free', serif;
-  //     content: "\e874";
-  //     font-size: 0.75rem;
-  //     color: $text;
-  //     right: 2.1em;
-  //     top: -1em;
-  //     pointer-events: none;
-  //   }
-  // }
-
-  // &__search-select {
-  //   min-height: 3.63em;
-  //   position: absolute;
-  //   border: none;
-  //   outline: transparent;
-  //   background: transparent;
-  //   color: $text;
-  //   border-left: 0.0625rem solid #d9dfe5;
-  //   font-size: 1rem;
-  //   padding: 0 4.5em 0 1.250em;
-  //   top: -1.82em;
-  //   right: 0.1em;
-  //   -webkit-appearance: none;
-  //   -moz-appearance: none;
-  //   -ms-appearance: none;
-  //   -o-appearance: none;
-  //   appearance: none;
-
-  //   &:focus {
-  //     filter: drop-shadow(5px 5px 5px rgb(165, 156, 187));
-  //   }
-  // }
 
   &__search-btn {
     font-family: Quicksand, sans-serif;
@@ -982,7 +944,7 @@
     max-width: 15.5em;
     width: 100%;
     border-radius: 0.25rem;
-    margin-left: 2em;
+    margin-left: 2.2em;
     padding: 1.4em 1em 1.4em .2em;
 
     &:hover {
