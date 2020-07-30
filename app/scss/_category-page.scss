@@ -3,7 +3,7 @@
 }
 
 .top {
-  .page-top {
+  .page__top {
     &__inner {
       padding: 4.5rem 0 1.2rem;
     }
@@ -48,7 +48,7 @@
 
 .page-content {
 
-  background-color: #000;
+  background-color: #fff;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 
 
@@ -164,8 +164,9 @@
   &__cards-star-count {
     display: none;
   }
-
 }
+
+
 
 .page-content__cards {
   &.list {
@@ -187,7 +188,7 @@
     .page-content__cards-info {
       max-width: 100%;
       width: 100%;
-      transition: all .8s ease; // ANCHOR почему не реагирует? :(
+      transition: all .8s ease; 
       display: flex;
       padding: 30px 0;
     }

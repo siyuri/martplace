@@ -146,6 +146,9 @@ $(document).ready(function () {
     if (isBreakPoint(885)) {
       $('.header__register-link').appendTo($('.header__bottom'))
     }
+    else{
+      $('.header__register-link').insertBefore($('.header__notification-btns'))
+    }
   }
   // var $window = $(window)
   // if ($window.width() == 885) {
