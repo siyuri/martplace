@@ -2,9 +2,10 @@
 @import "fonts";
 @import "vars";
 @import "global";
-@import "product-card";
+@import "BEMBLOCKS/product-card/product-card";
 @import "category-page";
 @import "BEMBLOCKS/select/select";
+@import "BEMBLOCKS/submit-form/submit-form";
 
 .header {
   background: #fff;
@@ -760,50 +761,18 @@
   }
 }
 
-.search-form {
+.submit-form {
   margin-top: 1em;
-  position: relative;
-  // overflow: hidden;
 
-  &__input {
-    border-radius: 2em;
-    font-size: 0.9rem;
-    padding: 1em 6em 1.1em 1.7em;
-    max-width: 24.7em;
-
-    &::placeholder {
-      position: absolute;
-      font-size: 0.9rem;
-      padding-right: 5em;
-    }
-  }
-
-  &__btn {
-    position: absolute;
-    outline: transparent;
-    right: 0;
-    max-width: 4rem;
-    width: 100%;
-    padding: 1rem 0;
+  &__button {
     font-size: 0;
-    border-radius: 2rem;
 
     &:before {
       content: "\e86f";
       color: #fff;
       font-size: 1rem;
       font-family: 'Linearicons-Free';
-      line-height: 100%;
-    }
-
-    &:hover {
-      background: linear-gradient(90deg, rgba(115, 71, 193, 1) 0%, rgba(6, 116, 236, 1) 100%);
-      transition: .3s;
-    }
-
-    &:focus {
-      border: .5px solid #fff;
-      outline: rgb(114, 33, 160);
+      line-height: 115%;
     }
   }
 }
@@ -1002,18 +971,14 @@
 
   &__item {
     display: flex !important;
-    height: 450px;
+    // min-height: 450px;
     width: 100%;
   }
 
   &__item-preview {
     flex-basis: 48.5%;
-    // height: 100%;
-    // flex: 1 1 0;
-    // width: 100%;
-    height: 100%;
     overflow: hidden;
-    // max-height: 450px;
+    min-height: 411.6px;
   }
 
   &__img {
@@ -1037,6 +1002,7 @@
     // height: 100%;
     overflow: hidden;
     align-self: stretch;
+    min-height: 450px;
   }
 
   &__item-description {
@@ -2161,26 +2127,21 @@
     }
   }
 
-  &__content-form {
+  .submit-form {
     margin: .8em 0 4em;
-  }
+    max-width: 22.5rem;
 
-  &__content-input {
-    padding: .85em 8em 1em 1.7em;
-  }
+    &__button {
+      max-width: 7rem;
+      font-size: .9rem;
 
-  &__content-btn {
-    max-width: 8em;
-    font-size: .9rem;
-    text-align: center;
-    padding: 1em;
-
-    &:before {
-      content: '';
+      &:before {
+        content: '';
+      }
     }
 
-    &:hover {
-      background-color: $theme-color-purple;
+    &__input {
+      max-width: 20rem;
     }
   }
 

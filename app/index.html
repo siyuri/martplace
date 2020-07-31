@@ -800,20 +800,12 @@
                     </li>
                   </ul>
                 </nav>
-                <form class="header__bottom-search search-form">
-                  <!-- <div class="header__bottom-select-wrap about__search-select-wrapper select-wrapper">
-                    <select class="header__bottom-select about__search-select select" name="search-category"
-                      id="select-products-top">
-                      <option value="all">All Categories</option>
-                      <option value="newest">Newest</option>
-                      <option value="popular">Popular</option>
-                    </select>
-                  </div> -->
-                  <label class="header__bottom-label" for="search">
-                    <input class="search-form__input search-input" type="search" placeholder="Search product here..."
-                      name="search" id="search">
+                <form class="header__bottom-submit-form submit-form">
+                  <label class="submit-form__label" for="header__bottom-submit-form">
+                    <input class="submit-form__input" type="search" placeholder="Search product here..." name="search"
+                      id="header__bottom-submit-form">
                   </label>
-                  <button class="search-form__btn button" type="submit">search button
+                  <button class="submit-form__button button" type="submit">search button
                   </button>
                 </form>
               </div>
@@ -855,7 +847,7 @@
               <div class="about__search">
                 <form class="about__search-form" action="">
                   <label class="about__search-label" for="search-product">
-                    <input class="about__search-input search-input" name="search-product" id="search-product"
+                    <input class="about__search-input submit-form__input" name="search-product" id="search-product"
                       type="search" placeholder="Search your products...">
                   </label>
                   <div class="about__search-select-wrapper select-wrapper">
@@ -920,7 +912,7 @@
                 </span>
                 <div class="slider-featured__products">
                   <article class="slider-featured__item product-card product-card--stars">
-                    <div class="slider-featured__item-preview product-card__preview">
+                    <div class="slider-featured__item-preview product-card__preview" id="left">
                       <img class="slider-featured__item-img product-card__img" src="images/slider-featured-1.jpg"
                         alt="pretty green template for iPhone">
                       <div class="slider-featured__item-buttons preview-btn">
@@ -932,7 +924,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="slider-featured__item-info product-card__info">
+                    <div class="slider-featured__item-info product-card__info" id="right">
                       <div class="slider-featured__item-info-top product-card__info-top">
                         <a class="slider-featured__item-title title product-card__top-title title--link" href="#">
                           One Page Resume Template
@@ -2244,12 +2236,12 @@
               <span class="footer__content-text">Subscribe to get the latest news, update and offer information. Don't
                 worry,
                 we won't send spam!</span>
-              <form class="footer__content-form search-form">
-                <label class="footer__content-label" for="email">
-                  <input class="footer__content-input search-input search-form__input" type="email" id="email"
-                    name="email" placeholder="Enter email" required>
+              <form class="footer__submit-form submit-form">
+                <label class="submit-form__label" for="footer__submit-form">
+                  <input class="submit-form__input" type="email" id="footer__submit-form" name="email"
+                    placeholder="Enter email" required>
                 </label>
-                <button class="footer__content-btn button search-form__btn" type="submit">Submit</button>
+                <button class="submit-form__button button" type="submit">Submit</button>
               </form>
               <ul class="footer__content-mediabox mediabox">
                 <li class="mediabox__item">

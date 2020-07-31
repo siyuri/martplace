@@ -59,9 +59,19 @@ body {
   font-size: 0.875rem;
   background-color: $theme-color-blue;
   color: #fff;
-  border-radius: 2em;
+  border-radius: 2rem;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, rgba(115, 71, 193, 1) 0%, rgba(6, 116, 236, 1) 100%);
+    transition: .3s;
+  }
+
+  &:focus {
+    border: .5px solid #fff;
+    outline: rgb(114, 33, 160);
+  }
 }
 
 .button--category {
@@ -81,18 +91,18 @@ body {
   border-radius: 50%;
 }
 
-.search-input {
-  border: 0.0625rem solid #d9dfe5;
+// .search-input {
+//   border: 0.0625rem solid #d9dfe5;
 
-  &:focus {
-    outline: transparent;
-    border: 0.0625rem solid $theme-color-blue;
-  }
+//   &:focus {
+//     outline: transparent;
+//     border: 0.0625rem solid $theme-color-blue;
+//   }
 
-  &::placeholder {
-    color: $form;
-  }
-}
+//   &::placeholder {
+//     color: $form;
+//   }
+// }
 
 .title {
   color: #000;

@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  var height = Math.max($('.slider-featured__item-preview').height(), $('.slider-featured__item-info').height())
+  var minHeight = height + 38.4
+  console.log(height)
+  console.log(minHeight)
+  $('.slider-featured__item-preview').height(minHeight)
+
   // slickliders
   $('.slider-featured__products').slick({
     infinite: true,
