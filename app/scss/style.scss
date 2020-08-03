@@ -2,10 +2,11 @@
 @import "fonts";
 @import "vars";
 @import "global";
-@import "BEMBLOCKS/product-card/product-card";
 @import "category-page";
+@import "BEMBLOCKS/product-card/product-card";
 @import "BEMBLOCKS/select/select";
 @import "BEMBLOCKS/submit-form/submit-form";
+@import "BEMBLOCKS/dropdown/dropdown";
 
 .header {
   background: #fff;
@@ -20,7 +21,6 @@
   }
 
   &__user-panel {
-    // min-width: 48%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -57,15 +57,22 @@
   &__mail-box {
     max-width: 2.4rem;
     padding: 1.5rem 0;
-    outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+
 
     &:hover {
-      .messages-dropdown {
+      outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
+
+      .dropdown--messages {
         height: auto;
         overflow: visible;
         opacity: 1;
         border-top: 1px solid $theme-color-blue;
       }
+    }
+
+    &:active,
+    &:focus {
+      outline: drop-shadow(1px 1px 1px rgb(126, 108, 172));
     }
   }
 
@@ -74,7 +81,7 @@
     max-width: 2.4rem;
 
     &:hover {
-      .notifications-dropdown {
+      .dropdown--notifications {
         height: auto;
         overflow: visible;
         opacity: 1;
@@ -88,7 +95,7 @@
     max-width: 2.4rem;
 
     &:hover {
-      .cart-dropdown {
+      .dropdown--cart {
         height: auto;
         overflow: visible;
         opacity: 1;
@@ -189,7 +196,7 @@
     padding: 1em 0;
 
     &:hover {
-      .header__dropdown-user {
+      .dropdown--user {
         opacity: 1;
         height: auto;
         overflow: visible;
@@ -239,337 +246,10 @@
 
   /*ANCHOR DROPDOWN ICONS STARTS*/
 
-  /*dropdown user starts*/
-
-  .dropdown-user {
-    z-index: 1;
-    min-width: 270px;
-    right: 0;
-    margin-top: 1rem;
-
-    &__items {
-      margin: 0;
-    }
-
-    &__link {
-      &:before {
-        margin-right: 1.5em;
-      }
-    }
-  }
-
-  /*dropdown user ends*/
-
-  /*dropdown messages starts*/
-  .messages-dropdown {
-    left: 21em;
-
-    &__item {
-
-      &--notread {
-        .messages-dropdown__name {
-          padding-right: 2em;
-          position: relative;
-
-          &:after {
-            position: absolute;
-            content: "\e818";
-            color: $theme-color-blue;
-            right: 0;
-            font-size: .9rem;
-            font-family: 'Linearicons-Free';
-          }
-        }
-
-        .messages-dropdown__time {
-          color: $theme-color-blue;
-        }
-      }
-
-      &--replied {
-        .messages-dropdown__name {
-          padding-right: 2em;
-          background-image: url(../images/replied.svg);
-          background-repeat: no-repeat;
-          background-position: right;
-        }
-      }
-    }
-
-    &__text {
-      margin: 0;
-      padding: 0;
-      font-size: 0.95rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 250px;
-      color: $text;
-    }
-  }
-
-  /*dropdown messages ends*/
-
   /*dropdown notification starts*/
-  .notifications-dropdown {
-    right: 1.5%;
-
-    &__name {
-      &:after {
-        content: "";
-        font-weight: normal;
-        color: #747a86;
-        font-size: 0.9rem;
-      }
-    }
-
-    &__box {
-      position: relative;
-
-      &:after {
-        right: 0;
-        bottom: 50%;
-        transform: translateY(50%);
-        position: absolute;
-        content: "";
-        width: 33px;
-        height: 33px;
-        border-radius: 50%;
-        font-size: 1rem;
-        font-weight: 600;
-        font-family: 'Linearicons-Free';
-        padding: 5px 5px 5px 8.5px;
-      }
-    }
-
-    &--favourite {
-      .notifications-dropdown__name {
-        &:after {
-          content: "added to Favourite";
-        }
-      }
-
-      .notifications-dropdown__box {
-        &:after {
-          content: "\e813";
-          color: $theme-color-blue;
-          background-color: rgba(6, 116, 236, .10);
-        }
-      }
-    }
-
-    &--commented {
-      .notifications-dropdown__name {
-        &:after {
-          content: "commented on";
-        }
-      }
-
-      .notifications-dropdown__name,
-      .notifications-dropdown__work {
-        display: inline;
-      }
-
-      .notifications-dropdown__box {
-        &:after {
-          content: "\e83f";
-          color: $theme-color-purple;
-          background-color: rgba(115, 71, 193, .10);
-        }
-      }
-    }
-
-    &--purchased {
-      .notifications-dropdown__name {
-        &:after {
-          content: "Purchased";
-        }
-      }
-
-      .notifications-dropdown__box {
-        &:after {
-          content: "\e82e";
-          color: $theme-color-red;
-          background-color: rgba(255, 106, 108, .10);
-        }
-      }
-    }
-
-    &--review {
-      .notifications-dropdown__name {
-        &:after {
-          content: "wrote a review on";
-        }
-      }
-
-      .notifications-dropdown__box {
-        &:after {
-          content: "\e814";
-          color: $theme-color-green;
-          background-color: rgba(98, 208, 58, .10);
-        }
-      }
-    }
-
-    &__name {
-      font-size: 1rem;
-      display: block;
-    }
-
-    &__work {
-      color: $theme-color-blue;
-      font-size: 0.9rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin: 0;
-      padding: 0;
-      max-width: 210px;
-    }
-
-    &__preview {
-      max-width: 210px;
-    }
-
-    &__time {
-      display: block;
-    }
-  }
-
   /*dropdown notification ends*/
 
   /*dropdown cart starts*/
-
-  .cart-dropdown {
-    right: 10.5em;
-    max-width: 400px;
-    width: 100%;
-
-    &__item {
-      display: flex;
-      padding: 0;
-      padding: .2em 1.2em 1.5em 1.4em;
-    }
-
-    &__name,
-    &__category {
-      display: block;
-    }
-
-    &__img {
-      width: 80px;
-      height: 70px;
-      border-radius: 0;
-      object-fit: cover;
-      margin-top: 1em;
-    }
-
-    &__name {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: .5em;
-    }
-
-    &__trash {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 1.4em;
-    }
-
-    &__trash-btn {
-      border: none;
-      outline: transparent;
-      color: $theme-color-green;
-      width: 33px;
-      height: 33px;
-      font-size: 0;
-      border-radius: 50%;
-      background-color: rgba(115, 71, 193, .1);
-      position: relative;
-      cursor: pointer;
-      margin-bottom: .7rem;
-      outline: drop-shadow(1px 1px 1px rgb(165, 156, 187));
-      ;
-
-      &:before {
-        position: absolute;
-        right: 5px;
-        bottom: 50%;
-        transform: translateY(50%);
-        content: "\e811";
-        font-size: .9rem;
-        font-weight: 600;
-        font-family: 'Linearicons-Free';
-        padding: 4px 4px 5px 10px;
-        color: #818c98;
-      }
-
-      &:hover {
-        &:before {
-          color: $theme-color-blue;
-        }
-      }
-
-      &:focus {
-        &:before {
-          font-weight: 700;
-          filter: drop-shadow(1px 1px 1px rgb(165, 156, 187));
-        }
-      }
-    }
-
-    &__total {
-      text-align: end;
-      color: #000;
-      font-weight: 600;
-      font-size: 1.125rem;
-      border-bottom: 1px solid #e8ebf0;
-      padding-bottom: 1.5em;
-      padding-top: 1em;
-      padding-right: 1.2em;
-      margin: 0;
-    }
-
-    &__total-price {
-      padding-left: 2em;
-    }
-
-    &__bottom {
-      display: inline-flex;
-      align-items: flex-start;
-      max-width: 400px;
-      width: 100%;
-    }
-
-    &__button {
-      padding: 15px 0;
-      width: 50%;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      font-size: 0.9rem;
-
-      &--purple {
-        background-color: $theme-color-purple;
-      }
-
-      &--blue {
-        background-color: $theme-color-blue;
-      }
-
-      &:hover {
-        font-weight: 500;
-      }
-
-      &:focus {
-        font-weight: 700;
-      }
-    }
-  }
-
   /*dropdown cart ends*/
   // ANCHOR dropdown icons ends
   /*header__top ends*/
@@ -606,10 +286,10 @@
 
     &:hover {
 
-      .header__bottom-dropdown--home,
-      .header__bottom-dropdown--wordpress,
-      .header__bottom-dropdown--pages,
-      .header__bottom-dropdown--products {
+      .dropdown--home,
+      .dropdown--wordpress,
+      .dropdown--pages,
+      .dropdown--products {
         opacity: 1;
         height: auto;
         overflow: auto;
@@ -640,23 +320,6 @@
     }
   }
 
-  &__bottom-dropdown--home {
-    min-width: 315px;
-  }
-
-  &__bottom-dropdown--wordpress {
-    min-width: 270px;
-    left: 19%;
-    right: auto;
-  }
-
-  &__bottom-dropdown--products {
-    width: 270px;
-
-    left: 6.5%;
-
-  }
-
   &__bottom-drop {
     display: none;
     font-size: 0;
@@ -677,7 +340,7 @@
     display: none;
     outline: transparent;
     transition: all .3s;
-    z-index: 80000;
+    z-index: 999;
 
     &:hover {
       &:before {
@@ -701,63 +364,6 @@
 
   &__bottom-select-wrap {
     display: none;
-  }
-}
-
-.dropdown-pages {
-  z-index: 1;
-  left: 0;
-  max-width: 1140px;
-  margin-top: 1.7rem;
-
-  &__wrapper {
-    display: inline-flex;
-    padding: 1.3em 0;
-  }
-
-  &__items {
-    list-style: none;
-
-    &--multiple-columns {
-      -moz-column-count: 2;
-      -webkit-column-width: 200px;
-      -moz-column-width: 200px;
-      column-width: 200px;
-      -moz-column-gap: 2em;
-      -webkit-column-count: 2;
-      -webkit-column-gap: 2em;
-      column-count: 2;
-      column-gap: 2em;
-    }
-  }
-
-  &__title {
-    display: block;
-    color: #000;
-    font-weight: 500;
-    font-size: 1rem;
-    border-bottom: 1px solid #e8ebf0;
-    padding: .7em 0 1em;
-    margin: 0 2em 2em;
-  }
-
-  &__link {
-    color: #54667a;
-    font-size: .9rem;
-
-    &+& {
-      margin-top: 1em;
-    }
-
-    &:hover {
-      font-weight: 500;
-      color: $theme-color-blue;
-    }
-
-    &:focus {
-      font-weight: 700;
-      outline: rgb(114, 33, 160);
-    }
   }
 }
 
@@ -887,7 +493,6 @@
     align-items: center;
     z-index: 1;
     padding-left: 2.5em;
-    padding-top: 2em;
   }
 
   &__search-label {
@@ -1148,11 +753,6 @@
 
   .container-fluid--onecolor {
     background-color: #f6f7fb;
-  }
-
-  &__inner {
-    // padding-top: 7.5em;
-    // padding-bottom: 7.5em;
   }
 
   &__navigation {
