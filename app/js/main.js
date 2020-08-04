@@ -89,15 +89,6 @@ $(document).ready(function () {
     ]
   })
 
-  // $('.header').on('click', '.search-toggle', function (e) {
-  //   var selector = $(this).data('selector')
-
-  //   $(selector).toggleClass('show').find('.search-form__input').focus()
-  //   $(this).toggleClass('active')
-
-  //   e.preventDefault()
-  // })
-
   // raty
   $('.star-rating').raty({
     path: null,
@@ -140,6 +131,15 @@ $(document).ready(function () {
         $('.header__bottom-items').removeClass('toggle'),
         $('.header__bottom-menu').removeClass('toggle'),
         $('body').removeClass('fixedPosition')
+    }
+  })
+  // searchbar-toggle
+  $('.submit-form__button').click(function () {
+    $(this).toggleClass('toggle')
+    if ($(this).hasClass('toggle')) {
+      $('.submit-form__input').addClass('toggle')
+    } else {
+      $('.submit-form__input').removeClass('toggle')
     }
   })
   // btn movement with windows resize
