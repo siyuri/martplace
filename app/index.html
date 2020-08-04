@@ -23,7 +23,6 @@
               <div class="header__top">
                 <a class="header__logo" href="#">
                   <img class="header__logo-img" src="../images/header_logo.png" alt="logo image">
-                  <img class="header__logo-mini" src="images/logo-mini.png" alt="logo responsive">
                 </a>
                 <div class="header__user-panel">
                   <a class="header__register-link button" href="#">
@@ -381,14 +380,9 @@
             <div class="header__bottom">
               <div class="header__bottom-inner">
                 <nav class="header__bottom-menu">
-                  <div class="header__bottom-menu-i">
-                    <button class="header__bottom-nav-btn lnr lnr-menu">
-                      menubtn
-                    </button>
-                    <button class="header__bottom-nav-btn lnr lnr-cross-circle">
-                      menubtnclose
-                    </button>
-                  </div>
+                  <a class="header__bottom-menubtn" href="#">
+                    <span class="header__bottom-lines"></span>
+                  </a>
                   <ul class="header__bottom-items">
                     <li class="header__bottom-item">
                       <a class="header__bottom-link header__bottom-link--active" href="#">
@@ -2238,22 +2232,21 @@
         <!-- NOTE ends news section -->
 
         <!-- NOTE starts guarantee section -->
-        <section class="guarantee">
+        <section class="warranty">
           <div class="container">
-            <ul class="guarantee__inner">
-              <li class="guarantee__item guarantee__item--money">
-                30 Days Money Back
-                <span class="guarantee__item--blue">
-                  Guarantee
-                </span>
-              </li>
-              <li class="guarantee__item guarantee__item--support">
-                Fast and Friendly
-                <span class="guarantee__item--purple">
-                  Support
-                </span>
-              </li>
-            </ul>
+            <div class="warranty__inner">
+              <div class="warranty-guarantee warranty__item warranty__item--guarantee">
+                <img class="warranty__item-img" src="images/money.png" alt="">
+                <div class="warranty__item-text">30 Days Money Back <a
+                    class="warranty__item-link warranty__item-link--blue" href="#">Guarantee</a></div>
+              </div>
+              <div class="warranty-support warranty__item warranty__item--support">
+                <img class="warranty__item-img" src="images/person.png" alt="">
+                <div class="warranty__item-text">Fast and Friendly <a
+                    class="warranty__item-link warranty__item-link--purple" href="#">Support</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <!-- NOTE ends guarantee section -->

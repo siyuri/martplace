@@ -41,10 +41,6 @@
     }
   }
 
-  &__logo-mini {
-    display: none;
-  }
-
   &__notification-btns {
     max-width: 9.2em;
     width: 100%;
@@ -256,7 +252,7 @@
 
   /*header__bottom starts*/
   &__bottom {
-    min-height: 80px;
+    min-height: 5rem; //80px;
     position: relative;
   }
 
@@ -264,10 +260,75 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
   }
 
-  &__bottom-menu {
-    margin-top: 1em;
+  // &__bottom-menu {
+  //   margin-top: 1em;
+  // }
+
+  &__bottom-menubtn {
+    display: none;
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    z-index: 101;
+    padding-left: 1em;
+
+    &.toggle {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__bottom-lines {
+    background-color: $theme-color-purple;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    transition: height 100ms;
+
+    &:after,
+    &:before {
+      content: '';
+      background-color: $theme-color-blue;
+      border-radius: 1px;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      transition: all 200ms;
+    }
+
+    &:after {
+      top: -7px;
+    }
+
+    &:before {
+      bottom: -7px;
+    }
+
+    &.toggle {
+      height: 0;
+
+      &:after,
+      &:before {
+        background-color: $theme-color-purple;
+        top: 1px;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+    }
+
   }
 
   &__bottom-items {
@@ -368,7 +429,6 @@
 }
 
 .submit-form {
-  margin-top: 1em;
 
   &__button {
     font-size: 0;
@@ -555,7 +615,7 @@
     margin-bottom: 1.5em;
     background-repeat: no-repeat;
     background-position: top center;
-    padding-top: 6em;
+    padding-top: 121px;
   }
 
   &__box-text {
@@ -927,10 +987,6 @@
 .follow-slider {
   background-color: #eff1f5;
 
-  &__inner {
-    // padding: 7.5em 0;
-  }
-
   &__items {
     flex-basis: 1140px;
 
@@ -941,6 +997,10 @@
     .slick-list {
       margin: 0 -.95em;
     }
+  }
+
+  .slick-dots {
+    display: inline;
   }
 
   &__top {
@@ -969,7 +1029,7 @@
   &__item {
     padding-top: 5.2em;
     position: relative;
-    flex: 25%;
+    flex: 0 1 auto;
 
     &:before {
       content: '';
@@ -1488,22 +1548,44 @@
 
 /* ANCHOR news ends*/
 
-/*guarantee start*/
+/*warranty start*/
 
-.guarantee {
+.warranty {
+  background-color: #fff;
+
   &__inner {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
     color: #000;
-    list-style: none;
-    margin: 0;
-    text-align: center
   }
 
   &__item {
-    font-size: 1.5rem;
-    position: relative;
-    padding: 8.8em 5.3em 2.5em 2em;
+    flex: 1 0 50%;
+    padding: 2.7em;
 
+    &--guarantee {
+      border-right: 1px solid #e8eaf3;
+
+      .warranty__item-img {
+        width: 6em;
+        height: 5em;
+      }
+    }
+
+    &--support {
+      margin-left: .8em;
+
+      .warranty__item-img {
+        width: 6.5em;
+        height: 5em;
+      }
+    }
+  }
+
+  &__item-link {
     &--blue {
       color: $theme-color-blue;
     }
@@ -1512,36 +1594,15 @@
       color: $theme-color-purple;
     }
 
-    &+& {
-      margin-left: 3.5em;
-    }
+    transition: all .3s;
 
-    &:before {
-      position: absolute;
-      content: '';
-      left: 42%;
-      bottom: 35%;
-      transform: translateX(-50%);
-      width: 180px;
-      height: 145px;
+    &:hover {
+      color: $theme-color-purple
     }
+  }
 
-    &--money {
-      border-right: 1px solid #e8eaf3;
-
-      &:before {
-        background: url(../images/money.png);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-
-    &--support:before {
-      background: url(../images/person.png);
-      background-repeat: no-repeat;
-      background-position: top;
-      bottom: 30%;
-    }
+  &__item-img {
+    margin-bottom: 25px;
   }
 }
 
