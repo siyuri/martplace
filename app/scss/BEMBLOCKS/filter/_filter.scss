@@ -1,0 +1,49 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+
+  &__right {
+    display: flex;
+  }
+
+  &__layout {
+    align-self: center;
+    border-radius: 0.25em;
+    border: 1px solid #d9dfe5;
+    padding: .5em .3em .31em .5em;
+  }
+
+  &__layout-button,
+  &__left-button {
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    cursor: pointer;
+
+  }
+
+  &__left-button {
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgb(6, 116, 236);
+    }
+  }
+
+  &__layout-button {
+    width: 1.25em;
+    margin-right: 1em;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .filter__layout-button-svg {
+        fill: rgb(6, 116, 236);
+      }
+    }
+  }
+}

@@ -33,7 +33,8 @@ gulp.task('css', function () {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
       'node_modules/slick-carousel/slick/slick.css',
-      'node_modules/raty-js/lib/jquery.raty.css'
+      'node_modules/raty-js/lib/jquery.raty.css',
+      'node_modules/ion-rangeslider/css/ion.rangeSlider.css'
     ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -63,7 +64,8 @@ gulp.task('js', function () {
       'node_modules/mixitup/dist/mixitup.js',
       'node_modules/raty-js/lib/jquery.raty.js',
       'node_modules/waypoints/lib/jquery.waypoints.js',
-      'node_modules/counterup2/dist/index.js'
+      'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
+
 
     ])
     .pipe(concat('libs.min.js'))

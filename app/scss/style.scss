@@ -7,6 +7,9 @@
 @import "BEMBLOCKS/select/select";
 @import "BEMBLOCKS/submit-form/submit-form";
 @import "BEMBLOCKS/dropdown/dropdown";
+@import "BEMBLOCKS/breadcrumbs/breadcrumbs";
+@import "BEMBLOCKS/filter/filter";
+@import "BEMBLOCKS/aside/aside";
 
 .header {
   background: #fff;
@@ -452,6 +455,10 @@
   padding-bottom: .5em;
   background: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
 
+  &--page {
+    background: linear-gradient(to left, rgb(13, 62, 242) 0%, rgb(45, 47, 199) 46%, rgb(76, 31, 156) 100%);
+  }
+
   &__inner {
     padding: 11em 0 15em;
     display: flex;
@@ -461,18 +468,30 @@
     // min-height: 41em;
     height: 100%;
     text-align: center;
+
+    &--page {
+      padding: 4.5rem 0 1.2rem;
+    }
   }
 
   &__title {
     font-size: 3.75rem;
     line-height: 110%;
 
+    &--category-page {
+      font-size: 1.625rem;
+      line-height: 200%;
+    }
   }
 
   &__title-accent {
     display: block;
     font-weight: 700;
     line-height: 110%;
+
+    &--category-page {
+      display: inline;
+    }
   }
 
   &__text {

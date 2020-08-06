@@ -1,0 +1,34 @@
+.breadcrumbs {
+  list-style: none;
+
+  &__item {
+    display: inline;
+    padding-right: .8rem;
+    position: relative;
+    margin-right: .7rem;
+
+    &:after {
+      content: '/';
+      color: #fff;
+      position: absolute;
+      right: 0;
+      font-size: 0.95rem;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    color: #fff;
+
+    &--active {
+      color: #bfcad7;
+      font-size: 0.95rem;
+    }
+  }
+}

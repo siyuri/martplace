@@ -102,6 +102,24 @@ $(document).ready(function () {
     space: false
   })
 
+  $('.aside__price-input').ionRangeSlider({
+    type: 'double',
+    min: 0,
+    max: 400,
+    from: 30,
+    to: 300,
+    prefix: '$'
+  })
+
+  $('.aside__filter--pricerange').click(function () {
+    $('.aside__items--pricerange').toggle(1000)
+  })
+  $('.aside__filter--category').click(function () {
+    $('.aside__items--category').toggle(1000)
+  })
+  $('.aside__filter--products').click(function () {
+    $('.aside__items--products').toggle(1000)
+  })
   // $('.header__bottom-nav-btn').on('click', function () {
   //   $('.header__bottom-items').slideToggle()
   // })const selectElement = (element) => document.querySelector(element)
