@@ -67,7 +67,7 @@
      grid-column-gap: 2rem;
    }
 
-   &__cards {
+   &__products {
      display: grid;
      grid-template-columns: repeat(3, 262px);
      grid-template-rows: repeat(4, 375px);
@@ -111,9 +111,7 @@
    }
  }
 
-
-
- .page-content__cards {
+ .category-page__products {
    &.list {
      display: grid;
      grid-template-columns: 1fr;

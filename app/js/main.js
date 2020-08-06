@@ -120,12 +120,6 @@ $(document).ready(function () {
   $('.aside__filter--products').click(function () {
     $('.aside__items--products').toggle(1000)
   })
-  // $('.header__bottom-nav-btn').on('click', function () {
-  //   $('.header__bottom-items').slideToggle()
-  // })const selectElement = (element) => document.querySelector(element)
-  // selectElement('.header__bottom-nav-btn').addEventListener('click', () => {
-  //   selectElement('.header__bottom-items').classList.toggle('.active')
-  // })
 
   // menu click event
   // $('.header__bottom-menubtn').click(function () {
@@ -221,15 +215,29 @@ $(document).ready(function () {
   // }
 
   // page-content__view-btn--grid 
-  $('.page-content__view-btn--list').on('click', function () {
-    $('.page-content__cards').addClass('list')
-    $('.page-content__view-btn--list').addClass('active')
-    $('.page-content__view-btn--grid').removeClass('active')
+  $('.filter__layout-button--list').on('click', function () {
+    $('.category-page__products').addClass('list'),
+      $('.product-card').addClass('list'),
+      $('.product-card').children().addClass('list'),
+      $('.product-card__info-top').children().addClass('list'),
+      $('.product-card__top').children().addClass('list'),
+      $('.product-card__top-author').children().addClass('list'),
+      $('.product-card__review').children().addClass('list'),
+      $('.product-card').children().addClass('list'),
+      $('.product-card__review-category').children().addClass('list')
   })
-  $('.page-content__view-btn--grid').on('click', function () {
-    $('.page-content__cards').removeClass('list')
-    $('.page-content__view-btn--grid').addClass('active')
-    $('.page-content__view-btn--list').removeClass('active')
+  $('.filter__layout-button--grid').on('click', function () {
+    $('.category-page__products').removeClass('list')
+    $('.product-card').removeClass('list'),
+      $('.product-card').children().removeClass('list'),
+      $('.filter__layout-button--grid').addClass('active'),
+      $('.filter__layout-button--list').removeClass('active'),
+      $('.product-card__top').children().removeClass('list'),
+      $('.product-card__info-top').children().removeClass('list'),
+      $('.product-card__top-author').children().removeClass('list'),
+      $('.product-card__review').children().removeClass('list'),
+      $('.product-card').children().removeClass('list'),
+      $('.product-card__review-category').children().removeClass('list')
   })
 
   if ($('.newest-products__items').length) {
